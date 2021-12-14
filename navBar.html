@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+       #logo
+       {
+           background-color: white;
+           height: 80px;
+           display: grid;
+           grid-template-columns: repeat(3,33%);
+           justify-content: space-between;
+       }
+       #logoin
+       {
+           padding-left: 200px;
+           height: 80px;
+       }
+       #rdPart
+    {
+       padding-left: 100px;
+    }
+       #rdPart>img
+       {
+           margin-top: 10px;
+           padding-left: 10px;
+           margin-left: 15px;
+           width: 60px;
+           height: 60px;
+       }
+       #cat{
+            
+           
+           background-color: rgb(250, 185, 174);
+           transform: translate(-0%,-70%);
+           
+            
+       }
+       #cat>ul
+       {
+           list-style: none;
+            display: flex;
+          
+           justify-content: center;
+           background-color: turquoise;
+            
+           
+       }
+       #cat>ul>li
+       {
+           padding-left: 45px;
+       }
+       
+       .BorderLineSearch {
+   
+    width: 70%;
+    border-bottom: 3px solid purple;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0px 25px 0px;
+    transition: all 0.5s ease 0s;
+}
+ 
+.BorderLineSearch button,
+.BorderLineSearch input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  outline: 0;
+}
+#Sbutton
+{
+    cursor: pointer;
+}
+#Sbutton > img
+{
+    width: 20px;
+    height: 20px;
+}
+   </style>
+</head>
+<body>
+
+    <div id="mainDiv">
+        <div id="logo">
+        
+
+            <div class="BorderLineSearch">
+                <input id="input" placeholder="Search..."/>
+                <button id="Sbutton"><img src="https://cdn2.iconfinder.com/data/icons/social-messaging-productivity-black-2/1/16-512.png" alt=""></i></button>
+              </div>
+               
+           
+            <img id="logoin" src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg" alt="">
+           
+            <div id="rdPart">
+                <img src="https://cdn1.iconfinder.com/data/icons/circle-outlines/512/Like_Favourite_Love_Health_Heart_Favourites_Favorite-512.png" alt="">
+
+                <img src="https://cdn4.iconfinder.com/data/icons/user-interface-33/80/Account-512.png" alt="">
+
+                <img src="https://cdn0.iconfinder.com/data/icons/buntu-internet/100/shopping_cart_glyph_convert-512.png" alt="">
+            </div>
+
+        </div>
+        <div id="cat">
+    
+           
+            <ul>
+                <li>SHOP CATEGORIES</li>
+                <li>BRANDS</li>
+                <li>OFFERS</li>
+                <li>NEW</li>
+                <li>SPLURGE</li>
+                <li>MAGAZINE</li>
+                
+                 
+            </ul>
+            
+            
+        </div>
+    </div>
+   
+</body>
+</html>
