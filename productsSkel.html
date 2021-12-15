@@ -50,6 +50,7 @@
            
         </div>
         <p id="heading_sub1"> ALL PRODUCTS</p>
+        <div id="ForNoShow"></div>
         <div id="container_products">
 
         </div>
@@ -120,7 +121,7 @@ function brand_sort(){
    document.querySelector("#sort_details").innerHTML = ""; 
 
    let sortDiv = document.createElement("div");
-   sortDiv.setAttribute("id","brand_sort");
+   sortDiv.setAttribute("id","brandSort");
    sortDiv.style.marginLeft = "5.5%";
    sortDiv.onmouseleave = noShow;
    
@@ -177,38 +178,55 @@ function brand_sort(){
     //This is related to filters function on product page based on price
 document.querySelector("#price_sort").addEventListener("click",price_sort);
 function price_sort() {
-
    document.querySelector("#sort_details").innerHTML = ""; 
 
    let sortDiv = document.createElement("div");
    sortDiv.setAttribute("id","priceSort");
    sortDiv.style.marginLeft = "17.5%";
    sortDiv.style.height = "90%";
-   sortDiv.onmouseleave = noShow;
+   sortDiv.onmouseleave = noShow1;
    
    let l1l1 = document.createElement("p");
    l1l1.setAttribute("id","l1");
    l1l1.textContent = "Rs.100 And Below";
+   l1l1.onclick = () =>{
+      priceRange1(); 
+   }
 
    let l1l2 = document.createElement("p");
    l1l2.setAttribute("id","l2");
    l1l2.textContent = "Rs. 100 - Rs. 200";
-
+   l1l2.onclick = () =>{
+      priceRange2(); 
+   }
+  
    let l1l3 = document.createElement("p");
    l1l3.setAttribute("id","l3");
-   l1l3.textContent = "Rs. 200 - Rs. 500";
+   l1l3.textContent = "Rs. 200 - Rs. 400";
+   l1l3.onclick = () =>{
+      priceRange3(); 
+   }
 
    let l1l4 = document.createElement("p");
    l1l4.setAttribute("id","l4");
-   l1l4.textContent = "Rs. 500 - Rs. 1000";
+   l1l4.textContent = "Rs. 400 - Rs. 1000";
+   l1l4.onclick = () =>{
+      priceRange4();
+   }
 
    let l1l5 = document.createElement("p");
    l1l5.setAttribute("id","l5");
-   l1l5.textContent = "Rs. 1000 - Rs. 3000";   
+   l1l5.textContent = "Rs. 1000 - Rs. 3000";
+   l1l5.onclick = () =>{
+      priceRange5(); 
+   }   
    
    let l1l6 = document.createElement("p");
    l1l6.setAttribute("id","l6");
-   l1l6.textContent = "Rs. 3000 And Above";  
+   l1l6.textContent = "Rs. 3000 And Above";
+   l1l6.onclick = () =>{
+      priceRange6(); 
+   }  
 
    sortDiv.append(l1l1,l1l2,l1l3,l1l4,l1l5,l1l6);
    document.querySelector("#sort_details").append(sortDiv);
@@ -225,7 +243,7 @@ function discount_sort() {
    sortDiv.setAttribute("id","discountSort");
    sortDiv.style.marginLeft = "30.5%";
    sortDiv.style.height = "80%";
-   sortDiv.onmouseleave = noShow;
+   sortDiv.onmouseleave = noShow2;
    
    let l1l1 = document.createElement("p");
    l1l1.setAttribute("id","l1");
@@ -252,14 +270,6 @@ function discount_sort() {
 }
     //From Up till this Comment everything is related to discount Sort
 
-
-function noShow(){
-       document.querySelector("#sort_details").style.display = "none";
-       window.location.reload();
-    //    sortDiv.style.display = "none" ;
-   }
-    
-
     //This is related to filters function on product page based on benefit
 document.querySelector("#benefits_sort").addEventListener("click",benefits_sort);
 function benefits_sort(){
@@ -267,10 +277,10 @@ function benefits_sort(){
    document.querySelector("#sort_details").innerHTML = ""; 
 
    let sortDiv = document.createElement("div");
-   sortDiv.setAttribute("id","benefits_sort");
+   sortDiv.setAttribute("id","benefitsSort");
    sortDiv.style.marginLeft = "42.5%";
    sortDiv.style.height = "95%";
-   sortDiv.onmouseleave = noShow;
+   sortDiv.onmouseleave = noShow3;
    
    let l1l1 = document.createElement("p");
    l1l1.setAttribute("id","l1");
@@ -333,10 +343,10 @@ function skin_sort(){
    document.querySelector("#sort_details").innerHTML = ""; 
 
    let sortDiv = document.createElement("div");
-   sortDiv.setAttribute("id","skin_sort");
+   sortDiv.setAttribute("id","skinSort");
    sortDiv.style.marginLeft = "55%";
    sortDiv.style.height = "95%";
-   sortDiv.onmouseleave = noShow;
+   sortDiv.onmouseleave = noShow4;
    
    let l1l1 = document.createElement("p");
    l1l1.setAttribute("id","l1");
@@ -379,11 +389,11 @@ function relevance_sort(){
    document.querySelector("#sort_details").innerHTML = ""; 
 
    let sortDiv = document.createElement("div");
-   sortDiv.setAttribute("id","relevance_sort");
+   sortDiv.setAttribute("id","relevanceSort");
    sortDiv.style.marginLeft = "90.5%";
    sortDiv.style.width = "14%";
    sortDiv.style.height = "95%";
-   sortDiv.onmouseleave = noShow;
+   sortDiv.onmouseleave = noShow5;
    
    let l1l1 = document.createElement("p");
    l1l1.setAttribute("id","relevance1");
@@ -411,6 +421,32 @@ function relevance_sort(){
 
 }
     //From Up till this Comment everything is related to relevance Sort
+
+
+function noShow(){
+       document.querySelector("#brandSort").style.display = "none";
+    document.querySelector("#brand_sort").addEventListener("click",brand_sort);  
+}
+function noShow1(){
+       document.querySelector("#priceSort").style.display = "none";
+    document.querySelector("#price_sort").addEventListener("click",price_sort);  
+}
+function noShow2(){
+       document.querySelector("#discountSort").style.display = "none";
+    document.querySelector("#discount_sort").addEventListener("click",discount_sort);  
+}
+function noShow3(){
+       document.querySelector("#benefitsSort").style.display = "none";
+    document.querySelector("#benefits_sort").addEventListener("click",benefits_sort);  
+}
+function noShow4(){
+       document.querySelector("#skinSort").style.display = "none";
+    document.querySelector("#skin_sort").addEventListener("click",skin_sort);  
+}
+function noShow5(){
+       document.querySelector("#relevanceSort").style.display = "none";
+    document.querySelector("#relevance_sort").addEventListener("click",relevance_sort);  
+}
 
     //This is related to data of products Information 
 let products = [
@@ -641,6 +677,95 @@ let products = [
 
 let contain_Div = document.querySelector("#container_products");
 
-ShowProductsOnMain(products,contain_Div,cartArray)
+ShowProductsOnMain(products,contain_Div,cartArray);
+
+function priceRange1(){
+    let max = 100;
+    let newProd = products.filter(function(item){
+         if(item.price <= max) return item;
+    })
+    if(newProd.length === 0) {
+        console.log("No no no");
+        contain_Div.innerHTML = "";
+        let pNop = document.createElement("h1");
+        pNop.textContent = "No Products Available";
+       document.querySelector("#ForNoShow").append(pNop);
+    }
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function priceRange2(){
+    let min = 100;
+    let max = 200;
+    let newProd = products.filter(function(item){
+         if(item.price > min && item.price <= max) return item;
+    })
+    if(newProd.length === 0) {
+        console.log("No no no");
+        contain_Div.innerHTML = "";
+        let pNop = document.createElement("h1");
+        pNop.textContent = "No Products Available";
+       document.querySelector("#ForNoShow").append(pNop);
+    }
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function priceRange3(){
+    let min = 200;
+    let max = 400;
+    let newProd = products.filter(function(item){
+         if(item.price > min && item.price <= max) return item;
+    })
+    if(newProd.length === 0) {
+        console.log("No no no");
+        contain_Div.innerHTML = "";
+        let pNop = document.createElement("h1");
+        pNop.textContent = "No Products Available";
+       document.querySelector("#ForNoShow").append(pNop);
+    }
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function priceRange4(){
+    let min = 400;
+    let max = 1000;
+    let newProd = products.filter(function(item){
+         if(item.price > min && item.price <= max) return item;
+    })
+    if(newProd.length === 0) {
+        console.log("No no no");
+        contain_Div.innerHTML = "";
+        let pNop = document.createElement("h1");
+        pNop.textContent = "No Products Available";
+       document.querySelector("#ForNoShow").append(pNop);
+    }
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function priceRange5(){
+    let min = 1000;
+    let max = 3000;
+    let newProd = products.filter(function(item){
+         if(item.price > min && item.price <= max) return item;
+    })
+    if(newProd.length === 0) {
+        console.log("No no no");
+        contain_Div.innerHTML = "";
+        let pNop = document.createElement("h1");
+        pNop.textContent = "No Products Available";
+       document.querySelector("#ForNoShow").append(pNop);
+    }
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function priceRange6(){
+    let min = 3000;
+    let newProd = products.filter(function(item){
+         if(item.price > min) return item;
+    })
+    if(newProd.length === 0) {
+        console.log("No no no");
+        contain_Div.innerHTML = "";
+        let pNop = document.createElement("h1");
+        pNop.textContent = "No Products Available";
+       document.querySelector("#ForNoShow").append(pNop);
+    }
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
 
 </script>
