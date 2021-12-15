@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* top slider */
+
+#slideShow1{
+  /* width: 83%; */
+  margin: auto;
+  height: 410px;
+  cursor: pointer;
+}
+#slideShow1 {
+ background-image: url();
+}
+#path{
+  margin-left: 40% ;
+  margin-top: 15px ; 
+  margin-bottom: 40px ;   
+}
+
+/* main div */
+#Home_div {
+    width: 83%;
+    margin: auto;
+  }
+
+  #slider_container_div {
+    width: 100%;
+    height: 327px;
+    position: relative;
+    overflow: hidden;
+
+    margin-bottom: 30px;
+  }
+
+  #slider_bag,
+  .slider_bag {
+    width: 1000%;
+    height: 100%;
+    list-style: none;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    transition: all 0.75s ease;
+  }
+
+  #slider_container_div .slideBox {
+    height: 100%;
+    float: left;
+  }
+  #slider_container_div .slideBox p {
+    line-height: 20px;
+    color: #000;
+  }
+  #slider_container_div .slideBox a {
+    text-decoration: none;
+  }
+
+  /* me */
+
+  .slideBox > a > div > img {
+    height: 85%;
+    width: 70%;
+  }
+
+  .slideBox {
+    /* height:70%;
+ width:57%; */
+    margin: 0 -80px;
+  }
+  /* me */
+
+  #slider_bag > div,
+  .slider_bag > div {
+    margin-left: 5px;
+  }
+
+  #slider_bag > div:nth-child(1),
+  .slider_bag > div:nth-child(1) {
+    margin-left: 0;
+  }
+
+  #slider_container_div .btn {
+    position: absolute;
+    top: 40%;
+    color: rgb(221, 219, 219);
+    text-decoration: none;
+    padding-left: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  #next,
+  #next2 {
+    right: 0;
+  }
+
+  #prev:hover,
+  #next:hover,
+  #prev2:hover,
+  #next2:hover {
+    color: rgb(192, 192, 192);
+  }
+
+  /* purple grid 1 */
+
+  .grid-container {
+    width: 100%;
+    grid-gap: 20px;
+    display: grid;
+
+    grid-template-columns: auto auto;
+
+    padding: 10px;
+  }
+  .grid-item {
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  }
+
+  #heading_img {
+    width: 100%;
+  }
+
+  /* white skine type section  */
+#skinType_section{
+display: flex;
+}
+#left_white_part{
+    flex: 4;
+}
+#right_image{
+    flex: 1;
+}
+#right_image > img{
+    height: 640px;
+    width: 320px;
+    margin-right: 50px;
+}
+
+#three_skin_type{
+    display: flex;
+}
+.skin_imgage > img{
+    height: 640px;
+    width: 320px;
+}
+
+#skin_tone{
+    display: flex;
+}
+
+.tone_img > img{
+    height: 610px;
+    width: 420px;
+}
+
+.grid-container_four_cards {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  /* padding: 10px; */
+  height: 80%;
+  width: 83%;
+  margin: auto;
+}
+.grid-item_sq {
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+ width: 100%;
+ height: 85%;
+ overflow: hidden;
+ margin-bottom: -145px;
+ margin-left: 2%;
+}
+.grid-item_sq > img{
+  height: 150%;
+  width: 90%;
+  
+}
+/* gif makeup guide */
+#makeup_guide{
+  display: flex;
+ 
+}
+.makeup_card{
+  margin: 10px;
+}
+.makeup_card > img{
+  height: 95%;
+  width: 90%;
+}
+
+
+
+
+
+
+
+/* home secondary div */
+
+/* brand store */
+
+.grid-container_brands {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin-left: 2%;
+  
+}
+
+.grid-item_brands > img{
+  width: 90%;
+  height: 90%;
+}
+
+/* trending serches */
+#trending_search{
+  display: flex;
+}
+
+.trend_search{
+  padding: 1%;
+}
+
+
+
+/* lifestyle section */
+#Home_secondary_div{
+  width: 83%;
+  margin: auto;
+}
+
+.grid-container_lifestyle {
+  display: grid;
+  grid-template-columns: auto auto;
+ 
+}
+.grid-item_lifestyle {
+
+  padding: 1% 1% 1% 1%;
+ 
+ 
+}
+.grid-item_lifestyle >img{
+  height: 98%;
+  width: 100%;
+}
+
+
+
+/* marketing stuff insta*/
+
+#insta_vid{
+  width: 83%;
+  margin: auto;
+}
+#insta_videos{
+  display: flex;
+}
+.insta_video_div > img{
+  height: 100%;
+  width: 70%;
+}
+
+/* innovation at its peak */
+
+#innovation_div{
+  width: 83%;
+  margin: auto;
+}
+#inno_div{
+  display: flex;
+}
+.inno_card > div{
+  height: 90%;
+  width: 50%;
+}
+.inno_card > img{
+  width: 50%;
+  height: 100%;
+}
+
+/* pocket friendly store */
+
+#pocket_friendly{
+  width: 83%;
+  margin: auto;
+}
+#pocket_friend{
+  display: flex;
+}
+.pocket_div {
+  height: 100%;
+  width: 105%;
+}
+.pocket_div > img{
+  height: 100%;
+  width: 105%;
+  padding: 2% 0;
+  
+}
