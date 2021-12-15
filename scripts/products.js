@@ -1,5 +1,6 @@
 function ShowProductsOnMain(products,location,cartArray){
     location.innerHTML = "";
+    document.querySelector("#ForNoShow").innerHTML = "";
     products.map(function(item,index){
         let Mdiv = document.createElement("div");
         Mdiv.setAttribute("id","Mdiv");
