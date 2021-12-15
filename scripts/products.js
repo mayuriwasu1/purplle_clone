@@ -58,8 +58,6 @@ function ShowProductsOnMain(products,location,cartArray){
 }
 
 function addtoCart(item,index,cartArray){
-    console.log(item);
-    console.log(index);
     let toCartItem = item;
     let uniqueId = item.id;
     let count = 0;
@@ -71,8 +69,7 @@ function addtoCart(item,index,cartArray){
        document.querySelector("#toCartBtn1").innerHTML = "ADDED TO CART";
        cartArray.push(toCartItem);
        localStorage.setItem("cartItems", JSON.stringify(cartArray));  
-    }
-    
+    }   
  }
 
  function redirectedProduct(item){
