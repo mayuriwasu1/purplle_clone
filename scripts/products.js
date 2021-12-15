@@ -33,8 +33,9 @@ function ShowProductsOnMain(products,location,cartArray){
         });
 
         let price = document.createElement("p");
-        price.setAttribute("id","priceOf")
-        price.textContent = "₹ " + item.price ;
+        price.setAttribute("id","priceOf");
+        // let disc = 100 * item.discount
+        price.textContent = `₹ ${item.price}` ;
         price.addEventListener("click", function(){
             redirectedProduct(item);
         });

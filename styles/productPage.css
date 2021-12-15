@@ -62,6 +62,7 @@
     #filter_div > div{
         line-height: 20px;
         width: 12%;
+        cursor: pointer;
     }
 
     #filter_div > div:nth-child(2), #filter_div > div:nth-child(4), #filter_div > div:nth-child(6), #filter_div > div:nth-child(8), #filter_div > div:nth-child(10){
