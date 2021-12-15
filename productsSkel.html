@@ -128,46 +128,80 @@ function brand_sort(){
    let l1l1 = document.createElement("p");
    l1l1.setAttribute("id","l1");
    l1l1.textContent = "Lakme";
+   l1l1.onclick = () => {
+       brand1()
+   }
 
    let l1l2 = document.createElement("p");
    l1l2.setAttribute("id","l2");
    l1l2.textContent = "MAC";
+   l1l2.onclick = () => {
+       brand2()
+   }
 
    let l1l3 = document.createElement("p");
    l1l3.setAttribute("id","l3");
    l1l3.textContent = "Maybelline";
+   l1l3.onclick = () => {
+       brand3()
+   }
 
    let l1l4 = document.createElement("p");
    l1l4.setAttribute("id","l4");
    l1l4.textContent = "Sugar";
+   l1l4.onclick = () => {
+       brand4()
+   }
 
    let l1l5 = document.createElement("p");
    l1l5.setAttribute("id","l5");
-   l1l5.textContent = "Swiss Beauty";   
+   l1l5.textContent = "Swiss Beauty"; 
+   l1l5.onclick = () => {
+       brand5()
+   }  
    
    let l1l6 = document.createElement("p");
    l1l6.setAttribute("id","l6");
-   l1l6.textContent = "Maliao";   
+   l1l6.textContent = "Maliao"; 
+   l1l6.onclick = () => {
+       brand6()
+   }  
    
    let l1l7 = document.createElement("p");
    l1l7.setAttribute("id","l7");
    l1l7.textContent = "Makeup Revolution";
+   l1l7.onclick = () => {
+       brand7()
+   }
+
 
    let l1l8 = document.createElement("p");
    l1l8.setAttribute("id","l8");
-   l1l8.textContent = "Colorbar"; 
+   l1l8.textContent = "Colorbar";
+   l1l8.onclick = () => {
+       brand8()
+   } 
 
    let l1l9 = document.createElement("p");
    l1l9.setAttribute("id","l9");
    l1l9.textContent = "NY Bae"; 
+   l1l9.onclick = () => {
+       brand9()
+   }
 
    let l1l10 = document.createElement("p");
    l1l10.setAttribute("id","l9");
-   l1l10.textContent = "L'Oreal Paris"; 
+   l1l10.textContent = "L'Oreal Paris";
+   l1l10.onclick = () => {
+       brand10()
+   } 
 
    let l1l11 = document.createElement("p");
    l1l11.setAttribute("id","l11");
-   l1l11.textContent = "purplle"; 
+   l1l11.textContent = "Purplle";
+   l1l11.onclick = () => {
+       brand11()
+   } 
 
    sortDiv.append(l1l1,l1l2,l1l3,l1l4,l1l5,l1l6,l1l7,l1l8,l1l9,l1l10,l1l11);
    document.querySelector("#sort_details").append(sortDiv);
@@ -248,22 +282,37 @@ function discount_sort() {
    let l1l1 = document.createElement("p");
    l1l1.setAttribute("id","l1");
    l1l1.textContent = "Up to 10%";
+   l1l1.onclick = () => {
+       discount1()
+   }
 
    let l1l2 = document.createElement("p");
    l1l2.setAttribute("id","l2");
    l1l2.textContent = "10% to 20%";
+   l1l2.onclick = () => {
+       discount2()
+   }
 
    let l1l3 = document.createElement("p");
    l1l3.setAttribute("id","l3");
    l1l3.textContent = "20% to 30%";
+   l1l3.onclick = () => {
+       discount3()
+   }
 
    let l1l4 = document.createElement("p");
    l1l4.setAttribute("id","l4");
    l1l4.textContent = "30% to 40%";
+   l1l4.onclick = () => {
+       discount4()
+   }
 
    let l1l5 = document.createElement("p");
    l1l5.setAttribute("id","l5");
-   l1l5.textContent = "More than 40%";   
+   l1l5.textContent = "More than 40%";
+   l1l5.onclick = () => {
+       discount5();
+   }   
    
    sortDiv.append(l1l1,l1l2,l1l3,l1l4,l1l5);
    document.querySelector("#sort_details").append(sortDiv);
@@ -285,10 +334,16 @@ function benefits_sort(){
    let l1l1 = document.createElement("p");
    l1l1.setAttribute("id","l1");
    l1l1.textContent = "Hydrating";
+   l1l1.onclick = () => {
+       hydrating();
+   }
 
    let l1l2 = document.createElement("p");
    l1l2.setAttribute("id","l2");
-   l1l2.textContent = "Mositurizing";
+   l1l2.textContent = "Moisturizing";
+   l1l2.onclick = () => {
+       moisturizer()
+   }
 
    let l1l3 = document.createElement("p");
    l1l3.setAttribute("id","l3");
@@ -321,6 +376,9 @@ function benefits_sort(){
    let l1l10 = document.createElement("p");
    l1l10.setAttribute("id","l9");
    l1l10.textContent = "light weight"; 
+   l1l10.onclick = () => {
+       lightweight()
+   }
 
    let l1l11 = document.createElement("p");
    l1l11.setAttribute("id","l11");
@@ -328,7 +386,10 @@ function benefits_sort(){
 
    let l1l12 = document.createElement("p");
    l1l12.setAttribute("id","l12");
-   l1l12.textContent = "Long Lasting"; 
+   l1l12.textContent = "Long Lasting";
+   l1l12.onclick = () => {
+       longLasting()
+   }
 
    sortDiv.append(l1l1,l1l2,l1l3,l1l4,l1l5,l1l6,l1l7,l1l8,l1l9,l1l10,l1l11,l1l12);
    document.querySelector("#sort_details").append(sortDiv);
@@ -362,7 +423,10 @@ function skin_sort(){
 
    let l1l4 = document.createElement("p");
    l1l4.setAttribute("id","l4");
-   l1l4.textContent = "Combination";
+   l1l4.textContent = "Combination Skin";
+   l1l4.onclick = () => {
+       skin4()
+   }
 
    let l1l5 = document.createElement("p");
    l1l5.setAttribute("id","l5");
@@ -370,11 +434,17 @@ function skin_sort(){
    
    let l1l6 = document.createElement("p");
    l1l6.setAttribute("id","l6");
-   l1l6.textContent = "All Skin Types";   
+   l1l6.textContent = "All Skin Types";
+   l1l6.onclick = () => {
+       skin6();
+   }   
    
    let l1l7 = document.createElement("p");
    l1l7.setAttribute("id","l7");
    l1l7.textContent = "Acne-Prone Skin"; 
+   l1l7.onclick = () => {
+       skin7();
+   }
 
    sortDiv.append(l1l1,l1l2,l1l3,l1l4,l1l5,l1l6,l1l7);
    document.querySelector("#sort_details").append(sortDiv);
@@ -403,18 +473,30 @@ function relevance_sort(){
    let l1l2 = document.createElement("p");
    l1l2.setAttribute("id","disco");
    l1l2.textContent = "Discount";
+   l1l2.onclick = () => {
+       discount_Desc();
+   }
 
    let l1l3 = document.createElement("p");
    l1l3.setAttribute("id","high");
    l1l3.textContent = "High Price";
+   l1l3.onclick = () => {
+       highTolow();
+   }
 
    let l1l4 = document.createElement("p");
    l1l4.setAttribute("id","low");
    l1l4.textContent = "low Price";
+   l1l4.onclick = () => {
+       lowTohigh();
+   }
 
    let l1l5 = document.createElement("p");
    l1l5.setAttribute("id","rating");
-   l1l5.textContent = "Average Rating";   
+   l1l5.textContent = "Average Rating";
+   l1l5.onclick = () => {
+       ratingDown();
+   }
    
    sortDiv.append(l1l1,l1l2,l1l3,l1l4,l1l5);
    document.querySelector("#sort_details").append(sortDiv);
@@ -454,6 +536,7 @@ let products = [
         id : "AA",
         title : " NY Bae Blurin' Primer|Face Primer|Blurs Out Pores & Fine Lines| Enriched With Vitamin E| Radiant Glow| All Skin Types| Matte products",
         rating : 3.9,
+        brand: "NY Bae",
         price : 215,
         discount: 0.12,
         qty : 1,
@@ -464,6 +547,7 @@ let products = [
         Speciality : "Enriched with Vitamin E,oil Free",
         finish : "Matte",
         Benefits : "Blurs out Pores & Fine Lines  Enriched with Vitamin E, Even skin tone, Hydrating, Light Weight",
+        oneBenefit : "Hydrating",
         type: "primer",
         origin : "India",
         image_url : ["https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_10_display_1631800058_e824cd72.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_6_display_1623941086_74d4845f.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_4_display_1623941083_ab8853d8.jpg","https://media6.ppl-media.com/mediafiles/ecomm/promo/1626774900_primer-a8_04.jpg"]
@@ -472,16 +556,18 @@ let products = [
         id : "AB",
         title : "Lakme Aboslute Blur Perfect Makeup Primer,10g",
         rating : 4.1,
+        brand: "Lakme",
         price : 299,
         discount: 0.12,
         qty : 1,
         description : "Makeup glides on effortlessly and blends seamlessly for a more vibrant, color true finish. The Lakme Absolute Blur Perfect Makeup Primer is the perfect canvas for makeup or wear-alone over your moisturiser for instant smoothness and radiance. Buy Now!The Lakme Absolute Make-Up Primer is a flawless make-up primer that preps your skin for professional make-up. • Creates the perfect base for make-up and helps it stay for longer.. Hides skin imperfections and gives you an even toned skin. It is lightweight, water-proof, and has a smooth matte texture.",
         best_before : "31 Jan 2023" ,
         skin_concern : "Skin Imperfection, Uneven Skin Texture, Visible Pores",
-        skin_type : "Acne-Prone Skin, Combination Skin, Dry Skin, Normal Skin, Oily Skin, Sensitive skin",
+        skin_type : "Combination Skin",
         Speciality : "Enriched with Vitamin E,oil Free",
         finish : "Matte",
         Benefits : "Blurs Fine Lines, Evens Skin Tone, Fadeproof, Hides Imperfections, Light Weight,Mattifying",
+        oneBenefit : "Light Weight",
         type: "primer",
         origin : "India",
         image_url : ["https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_7_display_1631104552_882ba13c.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_10_display_1631104554_9e79acb9.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_8_display_1631104552_aa52c3b0.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_11_display_1631104554_ff8fe6bb.jpg"]
@@ -490,6 +576,7 @@ let products = [
         id : "AC",
         title : "Swiss Beauty Real Makeup Base Highlighting Primer - Natural - Tint (32 ml) ",
         rating : 4.3,
+        brand: "Swiss Beauty",
         price : 349,
         discount: null,
         qty : 1,
@@ -500,6 +587,7 @@ let products = [
         Speciality : "Enriched with Vitamin E,oil Free",
         finish : "Radiant Finish",
         Benefits : "Evens Skin Tone, Light Weight, Minimizing Pores, Moisturizing, Skin Brightening",
+        oneBenefit : "Moisturizing",
         type: "primer",
         origin : "India",
         image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_1_display_1590792783_75d33aec.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_2_display_1590792784_5bb3dd61.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_3_display_1590792785_20ae436d.jpg","https://media4.purplle.com/static/img/brand//__1619086150_1647f507.jpg"]
@@ -508,6 +596,7 @@ let products = [
         id : "AD",
         title : "Purplle True Jewel 24K Gold Primer Mattel Oil Control Shine Controll Long Lasting Lightweight| Dermatologically Tested - (20 ml)",
         rating : 4.3,
+        brand: "Purplle",
         price : 450,
         discount: 0.12,
         qty : 1,
@@ -518,6 +607,7 @@ let products = [
         Speciality : "Cruelty Free, Dermatologically Tested,Enriched with Vitamin E,oil Free",
         finish : "Illuminating",
         Benefits : "Blurs Fine Lines, Light Weight, Mattifying, Minimizes Pores, Oil Control",
+        oneBenefit : "Light Weight",
         type: "primer",
         origin : "India",
         image_url : ["https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_10_display_1628078492_d1932184.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_15_display_1628077466_636ffaff.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_9_display_1596000695_5cecb9c8.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_11_display_1596000711_5a3df986.jpg"]
@@ -529,13 +619,14 @@ let products = [
         id : "AF",
         title : "Lakme Aboslute Blur Perfect Makeup Primer,10g",
         rating : 4.1,
+        brand: "Lakme",
         price : 299,
         discount: 0.12,
         qty : 1,
         description : "Makeup glides on effortlessly and blends seamlessly for a more vibrant, color true finish. The Lakme Absolute Blur Perfect Makeup Primer is the perfect canvas for makeup or wear-alone over your moisturiser for instant smoothness and radiance. Buy Now!The Lakme Absolute Make-Up Primer is a flawless make-up primer that preps your skin for professional make-up. • Creates the perfect base for make-up and helps it stay for longer.. Hides skin imperfections and gives you an even toned skin. It is lightweight, water-proof, and has a smooth matte texture.",
         best_before : "31 Jan 2023" ,
         skin_concern : "Skin Imperfection, Uneven Skin Texture, Visible Pores",
-        skin_type : "Acne-Prone Skin, Combination Skin, Dry Skin, Normal Skin, Oily Skin, Sensitive skin",
+        skin_type : "Acne-Prone Skin",
         Speciality : "Enriched with Vitamin E,oil Free",
         finish : "Matte",
         Benefits : "Blurs Fine Lines, Evens Skin Tone, Fadeproof, Hides Imperfections, Light Weight,Mattifying",
@@ -547,6 +638,7 @@ let products = [
         id : "AE",
         title : " NY Bae Blurin' Primer|Face Primer|Blurs Out Pores & Fine Lines| Enriched With Vitamin E| Radiant Glow| All Skin Types| Matte products",
         rating : 3.9,
+        brand: "NY Bae",
         price : 215,
         discount: 0.12,
         qty : 1,
@@ -565,6 +657,7 @@ let products = [
         id : "AG",
         title : "Swiss Beauty Real Makeup Base Highlighting Primer - Natural - Tint (32 ml) ",
         rating : 4.3,
+        brand: "Swiss Beauty",
         price : 349,
         discount: null,
         qty : 1,
@@ -583,6 +676,7 @@ let products = [
         id : "AH",
         title : "Purplle True Jewel 24K Gold Primer Mattel Oil Control Shine Controll Long Lasting Lightweight| Dermatologically Tested - (20 ml)",
         rating : 1.8,
+        brand: "Purplle",
         price : 450,
         discount: 0.12,
         qty : 1,
@@ -604,6 +698,7 @@ let products = [
         id : "AI",
         title : " NY Bae Blurin' Primer|Face Primer|Blurs Out Pores & Fine Lines| Enriched With Vitamin E| Radiant Glow| All Skin Types| Matte products",
         rating : 3.9,
+        brand: "NY Bae",
         price : 215,
         discount: 0.12,
         qty : 1,
@@ -622,6 +717,7 @@ let products = [
         id : "AJ",
         title : "Lakme Aboslute Blur Perfect Makeup Primer,10g",
         rating : 4.1,
+        brand: "Lakme",
         price : 299,
         discount: 0.12,
         qty : 1,
@@ -640,6 +736,7 @@ let products = [
         id : "AK",
         title : "Swiss Beauty Real Makeup Base Highlighting Primer - Natural - Tint (32 ml) ",
         rating : 4.3,
+        brand: "Swiss Beauty",
         price : 349,
         discount: null,
         qty : 1,
@@ -658,6 +755,7 @@ let products = [
         id : "AL",
         title : "Purplle True Jewel 24K Gold Primer Mattel Oil Control Shine Controll Long Lasting Lightweight| Dermatologically Tested - (20 ml)",
         rating : 4.3,
+        brand: "Purplle",
         price : 450,
         discount: 0.12,
         qty : 1,
@@ -684,13 +782,7 @@ function priceRange1(){
     let newProd = products.filter(function(item){
          if(item.price <= max) return item;
     })
-    if(newProd.length === 0) {
-        console.log("No no no");
-        contain_Div.innerHTML = "";
-        let pNop = document.createElement("h1");
-        pNop.textContent = "No Products Available";
-       document.querySelector("#ForNoShow").append(pNop);
-    }
+    if(newProd.length === 0) NotAvailable()
     else ShowProductsOnMain(newProd,contain_Div,cartArray)
 }
 function priceRange2(){
@@ -699,13 +791,7 @@ function priceRange2(){
     let newProd = products.filter(function(item){
          if(item.price > min && item.price <= max) return item;
     })
-    if(newProd.length === 0) {
-        console.log("No no no");
-        contain_Div.innerHTML = "";
-        let pNop = document.createElement("h1");
-        pNop.textContent = "No Products Available";
-       document.querySelector("#ForNoShow").append(pNop);
-    }
+    if(newProd.length === 0) NotAvailable()
     else ShowProductsOnMain(newProd,contain_Div,cartArray)
 }
 function priceRange3(){
@@ -714,13 +800,7 @@ function priceRange3(){
     let newProd = products.filter(function(item){
          if(item.price > min && item.price <= max) return item;
     })
-    if(newProd.length === 0) {
-        console.log("No no no");
-        contain_Div.innerHTML = "";
-        let pNop = document.createElement("h1");
-        pNop.textContent = "No Products Available";
-       document.querySelector("#ForNoShow").append(pNop);
-    }
+    if(newProd.length === 0) NotAvailable()
     else ShowProductsOnMain(newProd,contain_Div,cartArray)
 }
 function priceRange4(){
@@ -729,13 +809,7 @@ function priceRange4(){
     let newProd = products.filter(function(item){
          if(item.price > min && item.price <= max) return item;
     })
-    if(newProd.length === 0) {
-        console.log("No no no");
-        contain_Div.innerHTML = "";
-        let pNop = document.createElement("h1");
-        pNop.textContent = "No Products Available";
-       document.querySelector("#ForNoShow").append(pNop);
-    }
+    if(newProd.length === 0) NotAvailable()
     else ShowProductsOnMain(newProd,contain_Div,cartArray)
 }
 function priceRange5(){
@@ -744,13 +818,7 @@ function priceRange5(){
     let newProd = products.filter(function(item){
          if(item.price > min && item.price <= max) return item;
     })
-    if(newProd.length === 0) {
-        console.log("No no no");
-        contain_Div.innerHTML = "";
-        let pNop = document.createElement("h1");
-        pNop.textContent = "No Products Available";
-       document.querySelector("#ForNoShow").append(pNop);
-    }
+    if(newProd.length === 0) NotAvailable()
     else ShowProductsOnMain(newProd,contain_Div,cartArray)
 }
 function priceRange6(){
@@ -758,14 +826,213 @@ function priceRange6(){
     let newProd = products.filter(function(item){
          if(item.price > min) return item;
     })
-    if(newProd.length === 0) {
-        console.log("No no no");
-        contain_Div.innerHTML = "";
-        let pNop = document.createElement("h1");
-        pNop.textContent = "No Products Available";
-       document.querySelector("#ForNoShow").append(pNop);
-    }
+    if(newProd.length === 0) NotAvailable()
     else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+
+function brand1(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "Lakme") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand2(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "MAC") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand3(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "Maybelline") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand4(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "Sugar") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand5(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "Swiss Beauty") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand6(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "Maliao") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand7(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "Makeup Revolution") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand8(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "ColorBar") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand9(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "NY Bae") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand10(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "L'Oreal Paris") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand11(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "Purplle") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+
+function discount1(){
+    let max = 0.1;
+    let newProd = products.filter(function(item){
+         if(item.discount <= max) return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function discount2(){
+    let min = 0.1
+    let max = 0.2;
+    let newProd = products.filter(function(item){
+         if(item.discount > min && item.discount <= max) return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function discount3(){
+    let min = 0.2
+    let max = 0.3;
+    let newProd = products.filter(function(item){
+         if(item.discount > min && item.discount <= max) return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function discount4(){
+    let min = 0.3
+    let max = 0.4;
+    let newProd = products.filter(function(item){
+         if(item.discount > min && item.discount <= max) return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function discount5(){
+    let min = 0.4
+    let newProd = products.filter(function(item){
+         if(item.discount > min) return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+
+function skin4(){
+    let newProd = products.filter(function(item){
+         if(item.skin_type === "Combination Skin") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function skin6(){
+    let newProd = products.filter(function(item){
+         if(item.skin_type === "All Skin Types") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function skin7(){
+    let newProd = products.filter(function(item){
+         if(item.skin_type === "Acne-Prone Skin") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+
+function discount_Desc(){
+     let newProd = products.sort(function(a,b){
+             return b.discount - a.discount ;
+         });
+    ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function  highTolow(){
+    let  newProd = products.sort(function(a,b){
+             return b.price - a.price ;
+         });
+    ShowProductsOnMain(newProd,contain_Div,cartArray)     
+}
+function lowTohigh(){
+    let  newProd = products.sort(function(a,b){
+             return a.price - b.price ;
+         });
+    ShowProductsOnMain(newProd,contain_Div,cartArray)     
+}
+function ratingDown(){
+    let  newProd = products.sort(function(a,b){
+             return b.rating - a.rating ;
+         });
+    ShowProductsOnMain(newProd,contain_Div,cartArray)     
+}
+
+function  hydrating(){
+    let newProd = products.filter(function(item){
+         if(item.oneBenefit === "Hydrating") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function longLasting(){
+    let newProd = products.filter(function(item){
+         if(item.oneBenefit === "Long Lasting") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function moisturizer(){
+    let newProd = products.filter(function(item){
+         if(item.oneBenefit === "Moisturizing") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function lightweight(){
+    let newProd = products.filter(function(item){
+         if(item.oneBenefit === "Light Weight") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function NotAvailable(){
+    contain_Div.innerHTML = "";
+    document.querySelector("#ForNoShow").innerHTML = "";
+    let pNop = document.createElement("h1");
+    pNop.textContent = "No Products Available";
+    document.querySelector("#ForNoShow").append(pNop);  
 }
 
 </script>
