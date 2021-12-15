@@ -117,22 +117,25 @@
                 font-weight: bold;
             }
             #container_products{
-                width: 70%;
+                width: 73%;
                 margin: auto;
                 display: grid;
-                grid-template-columns: repeat(4,21%);
+                grid-template-columns: repeat(4,20%);
                 justify-content: center;
-                column-gap: 5%;
-                row-gap: 30px;               
+                column-gap: 6.8%;
+                row-gap: 35px; 
+                /* border: 1px solid blue;  */
             }
             #container_products > div{
                 height: 300px;
                 line-height: 2px;
+                /* border: 1px solid blue; */
             }
 
             #container_products > div > img{
-                height: 75%;
-                width: 100%
+                width: 206px;
+                height: 200px;
+                /* border: 1px solid blue; */
             }
 
             #nameofprod{
@@ -144,9 +147,80 @@
                 -webkit-box-orient: vertical;
                 font-size: 14px;
                 font-weight: 500;
-                color : black;
-                line-height: 15px;
+
+                color: #566770;
+                font-size: 16px;
+                text-align: left;
+                letter-spacing: 0.5px;
+                margin-top: 5px;
+                line-height: 21px;
+                font-family: 'Aqleema-Regular';
             }
+            #ratingOf{
+                width: max-content;
+                height: 5%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                color: white;
+                background-color: #27aa0b;
+                border-radius: 3px;
+                color: #fff;
+                padding: 3px 5px 0px 5px;
+                font-size: 11px;
+                font-weight: bold;
+                font-family: 'Aqleema-Medium';
+            }
+            #priceOf{
+                font-size: 16px;
+                color: #2c414c;
+                font-weight: bold;
+                letter-spacing: 0.5px;
+            }
+
+            #overlay {
+            position: absolute;
+           
+            /* 
+            bottom: 0;
+            left: 0;
+            right: 0; */
+            width: 18%;
+            /* height: 100%; */
+            opacity: 0;
+            transition: .3s ease;
+            }
+
+        #Mdiv:hover #overlay {
+            opacity: 1;
+        }
+
+        #toCartBtn1{
+            font-size: 20px;
+            position: relative;
+            /* 
+            top: 90%;
+            
+            margin-top: 70%; */
+            transform: translate(-6%, -6%);
+            -ms-transform: translate(-6%, -6%);
+            width: 100%;
+            top: 173px;
+            padding: 4px 0px;
+            padding-bottom: 3px;
+            display: block;
+            text-align: center;
+            background-color: #2c414c;
+            border: none !important;
+            z-index: 10;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        /* #toCartBtn1:hover{
+            background-color: rgb(247, 97, 10);
+        } */
 
        </style>
     </head>
@@ -200,6 +274,9 @@
 </html>
 <script>
     let count = 0; 
+
+    let cartArray = JSON.parse(localStorage.getItem("cartItems")) || [];
+
     let slideshowData = [
         "https://media6.ppl-media.com/mediafiles/ecomm/misc/1637066830_nyb-web-category-banner-1280x400-1.gif?tr=f-gif",
         'https://media6.ppl-media.com/mediafiles/ecomm/misc/1638952181_nybae-lipstips-web-brand-banner-1280_400.jpg',
@@ -621,26 +698,6 @@ let products = [
 
 
 
-
-
-    {
-        id : "AE",
-        title : " NY Bae Blurin' Primer|Face Primer|Blurs Out Pores & Fine Lines| Enriched With Vitamin E| Radiant Glow| All Skin Types| Matte products",
-        rating : 3.9,
-        price : 215,
-        discount: 0.12,
-        qty : 1,
-        description : "NY Bae's Blurin Primer is the hot goss of Bae town. It's every girl's must have. And for good reasons too. As you dab-dab across your face, the light-weight immediately makes you go' wooohoo! But did you know it has extra super-powers too? Of course, it does a fab job on hiding acne scars, blemishes, minimising pores and leaving behind a perfect, even-toned finish. But that apart, it even hydrates and nourishes the skin. Didn't we tell you it's an absolute wonder to have? So go prep up and hit the town with flawless skin.",
-        best_before : "31 Jan 2023" ,
-        skin_concern : "Fine lines and Pores",
-        skin_type : "All skin types",
-        Speciality : "Enriched with Vitamin E,oil Free",
-        finish : "Matte",
-        Benefits : "Blurs out Pores & Fine Lines  Enriched with Vitamin E, Even skin tone, Hydrating, Light Weight",
-        type: "primer",
-        origin : "India",
-        image_url : ["https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_10_display_1631800058_e824cd72.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_6_display_1623941086_74d4845f.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_4_display_1623941083_ab8853d8.jpg","https://media6.ppl-media.com/mediafiles/ecomm/promo/1626774900_primer-a8_04.jpg"]
-    },
     {
         id : "AF",
         title : "Lakme Aboslute Blur Perfect Makeup Primer,10g",
@@ -658,6 +715,24 @@ let products = [
         type: "primer",
         origin : "India",
         image_url : ["https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_7_display_1631104552_882ba13c.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_10_display_1631104554_9e79acb9.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_8_display_1631104552_aa52c3b0.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_11_display_1631104554_ff8fe6bb.jpg"]
+    },
+    {
+        id : "AE",
+        title : " NY Bae Blurin' Primer|Face Primer|Blurs Out Pores & Fine Lines| Enriched With Vitamin E| Radiant Glow| All Skin Types| Matte products",
+        rating : 3.9,
+        price : 215,
+        discount: 0.12,
+        qty : 1,
+        description : "NY Bae's Blurin Primer is the hot goss of Bae town. It's every girl's must have. And for good reasons too. As you dab-dab across your face, the light-weight immediately makes you go' wooohoo! But did you know it has extra super-powers too? Of course, it does a fab job on hiding acne scars, blemishes, minimising pores and leaving behind a perfect, even-toned finish. But that apart, it even hydrates and nourishes the skin. Didn't we tell you it's an absolute wonder to have? So go prep up and hit the town with flawless skin.",
+        best_before : "31 Jan 2023" ,
+        skin_concern : "Fine lines and Pores",
+        skin_type : "All skin types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Blurs out Pores & Fine Lines  Enriched with Vitamin E, Even skin tone, Hydrating, Light Weight",
+        type: "primer",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_10_display_1631800058_e824cd72.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_6_display_1623941086_74d4845f.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_4_display_1623941083_ab8853d8.jpg","https://media6.ppl-media.com/mediafiles/ecomm/promo/1626774900_primer-a8_04.jpg"]
     },
     {
         id : "AG",
@@ -680,7 +755,7 @@ let products = [
     {
         id : "AH",
         title : "Purplle True Jewel 24K Gold Primer Mattel Oil Control Shine Controll Long Lasting Lightweight| Dermatologically Tested - (20 ml)",
-        rating : 4.3,
+        rating : 1.8,
         price : 450,
         discount: 0.12,
         qty : 1,
@@ -776,29 +851,57 @@ let products = [
 let containDiv = document.querySelector("#container_products");
 
 ShowProductsOnMain(products)
+
 function ShowProductsOnMain(products){
     containDiv.innerHTML = "";
-    products.map(function(item){
+    products.map(function(item,index){
         let Mdiv = document.createElement("div");
         Mdiv.setAttribute("id","Mdiv");
-        Mdiv.style.cursor = "pointer"
-        Mdiv.addEventListener("click", function(){
-            redirectedProduct(item);
-        })
+        Mdiv.style.cursor = "pointer";
+
+        var overlayDiv = document.createElement('div');
+        overlayDiv.setAttribute("id","overlay");
+
+        let btn = document.createElement("button");
+        btn.textContent = "ADD TO CART";
+        btn.setAttribute("id","toCartBtn1")
+        btn.addEventListener("click",function(){
+            addtoCart(item,index)
+        });
+
+        overlayDiv.append(btn);
+        Mdiv.append(overlayDiv);
 
         let image = document.createElement("img");
         image.src = item.image_url[0];
+        image.onclick = ()=> {
+            redirectedProduct(item);
+        };
 
         let title = document.createElement("p");
         title.setAttribute("id","nameofprod")
         title.textContent = item.title;
+        title.addEventListener("click", function(){
+            redirectedProduct(item);
+        });
 
         let price = document.createElement("p");
+        price.setAttribute("id","priceOf")
         price.textContent = "₹ " + item.price ;
+        price.addEventListener("click", function(){
+            redirectedProduct(item);
+        });
 
-        let rating = document.createElement("p");
-        rating.textContent = item.rating ;
-        rating.setAttribute("id","ratingOf")
+        let rating = document.createElement("div");
+        let ratingtag = document.createElement("p");
+        ratingtag.innerHTML = `${item.rating} <i style="font-size:8px" class="fas fa-star"></i>` ;
+        rating.setAttribute("id","ratingOf");
+        rating.append(ratingtag);
+        if(item.rating < 4.0 && item.rating >= 2) rating.style.backgroundColor = "#cdd614";
+        if(item.rating < 2.0) rating.style.backgroundColor = "#ff7800"
+        rating.addEventListener("click", function(){
+            redirectedProduct(item);
+        });
 
         Mdiv.append(image, title, price,rating);
         containDiv.append(Mdiv);
@@ -811,7 +914,24 @@ function redirectedProduct(item){
     localStorage.setItem("DataIndivi",JSON.stringify(data));
     window.location.href = "productDetails.html";
 }
+
+function addtoCart(item,index){
+   console.log(item);
+   console.log(index);
+   let toCartItem = item;
+   let uniqueId = item.id;
+   let count = 0;
+   for(let i = 0; i < cartArray.length ; i++){
+       if(uniqueId == cartArray[i].id) alert("Item already exists in cart");
+       else count++;
+   }
+   if(count == cartArray.length){
+      document.querySelector("#toCartBtn1").innerHTML = "ADDED TO CART";
+      cartArray.push(toCartItem);
+      localStorage.setItem("CartItems", JSON.stringify(cartArray));  
+   }
+   
+}
+
+
 </script>
-
-
-
