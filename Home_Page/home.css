@@ -24,7 +24,7 @@
 
 /* main div */
 #Home_div {
-    width: 83%;
+    width: 90%;
     margin: auto;
   }
 
@@ -108,6 +108,166 @@
     color: rgb(192, 192, 192);
   }
 
+
+  /* card vala slider */
+
+  .brand_slider {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slider {
+    grid-gap: 1rem;
+    gap: 2.7rem;
+    padding: 0 0.8rem;
+    margin: 0 -0.8rem;
+    display: flex;
+    left: 0;
+    transition: left 0.3s ease-out;
+    position: relative;
+  }
+  
+  .Slider_card_div {
+    border: 1 solid #fff;
+    box-sizing: content-box;
+    min-width: 15rem;
+    max-width: 15rem;
+  }
+  
+  .slider_imgbox {
+    flex-shrink: 0;
+    width: 100%;
+  }
+  
+  .sliderCard_to_page,
+  .sliderCard_to_page:active,
+  .sliderCard_to_page:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .sliderCard_to_page img {
+    width: 100%;
+  }
+  
+  
+  .brand_slider .buttons {
+    position: absolute;
+    top: 40%;
+    text-decoration: none;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    margin: -0.1rem;
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+  }
+  .brand_slider .buttons1 {
+    position: absolute;
+    top: 40%;
+    text-decoration: none;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    margin: -0.1rem;
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+  }
+  
+  #rightSwipe {
+    right: 0;
+  }
+  #rightSwipe1 {
+    right: 0;
+  }
+  
+  #slider_heading{
+       font-family: 'Open Sans Condensed', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 0px 0 10px 0;
+      color: #2c414c;
+  }
+#each_slider_heading{
+  width: 83%;
+  margin: auto;
+}
+
+/* last slider of the page */
+
+.brand_slider_div {
+  width: 90%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider_div {
+  grid-gap: 1rem;
+  gap: 3rem;
+  padding: 0 0.8rem;
+  margin: 0 -0.8rem;
+  display: flex;
+  left: 0;
+  transition: left 0.3s ease-out;
+  position: relative;
+}
+
+.slider_box_f {
+  border: 1 solid #fff;
+  box-sizing: content-box;
+  min-width: 15rem;
+  max-width: 15rem;
+}
+
+.slid_boxer {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.link_sliderTopage,
+.link_sliderTopage:active,
+.link_sliderTopage:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link_sliderTopage img {
+  width: 100%;
+}
+
+
+.brand_slider_div .buton {
+  position: absolute;
+  top: 40%;
+  text-decoration: none;
+  padding-left: 0.1rem;
+  padding-right: 0.2rem;
+  margin: -0.1rem;
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+#rightSwipe10 {
+  right: 0;
+}
+
+#slider_heading{
+     font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0px 0 10px 0;
+    color: #2c414c;
+}
+
+
   /* purple grid 1 */
 
   .grid-container {
@@ -119,45 +279,69 @@
 
     padding: 10px;
   }
-  .grid-item {
+  .grid-item >img {
+    width: 99%;
+    height: 99%;
     /* border: 1px solid rgba(0, 0, 0, 0.8); */
   }
 
-  #heading_img {
-    width: 100%;
+  #heading_img >img{
+    width: 99%;
   }
 
   /* white skine type section  */
 #skinType_section{
+ width: 100%;
 display: flex;
 }
 #left_white_part{
-    flex: 4;
+    flex: 3;
+    padding: 3%;
 }
 #right_image{
-    flex: 1;
+    flex: 2;
+    
 }
 #right_image > img{
-    height: 640px;
-    width: 320px;
-    margin-right: 50px;
+    height: 90%;
+    width: 60%;
+    margin-right: 1%;
+}
+#left_white_part>h2{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0px 0 10px 0;
+  color: #2c414c;
 }
 
 #three_skin_type{
+  width: 100%;
     display: flex;
 }
+.skin_imgage{
+  height: 100%;
+  width: 100%;
+}
 .skin_imgage > img{
-    height: 640px;
-    width: 320px;
+    height: 40%;
+    width: 60%;
+   
+   
 }
 
 #skin_tone{
     display: flex;
 }
-
+.tone_img{
+  width: 100%;
+  height: 100%;
+}
 .tone_img > img{
-    height: 610px;
-    width: 420px;
+    height: 100%;
+    width: 100%;
 }
 
 .grid-container_four_cards {
@@ -198,8 +382,14 @@ display: flex;
 
 
 
+/* heading image hereon fallow this css */
 
-
+.heading_img1{
+  width: 99%;
+}
+.heading_img1>img{
+  width: 100%;
+}
 /* home secondary div */
 
 /* brand store */
@@ -210,7 +400,10 @@ display: flex;
   margin-left: 2%;
   
 }
-
+.grid-item_brands > div{
+  height: 99%;
+  width: 99%;
+}
 .grid-item_brands > img{
   width: 90%;
   height: 90%;
@@ -218,18 +411,22 @@ display: flex;
 
 /* trending serches */
 #trending_search{
+  width: 100%;
   display: flex;
 }
 
-.trend_search{
-  padding: 1%;
+.trend_search >img{
+  width: 105%;
+  height: 102%;
+  padding: 3%;
+  margin: 0 80%;
 }
 
 
 
 /* lifestyle section */
 #Home_secondary_div{
-  width: 83%;
+  width: 90%;
   margin: auto;
 }
 
@@ -254,7 +451,7 @@ display: flex;
 /* marketing stuff insta*/
 
 #insta_vid{
-  width: 83%;
+  width: 90%;
   margin: auto;
 }
 #insta_videos{
@@ -266,10 +463,13 @@ display: flex;
 }
 
 /* innovation at its peak */
-
 #innovation_div{
-  width: 83%;
+  width: 90%;
   margin: auto;
+}
+#innovation_div > #inno_div{
+  width: 100%;
+ 
 }
 #inno_div{
   display: flex;
@@ -286,19 +486,52 @@ display: flex;
 /* pocket friendly store */
 
 #pocket_friendly{
-  width: 83%;
+  width: 90%;
   margin: auto;
 }
 #pocket_friend{
+  width: 99%;
   display: flex;
 }
 .pocket_div {
   height: 100%;
-  width: 105%;
+  width: 95%;
+  
 }
 .pocket_div > img{
   height: 100%;
-  width: 105%;
-  padding: 2% 0;
-  
+  width: 100%;
+ 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
