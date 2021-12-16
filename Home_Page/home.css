@@ -7,13 +7,13 @@
 
 /* top slider */
 
-#slideShow1{
+#slideShow_top{
   /* width: 83%; */
   margin: auto;
   height: 410px;
   cursor: pointer;
 }
-#slideShow1 {
+#slideShow_top {
  background-image: url();
 }
 #path{
