@@ -1,0 +1,1330 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Skeleton</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/productPage.css">
+    </head>
+    <body>
+        <div id="slideShow1">
+            <span>  
+                <i  style="margin-left:3%;margin-top:190px; font-size: 30px;color:grey" id="left"; class="fas fa-chevron-left"></i>  
+                <i style="margin-left: 91%; text-align:right;font-size: 30px;color:grey" id="right" class="fas fa-chevron-right"></i>  
+            </span>
+        </div>
+        <div id="path">  <span> <a href="home.html"> Home </a> &ensp; > &ensp; <a href="home.html"> Brand </a> &ensp; > &ensp; <a style="color: grey"href="FaceMakeup.html"> Face Makeup </a> </span> </div>
+        <div id="title_div"> <h1 id="head_title">FACE MAKEUP PRODUCTS</h1>  &ensp; <a id= "view_all" href="FaceMakeup.html"> View all</a> </div>
+        <div id="filter_div">
+            <div id="brand_sort"> 
+                <p> Brands &ensp; <i style="font-size: 12px" class="fas fa-chevron-down"></i>  <br> All </p> 
+            </div>
+            <div></div>
+            <div id="price_sort">
+                <p> Price Range &ensp; <i style="font-size: 12px" class="fas fa-chevron-down"></i>  <br> All </p> 
+            </div>
+            <div></div>
+            <div id="discount_sort">
+                <p> Discounts &ensp; <i style="font-size: 12px" class="fas fa-chevron-down"></i>  <br> All </p> 
+            </div>
+            <div></div>
+            <div id="benefits_sort">
+                <p> Benefits &ensp; <i style="font-size: 12px" class="fas fa-chevron-down"></i>  <br> All </p> 
+            </div>
+            <div></div>
+            <div id="skin_sort">
+                <p> Skin type &ensp; <i style="font-size: 12px" class="fas fa-chevron-down"></i>  <br> All </p> 
+            </div>
+            <div></div>
+            <div id="moreFilters_sort">
+                <p> More filters option &ensp; <i style="font-size: 12px" class="fas fa-chevron-down"></i>  <br> 10 more filters </p> 
+            </div>
+            <div></div>
+            <div id="relevance_sort">
+                <p> Sort By &ensp; <i style="font-size: 12px" class="fas fa-chevron-down"></i>  <br> Relevance </p> 
+            </div>
+        </div>
+        <div id="sort_details"> 
+           
+        </div>
+        <p id="heading_sub1"> ALL PRODUCTS</p>
+        <div id="ForNoShow"></div>
+        <div id="container_products">
+
+        </div>
+       
+    </body>
+</html>
+<script type="module">
+    let count = 0; 
+
+    let cartArray = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    import ShowProductsOnMain from "./scripts/products.js";
+
+    // From Here till next Comment this is all related to slideShow1
+    // From Here till next Comment this is all related to slideShow1
+
+    let slideshowData = [1,2,3,4,5,6,7];
+
+    document.querySelector("#slideShow1").style.backgroundImage = "url(https://media6.ppl-media.com/mediafiles/ecomm/misc/1637066830_nyb-web-category-banner-1280x400-1.gif?tr=f-gif)"
+ 
+    function slideShow(count){
+       if(count == 0) document.querySelector("#slideShow1").style.backgroundImage = "url(https://media6.ppl-media.com/mediafiles/ecomm/misc/1637066830_nyb-web-category-banner-1280x400-1.gif?tr=f-gif)"
+       if(count == 1) document.querySelector("#slideShow1").style.backgroundImage = "url(https://media6.ppl-media.com/mediafiles/ecomm/misc/1638952181_nybae-lipstips-web-brand-banner-1280_400.jpg)"
+       if(count == 2) document.querySelector("#slideShow1").style.backgroundImage = "url(https://media6.ppl-media.com/mediafiles/ecomm/misc/1638952410_pu-web-brand-banner-1280x400_.jpg)";
+       if(count == 3) document.querySelector("#slideShow1").style.backgroundImage = "url(https://media6.ppl-media.com/mediafiles/ecomm/misc/1634154410_concealer-palette-web-banner.gif?tr=f-gif)"
+       if(count == 4) document.querySelector("#slideShow1").style.backgroundImage = "url(https://media6.ppl-media.com/mediafiles/ecomm/misc/1634154767_web-banner-1280_400.jpg)"
+       if(count == 5) document.querySelector("#slideShow1").style.backgroundImage = "url(https://media6.ppl-media.com/mediafiles/ecomm/misc/1639362729_clinique_cateogory_web.jpg)"
+       if(count == 6) document.querySelector("#slideShow1").style.backgroundImage = "url(https://media6.ppl-media.com/mediafiles/ecomm/misc/1630337163_nybae-rise-and-shine-web-category-banner-1280_400.jpg)"
+    }
+
+    document.querySelector("#left").addEventListener("click",leftSide)
+    document.querySelector("#right").addEventListener("click",rightSide)
+
+    function leftSide() {
+        if(count == 0 ){
+            count = slideshowData.length -1 ;    
+        } 
+        else {
+            count--;
+        }
+        slideShow(count);
+    }
+
+    function rightSide() {
+       if(count == slideshowData.length-1) {
+           count = 0;
+       }
+       else {
+        count++;
+       }
+       slideShow(count);
+    }
+
+  let timer = setInterval(function() {
+        count++;
+        if(count == slideshowData.length-1) count = 0;
+        else if (count == 0)  count = slideshowData.length -1 ;
+        slideShow(count);
+    },3000);
+
+    // From Up till this Comment everything is related to slideShow1
+    // From Up till this Comment everything is related to slideShow1
+
+    //This is related to filters function on product page based on brand
+document.querySelector("#brand_sort").addEventListener("click",brand_sort);
+function brand_sort(){
+
+   document.querySelector("#sort_details").innerHTML = ""; 
+
+   let sortDiv = document.createElement("div");
+   sortDiv.setAttribute("id","brandSort");
+   sortDiv.style.marginLeft = "5.5%";
+   sortDiv.onmouseleave = noShow;
+   
+   let l1l1 = document.createElement("p");
+   l1l1.setAttribute("id","l1");
+   l1l1.textContent = "Lakme";
+   l1l1.onclick = () => {
+       brand1()
+   }
+
+   let l1l2 = document.createElement("p");
+   l1l2.setAttribute("id","l2");
+   l1l2.textContent = "Bobbi Brown";
+   l1l2.onclick = () => {
+       brand2()
+   }
+
+   let l1l3 = document.createElement("p");
+   l1l3.setAttribute("id","l3");
+   l1l3.textContent = "Maybelline";
+   l1l3.onclick = () => {
+       brand3()
+   }
+
+   let l1l4 = document.createElement("p");
+   l1l4.setAttribute("id","l4");
+   l1l4.textContent = "MAC";
+   l1l4.onclick = () => {
+       brand4()
+   }
+
+   let l1l5 = document.createElement("p");
+   l1l5.setAttribute("id","l5");
+   l1l5.textContent = "Swiss Beauty"; 
+   l1l5.onclick = () => {
+       brand5()
+   }  
+   
+   let l1l6 = document.createElement("p");
+   l1l6.setAttribute("id","l6");
+   l1l6.textContent = "Maliao"; 
+   l1l6.onclick = () => {
+       brand6()
+   }  
+   
+   let l1l7 = document.createElement("p");
+   l1l7.setAttribute("id","l7");
+   l1l7.textContent = "Makeup Revolution";
+   l1l7.onclick = () => {
+       brand7()
+   }
+
+
+   let l1l8 = document.createElement("p");
+   l1l8.setAttribute("id","l8");
+   l1l8.textContent = "Colorbar";
+   l1l8.onclick = () => {
+       brand8()
+   } 
+
+   let l1l9 = document.createElement("p");
+   l1l9.setAttribute("id","l9");
+   l1l9.textContent = "NY Bae"; 
+   l1l9.onclick = () => {
+       brand9()
+   }
+
+   let l1l10 = document.createElement("p");
+   l1l10.setAttribute("id","l9");
+   l1l10.textContent = "L'Oreal Paris";
+   l1l10.onclick = () => {
+       brand10()
+   } 
+
+   let l1l11 = document.createElement("p");
+   l1l11.setAttribute("id","l11");
+   l1l11.textContent = "Purplle";
+   l1l11.onclick = () => {
+       brand11()
+   } 
+
+   sortDiv.append(l1l1,l1l2,l1l3,l1l4,l1l5,l1l6,l1l7,l1l8,l1l9,l1l10,l1l11);
+   document.querySelector("#sort_details").append(sortDiv);
+
+}
+    //From Up till this Comment everything is related to brand Sort
+
+    //This is related to filters function on product page based on price
+document.querySelector("#price_sort").addEventListener("click",price_sort);
+function price_sort() {
+   document.querySelector("#sort_details").innerHTML = ""; 
+
+   let sortDiv = document.createElement("div");
+   sortDiv.setAttribute("id","priceSort");
+   sortDiv.style.marginLeft = "17.5%";
+   sortDiv.style.height = "90%";
+   sortDiv.onmouseleave = noShow1;
+   
+   let l1l1 = document.createElement("p");
+   l1l1.setAttribute("id","l1");
+   l1l1.textContent = "Rs.100 And Below";
+   l1l1.onclick = () =>{
+      priceRange1(); 
+   }
+
+   let l1l2 = document.createElement("p");
+   l1l2.setAttribute("id","l2");
+   l1l2.textContent = "Rs. 100 - Rs. 200";
+   l1l2.onclick = () =>{
+      priceRange2(); 
+   }
+  
+   let l1l3 = document.createElement("p");
+   l1l3.setAttribute("id","l3");
+   l1l3.textContent = "Rs. 200 - Rs. 400";
+   l1l3.onclick = () =>{
+      priceRange3(); 
+   }
+
+   let l1l4 = document.createElement("p");
+   l1l4.setAttribute("id","l4");
+   l1l4.textContent = "Rs. 400 - Rs. 1000";
+   l1l4.onclick = () =>{
+      priceRange4();
+   }
+
+   let l1l5 = document.createElement("p");
+   l1l5.setAttribute("id","l5");
+   l1l5.textContent = "Rs. 1000 - Rs. 3000";
+   l1l5.onclick = () =>{
+      priceRange5(); 
+   }   
+   
+   let l1l6 = document.createElement("p");
+   l1l6.setAttribute("id","l6");
+   l1l6.textContent = "Rs. 3000 And Above";
+   l1l6.onclick = () =>{
+      priceRange6(); 
+   }  
+
+   sortDiv.append(l1l1,l1l2,l1l3,l1l4,l1l5,l1l6);
+   document.querySelector("#sort_details").append(sortDiv);
+}
+    //From Up till this Comment everything is related to price Sort
+
+    //This is related to filters function on product page based on discount
+document.querySelector("#discount_sort").addEventListener("click",discount_sort);
+function discount_sort() {
+
+   document.querySelector("#sort_details").innerHTML = ""; 
+
+   let sortDiv = document.createElement("div");
+   sortDiv.setAttribute("id","discountSort");
+   sortDiv.style.marginLeft = "30.5%";
+   sortDiv.style.height = "80%";
+   sortDiv.onmouseleave = noShow2;
+   
+   let l1l1 = document.createElement("p");
+   l1l1.setAttribute("id","l1");
+   l1l1.textContent = "Up to 10%";
+   l1l1.onclick = () => {
+       discount1()
+   }
+
+   let l1l2 = document.createElement("p");
+   l1l2.setAttribute("id","l2");
+   l1l2.textContent = "10% to 20%";
+   l1l2.onclick = () => {
+       discount2()
+   }
+
+   let l1l3 = document.createElement("p");
+   l1l3.setAttribute("id","l3");
+   l1l3.textContent = "20% to 30%";
+   l1l3.onclick = () => {
+       discount3()
+   }
+
+   let l1l4 = document.createElement("p");
+   l1l4.setAttribute("id","l4");
+   l1l4.textContent = "30% to 40%";
+   l1l4.onclick = () => {
+       discount4()
+   }
+
+   let l1l5 = document.createElement("p");
+   l1l5.setAttribute("id","l5");
+   l1l5.textContent = "More than 40%";
+   l1l5.onclick = () => {
+       discount5();
+   }   
+   
+   sortDiv.append(l1l1,l1l2,l1l3,l1l4,l1l5);
+   document.querySelector("#sort_details").append(sortDiv);
+}
+    //From Up till this Comment everything is related to discount Sort
+
+    //This is related to filters function on product page based on benefit
+document.querySelector("#benefits_sort").addEventListener("click",benefits_sort);
+function benefits_sort(){
+
+   document.querySelector("#sort_details").innerHTML = ""; 
+
+   let sortDiv = document.createElement("div");
+   sortDiv.setAttribute("id","benefitsSort");
+   sortDiv.style.marginLeft = "42.5%";
+   sortDiv.style.height = "95%";
+   sortDiv.onmouseleave = noShow3;
+   
+   let l1l1 = document.createElement("p");
+   l1l1.setAttribute("id","l1");
+   l1l1.textContent = "Hydrating";
+   l1l1.onclick = () => {
+       hydrating();
+   }
+
+   let l1l2 = document.createElement("p");
+   l1l2.setAttribute("id","l2");
+   l1l2.textContent = "Moisturizing";
+   l1l2.onclick = () => {
+       moisturizer()
+   }
+
+   let l1l3 = document.createElement("p");
+   l1l3.setAttribute("id","l3");
+   l1l3.textContent = "Nourishing";
+
+   let l1l4 = document.createElement("p");
+   l1l4.setAttribute("id","l4");
+   l1l4.textContent = "Smudgeproof";
+   l1l4.onclick = () => {
+        Smudgeproof()
+   }
+
+   let l1l5 = document.createElement("p");
+   l1l5.setAttribute("id","l5");
+   l1l5.textContent = "waterproof";   
+   
+   let l1l6 = document.createElement("p");
+   l1l6.setAttribute("id","l6");
+   l1l6.textContent = "Sweat Proof";
+   l1l6.onclick = () => {
+        Sweatproof()
+   }   
+   
+   let l1l7 = document.createElement("p");
+   l1l7.setAttribute("id","l7");
+   l1l7.textContent = "Sun Protection"; 
+
+   let l1l8 = document.createElement("p");
+   l1l8.setAttribute("id","l8");
+   l1l8.textContent = "Easy to Use";
+   l1l8.onclick = () => {
+        Easy_to_Use()
+   } 
+
+   let l1l9 = document.createElement("p");
+   l1l9.setAttribute("id","l9");
+   l1l9.textContent = "Strong Packaging"; 
+
+   let l1l10 = document.createElement("p");
+   l1l10.setAttribute("id","l9");
+   l1l10.textContent = "light weight"; 
+   l1l10.onclick = () => {
+       lightweight()
+   }
+
+   let l1l11 = document.createElement("p");
+   l1l11.setAttribute("id","l11");
+   l1l11.textContent = "Non sticky"; 
+
+   let l1l12 = document.createElement("p");
+   l1l12.setAttribute("id","l12");
+   l1l12.textContent = "Long Lasting";
+   l1l12.onclick = () => {
+       longLasting()
+   }
+
+   sortDiv.append(l1l1,l1l2,l1l3,l1l4,l1l5,l1l6,l1l7,l1l8,l1l9,l1l10,l1l11,l1l12);
+   document.querySelector("#sort_details").append(sortDiv);
+
+}
+    //From Up till this Comment everything is related to benefit Sort
+
+    //This is related to filters function on product page based on Skin - Type
+document.querySelector("#skin_sort").addEventListener("click",skin_sort);
+function skin_sort(){
+
+   document.querySelector("#sort_details").innerHTML = ""; 
+
+   let sortDiv = document.createElement("div");
+   sortDiv.setAttribute("id","skinSort");
+   sortDiv.style.marginLeft = "55%";
+   sortDiv.style.height = "95%";
+   sortDiv.onmouseleave = noShow4;
+   
+   let l1l1 = document.createElement("p");
+   l1l1.setAttribute("id","l1");
+   l1l1.textContent = "All Skin Types";
+   l1l1.onclick = () => {
+       skin6();
+   }
+
+   let l1l2 = document.createElement("p");
+   l1l2.setAttribute("id","l2");
+   l1l2.textContent = "Dry Skin";
+
+   let l1l3 = document.createElement("p");
+   l1l3.setAttribute("id","l3");
+   l1l3.textContent = "Oily Skin";
+
+   let l1l4 = document.createElement("p");
+   l1l4.setAttribute("id","l4");
+   l1l4.textContent = "Combination Skin";
+   l1l4.onclick = () => {
+       skin4()
+   }
+
+   let l1l5 = document.createElement("p");
+   l1l5.setAttribute("id","l5");
+   l1l5.textContent = "Sensitive";   
+   
+   let l1l6 = document.createElement("p");
+   l1l6.setAttribute("id","l6");
+   l1l6.textContent = "Normal skin";   
+   
+   let l1l7 = document.createElement("p");
+   l1l7.setAttribute("id","l7");
+   l1l7.textContent = "Acne-Prone Skin"; 
+   l1l7.onclick = () => {
+       skin7();
+   }
+
+   sortDiv.append(l1l1,l1l2,l1l3,l1l4,l1l5,l1l6,l1l7);
+   document.querySelector("#sort_details").append(sortDiv);
+
+}
+    //From Up till this Comment everything is related to skin-type Sort
+
+    //This is related to filters function on product page based on relevance
+document.querySelector("#relevance_sort").addEventListener("click",relevance_sort);
+function relevance_sort(){
+
+   document.querySelector("#sort_details").innerHTML = ""; 
+
+   let sortDiv = document.createElement("div");
+   sortDiv.setAttribute("id","relevanceSort");
+   sortDiv.style.marginLeft = "90.5%";
+   sortDiv.style.width = "14%";
+   sortDiv.style.height = "95%";
+   sortDiv.onmouseleave = noShow5;
+   
+   let l1l1 = document.createElement("p");
+   l1l1.setAttribute("id","relevance1");
+   l1l1.textContent = "Relevance";
+   l1l1.style.color = "pink";
+
+   let l1l2 = document.createElement("p");
+   l1l2.setAttribute("id","disco");
+   l1l2.textContent = "Discount";
+   l1l2.onclick = () => {
+       discount_Desc();
+   }
+
+   let l1l3 = document.createElement("p");
+   l1l3.setAttribute("id","high");
+   l1l3.textContent = "High Price";
+   l1l3.onclick = () => {
+       highTolow();
+   }
+
+   let l1l4 = document.createElement("p");
+   l1l4.setAttribute("id","low");
+   l1l4.textContent = "low Price";
+   l1l4.onclick = () => {
+       lowTohigh();
+   }
+
+   let l1l5 = document.createElement("p");
+   l1l5.setAttribute("id","rating");
+   l1l5.textContent = "Average Rating";
+   l1l5.onclick = () => {
+       ratingDown();
+   }
+   
+   sortDiv.append(l1l1,l1l2,l1l3,l1l4,l1l5);
+   document.querySelector("#sort_details").append(sortDiv);
+
+}
+    //From Up till this Comment everything is related to relevance Sort
+
+
+function noShow(){
+    document.querySelector("#brandSort").style.display = "none";
+    document.querySelector("#brand_sort").addEventListener("click",brand_sort);  
+}
+function noShow1(){
+       document.querySelector("#priceSort").style.display = "none";
+    document.querySelector("#price_sort").addEventListener("click",price_sort);  
+}
+function noShow2(){
+       document.querySelector("#discountSort").style.display = "none";
+    document.querySelector("#discount_sort").addEventListener("click",discount_sort);  
+}
+function noShow3(){
+       document.querySelector("#benefitsSort").style.display = "none";
+    document.querySelector("#benefits_sort").addEventListener("click",benefits_sort);  
+}
+function noShow4(){
+       document.querySelector("#skinSort").style.display = "none";
+    document.querySelector("#skin_sort").addEventListener("click",skin_sort);  
+}
+function noShow5(){
+       document.querySelector("#relevanceSort").style.display = "none";
+    document.querySelector("#relevance_sort").addEventListener("click",relevance_sort);  
+}
+
+    //This is related to data of products Information 
+let products = [
+
+{
+        id : "AA",
+        title : " NY Bae Blurin' Primer|Face Primer|Blurs Out Pores & Fine Lines| Enriched With Vitamin E| Radiant Glow| All Skin Types| Matte products",
+        rating : 3.9,
+        brand: "NY Bae",
+        price : 215,
+        discount: 0.12,
+        qty : 1,
+        description : "NY Bae's Blurin Primer is the hot goss of Bae town. It's every girl's must have. And for good reasons too. As you dab-dab across your face, the light-weight immediately makes you go' wooohoo! But did you know it has extra super-powers too? Of course, it does a fab job on hiding acne scars, blemishes, minimising pores and leaving behind a perfect, even-toned finish. But that apart, it even hydrates and nourishes the skin. Didn't we tell you it's an absolute wonder to have? So go prep up and hit the town with flawless skin.",
+        best_before : "31 Jan 2023" ,
+        skin_concern : "Fine lines and Pores",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Blurs out Pores & Fine Lines  Enriched with Vitamin E, Even skin tone, Hydrating, Light Weight",
+        oneBenefit : "Hydrating",
+        type: "primer",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_10_display_1631800058_e824cd72.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_6_display_1623941086_74d4845f.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_4_display_1623941083_ab8853d8.jpg","https://media6.ppl-media.com/mediafiles/ecomm/promo/1626774900_primer-a8_04.jpg"]
+    },{
+        id : "AM",
+        title : "Makeup Revolution X Friends Limitless Palette",
+        rating : 4.9,
+        brand: "Makeup Revolution",
+        price : 2850,
+        discount: 0.21,
+        qty : 1,
+        description : "This Revolution Flawless Limitless 27 shade eyeshadow palette allows you to create endless looks for special occassions, natural nude everyday looks and eye poppin' looks to have people saying Oh.My.God! This palette contains everything from matte pops of blue, orange and pinks, plus shimmery olives, nudes and golds, all encased in a movie clapper board style for show stopping looks!",
+        best_before : "31 July 2024" ,
+        skin_concern : "Gorgeous eyes",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Bold & Matte, Consistent Shade, Easy To Blend, Fadeproof, Highly Pigmented",
+        oneBenefit : "Long Lasting",
+        type: "eyeshadow",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/228489/makeup-revolution-x-friends-limitless-palette_1_display_1612695732_ca9c989a.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/228489/makeup-revolution-x-friends-limitless-palette_3_display_1612695733_1149f42a.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/228489/makeup-revolution-x-friends-limitless-palette_4_display_1612695733_30b71ea6.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/228489/makeup-revolution-x-friends-limitless-palette_2_display_1612695732_8fba6a28.jpg"]
+    },
+    {
+        id : "AC",
+        title : "Swiss Beauty Real Makeup Base Highlighting Primer - Natural - Tint (32 ml) ",
+        rating : 4.3,
+        brand: "Swiss Beauty",
+        price : 349,
+        discount: null,
+        qty : 1,
+        description : "The Swiss Beauty brighten the skin, contains pearl powder. It brightens skin and make the base fit and natural shines and enchanting lustre as well. Let your skin soft and moisturizing with this highlighting primer. Use it alone and bright your skin. Mixed with highlighting primer with base products such as foundation or BB cream with a scale of 1:1. After press on palm apply them on the face to finish the base. After finishing the base apply the product on the area where need to be highlighted, make the skin more glossy",
+        best_before : "31 Jan 2023" ,
+        skin_concern : "Dry Skin, Dull Skin, Fine Lines",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Radiant Finish",
+        Benefits : "Evens Skin Tone, Light Weight, Minimizing Pores, Moisturizing, Skin Brightening",
+        oneBenefit : "Moisturizing",
+        type: "primer",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_1_display_1590792783_75d33aec.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_2_display_1590792784_5bb3dd61.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_3_display_1590792785_20ae436d.jpg","https://media4.purplle.com/static/img/brand//__1619086150_1647f507.jpg"]
+    },
+    {
+        id : "AD",
+        title : "Purplle True Jewel 24K Gold Primer Mattel Oil Control Shine Controll Long Lasting Lightweight| Dermatologically Tested - (20 ml)",
+        rating : 4.3,
+        brand: "Purplle",
+        price : 450,
+        discount: 0.12,
+        qty : 1,
+        description : "Hey one with a golden heart, let your face channel your inner radiance with Purplle's True Jewel 24K Gold Primer. Purplle's True Jewel 24K Gold Primer is a total must-have for those who believe and know the true beauty of a good primer. This amazing primer masks fine lines and uneven texture, making skin marvellously soft and smooth. It is a perfect base for makeup as it holds the foundation in place for long hours. It instantly melts into the skin and helps retain moisture. It helps smooth out fine lines, helps reduce pores and tightens facial features. It also helps imparts a sheer glow & leaves skin an even finish under makeup sinks into the skin to provide moisture. It also helps neutralise redness for you to build up your base on. It's innovative light reflective gold flakes give a wonderful glow. The formula holds on your makeup up for a long time for a flawless looking shine. Say hello to a BFF for your skin",
+        best_before : "31 Jan 2023" ,
+        skin_concern : "Blemishes, Enlarged Pores, Fine Lines And Pores, Rough Skin, Uneven Skin Texture",
+        skin_type : "All Skin Types",
+        Speciality : "Cruelty Free, Dermatologically Tested,Enriched with Vitamin E,oil Free",
+        finish : "Illuminating",
+        Benefits : "Blurs Fine Lines, Light Weight, Mattifying, Minimizes Pores, Oil Control",
+        oneBenefit : "Light Weight",
+        type: "primer",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_10_display_1628078492_d1932184.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_15_display_1628077466_636ffaff.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_9_display_1596000695_5cecb9c8.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_11_display_1596000711_5a3df986.jpg"]
+    },
+    {
+        id : "AE",
+        title : "Maybelline New York Fit me Primer Matte + Poreless",
+        rating : 4.2,
+        brand: "Maybelline",
+        price : 499,
+        discount: 0.15,
+        qty : 1,
+        description : "Maybelline New York -  Fit Me Matte and Poreless primer is a melting gel cream primer that fits skin texture for a longer lasting flawless matte look.The Fit me matte + poreless primer makeup is best suited for normal to oily skin.The Maybelline Fit Me Matte and Poreless primer for oily skin has blurring powders that absorbs and controls oil. Can be worn with or without a moisturizer.",
+        best_before : "29 February 2024" ,
+        skin_concern : "Dull skin, Fines Lines",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Even Skin Tone, Minimizing Pores, Oil Control, Radiant Skin, Retains Moisture",
+        oneBenefit : "Even Skin Tone",
+        type: "primer",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/227298/maybelline-new-york-fit-me-primer-matte-poreless_8_display_1634019309_3768fc1f.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/227298/maybelline-new-york-fit-me-primer-matte-poreless_10_display_1627888064_7258557d.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/227298/maybelline-new-york-fit-me-primer-matte-poreless_12_display_1627888065_be0d3e05.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/227298/maybelline-new-york-fit-me-primer-matte-poreless_11_display_1627888065_b0735d26.jpg"]
+    },
+    {
+        id : "AF",
+        title : "Purplle Ultra HD Matte Mini Liquid Lipstick| Long Lasting |Transferproof |Smudgeproof| Red - My First Hook-up 11 (1.6 ml)",
+        rating : 3.9,
+        brand: "Purplle",
+        price : 225,
+        discount: 0.12,
+        qty : 1,
+        description : "A mini formula of Purplle Ultra HD Matte Liquid Lipstick is engineered to give you a finish which helps take your lipstick game to another level. Get the best of Purplle on your lips to give you an enticing look. Once applied, expect the pigmentation to be stronger and the shade to stay longer without reapplication. Enriched with Vitamin E to make sure that your lips are conditioned while they don a gorgeous colour. Use your lips for all the activities possible, smiling, talking, eating, drinking, kissing, without the fear of your lip colour smudging. It's water resistant formula enables you to consume any kind of drink without having to worry about colour fading or transferring. Want to remove it? Don't worry it won't stay if you don't want it to. Won't stain your lips when you remove it. Liquid when applied to give a Matte finish only to give you Ultra Soft lips. Get the most of it with just one swipe with the leaf-shaped applicator which reaches to every corner of your lips. We love animals as much as we love you and thus these lipsticks are completely cruelty-free. Whenever you apply this, you know that you have acquired the ability to express yourself in a unique way",
+        best_before : "31 March 2024" ,
+        skin_concern : "Hydrated Lips",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "High Color Payoff, Highly Pigmented, Long Lasting, Single Stroke Application, Water Resistant",
+        oneBenefit : "Long Lasting",
+        type: "lipStick",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/224415/purplle-mini-liquid-lipstick-maroon-my-first-hook-up-11-4-8-ml-48_9_display_1632903538_2c535504.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/224415/purplle-mini-liquid-lipstick-maroon-my-first-hook-up-11-4-8-ml-48_7_display_1627621814_cc476091.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/224415/purplle-mini-liquid-lipstick-maroon-my-first-hook-up-11-4-8-ml-48_8_display_1627621815_cccb9360.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/224415/purplle-mini-liquid-lipstick-maroon-my-first-hook-up-11-4-8-ml-48_3_display_1627621810_629d7ab4.jpg"]
+    },
+    {
+        id : "AG",
+        title : "NY Bae Confessions of a Lip-a-holic Liquid Lipstick | Primer + Matte | Pinkish Nude | Long Lasting- Red Carpet Dream 13 (4.5 ml)",
+        rating : 4.1,
+        brand: "NY Bae",
+        price : 237,
+        discount: 0.05,
+        qty : 1,
+        description : "Take your lipstick game to another level with NY Bae’s Confessions of a Lip-a-holic Lipsticks range. NY Bae brings for you richly-packed colour combined with a moisturizing primer base which allows a long-lasting matte finish without any hassle. NY Bae Confessions of a Lip-a-holic Lipsticks are designed to add a fun pop of colour while nourishing and moisturizing your lips. Say goodbye to lipstick stained glasses, constant touch ups and bring out your inner diva. Get the most of NY Bae Confessions of a Lip-a-holic Lipsticks in just one swipe",
+        best_before : "31 December 2024" ,
+        skin_concern : "Hydrated Lips",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched With Jojoba Oil, Macadamia Oil, Paraben Free, Vegan, Vitamin E &amp; Anti-Oxidant Properties",
+        finish : "Creamy Finish",
+        Benefits : "Highly Pigmented, In-Built Primer, Long Lasting, Luxe Matte Finish, Nourishing",
+        oneBenefit : "Long Lasting",
+        type: "lipStick",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/263042/ny-bae-liquid-lipstick-holiday-collection-blanket-scarves-4-gm_10_display_1632376643_d0771ad9.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/263042/ny-bae-liquid-lipstick-holiday-collection-blanket-scarves-4-gm_2_display_1622524611_f5b010d5.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/263042/ny-bae-liquid-lipstick-holiday-collection-blanket-scarves-4-gm_5_display_1622524619_2e4f836c.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/263042/ny-bae-liquid-lipstick-holiday-collection-blanket-scarves-4-gm_7_display_1622524623_ee101a23.jpg"]
+    },{
+        id : "AI",
+        title : "Bobbi Brown Crushed Liquid Lip - Hippy Shake - 6 ml",
+        rating : 4.2,
+        brand: "Bobbi Brown",
+        price : 1990,
+        discount: 0,
+        qty : 1,
+        description : "What it is: The look of a liquid lipstick meets the comfortable feel of a balm and the plumped-up sheen of a gloss. Created with a superfruit blend featuring cranberry, blueberry and raspberry extracts, this emollient-rich, full-coverage formula glides on with pure color pigments and offers nourishing comfort and moistureaa‚¬a€both instantly and over time. Paraben-free, phthalate-free, sulfite-free, talc-free, mineral oil-free, gluten-free, free from animal-derived ingredientsNourish &amp; moisturize All Skin Type",
+        best_before : "31 January 2024" ,
+        skin_concern : "Hydrated Lips",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Glossy",
+        Benefits : "Glides easily, Long Lasting, Moisturizing, Nourishing, Precise Application, Smooth Application",
+        oneBenefit : "Moisturizing",
+        type: "lipStick",
+        origin : "Germany,Czech Republic,France,South Korea,Belgium,Switzerland,Italy,Canada,Poland,mexico,Japan,Dominican Republic,North Macedonia",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/237719/bobbi-brown-crushed-liquid-lip-hippy-shake-5-ml_3_display_1601443665_9d54b836.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/237719/bobbi-brown-crushed-liquid-lip-hippy-shake-5-ml_2_display_1601443651_041a6503.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/237719/bobbi-brown-crushed-liquid-lip-hippy-shake-5-ml_1_display_1601443621_d0de1363.jpg","https://media4.purplle.com/static/img/brand//__1619522399_bbaf930a.jpg"]
+    },{
+        id : "AT",
+        title : "Purplle Nail Lacquer, Nude, Matte - High On Food 2 (9 ml)",
+        rating : 4.1,
+        brand: "Purplle",
+        price : 149,
+        discount: 0.50,
+        qty : 1,
+        description : "Give your nails their best friend in the form of Purplle's Nail Lacquer. A unique range with a matte finish, this shade gives your nail the ultimate look you're looking for. Perfectly safe for your nails, this beauty comes with a brush, helping you to apply the colour in one go. Just like a true friend, this shade stays for a long time and gives you an unforgettable finish. Its time to express yourself with different shades everytime you step out of the house",
+        best_before : "31 August 2023" ,
+        skin_concern : "Happy and Colourful Nails",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Chip Resistant, Consistent Shade, Long Lasting, One swipe application, Shine",
+        oneBenefit : "Long Lasting",
+        type: "nailpolish",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/155861/purplle-nail-lacquer-matte-high-on-food-2-9-ml_4_display_1571389730_41cd3c58.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/155861/purplle-nail-lacquer-matte-high-on-food-2-9-ml_1_display_1542889245_0c159b37.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/155861/purplle-nail-lacquer-matte-high-on-food-2-9-ml_3_display_1542889245_0093c557.jpg","https://media4.purplle.com/static/img/brand//__1620637402_f5931e18.jpg"]
+    },{
+        id : "AJ",
+        title : "Maybelline New York Super Stay Matte Ink Liquid Lipstick x Rogue Reds, 295 Dauntless, 5ml",
+        rating : 3.7,
+        brand: "Maybelline",
+        price : 520,
+        discount: 0.20,
+        qty : 1,
+        description : "NEW Superstay Matte Ink Rogue Reds: The best selling Superstay Matte Ink is back with 4 NEW shades of Reds that suit the Indian skin tones amazingly",
+        best_before : "30 April 2023" ,
+        skin_concern : "Hydrated Lips",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Glides easily, High Color Payoff, Highly Pigmented, Long Lasting, Smooth Application",
+        oneBenefit : "Long Lasting",
+        type: "lipStick",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/227276/maybelline-new-york-super-stay-matte-ink-liquid-lipstick-x-rogue-reds-295-dauntless-5ml_3_display_1612176779_4a59e449.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/227276/maybelline-new-york-super-stay-matte-ink-liquid-lipstick-x-rogue-reds-295-dauntless-5ml_4_display_1612176780_06eee68e.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/227276/maybelline-new-york-super-stay-matte-ink-liquid-lipstick-x-rogue-reds-295-dauntless-5ml_2_display_1612176778_63c716df.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/227276/maybelline-new-york-super-stay-matte-ink-liquid-lipstick-x-rogue-reds-295-dauntless-5ml_5_display_1612176781_25284267.jpg"]
+    },
+    {
+        id : "AK",
+        title : "Bobbi Brown Essential Multicolor Eye Shadow Palette - Bold Burgundy",
+        rating : 4.5,
+        brand: "Bobbi Brown",
+        price : 4400,
+        discount: 0,
+        qty : 1,
+        description : "What It Is: An artist-curated collection of eye shadow palettes, each featuring five universally flattering shades in stunning finishes to customize any look.All Skin Type Elevated and inclusive, premium and personal, we are a Beaute Artist Brand that inspires and celebrates confidence in all women around the world, and offers luxury products that deliver healthy, fresh, glowing skin with color that enhances every woman.",
+        best_before : "31 August 2022 " ,
+        skin_concern : "Gorgeous eyes",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Easy Application, High Color Payoff, Smooth Application",
+        oneBenefit : "Light Weight",
+        type: "eyeshadow",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/208395/bobbi-brown-essential-multicolor-eye-shadow-palette-bold-burgundy_6_display_1604645108_84263ef4.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/208395/bobbi-brown-essential-multicolor-eye-shadow-palette-bold-burgundy_2_display_1604645064_5f4ff0b7.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/208395/bobbi-brown-essential-multicolor-eye-shadow-palette-bold-burgundy_4_display_1604645102_eff223b6.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/208395/bobbi-brown-essential-multicolor-eye-shadow-palette-bold-burgundy_1_display_1604645052_6eac3153.jpg"]
+    },{
+        id : "AB",
+        title : "Lakme Aboslute Blur Perfect Makeup Primer,10g",
+        rating : 4.1,
+        brand: "Lakme",
+        price : 299,
+        discount: 0.12,
+        qty : 1,
+        description : "Makeup glides on effortlessly and blends seamlessly for a more vibrant, color true finish. The Lakme Absolute Blur Perfect Makeup Primer is the perfect canvas for makeup or wear-alone over your moisturiser for instant smoothness and radiance. Buy Now!The Lakme Absolute Make-Up Primer is a flawless make-up primer that preps your skin for professional make-up. • Creates the perfect base for make-up and helps it stay for longer.. Hides skin imperfections and gives you an even toned skin. It is lightweight, water-proof, and has a smooth matte texture.",
+        best_before : "31 Jan 2023" ,
+        skin_concern : "Skin Imperfection, Uneven Skin Texture, Visible Pores",
+        skin_type : "Combination Skin",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Blurs Fine Lines, Evens Skin Tone, Fadeproof, Hides Imperfections, Light Weight,Mattifying",
+        oneBenefit : "Light Weight",
+        type: "primer",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_7_display_1631104552_882ba13c.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_8_display_1631104552_aa52c3b0.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_10_display_1631104554_9e79acb9.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_11_display_1631104554_ff8fe6bb.jpg"]
+    },
+    {
+        id : "AL",
+        title : "Maybelline New York The Blushed Nudes Eyeshadow Palette",
+        rating : 3.9,
+        brand: "Maybelline",
+        price : 1050,
+        discount: 0.35,
+        qty : 1,
+        description : "With Maybelline New Yorks new Blushed Nudes Palette, embrace the upcoming fashion season and create endless, show stopping bare-IT-all looks! The Blush Nudes Palette is a range of 12 luxurious rose gold-infused shades, designed to create unlimited looks with hues of sensuous rose, tempting taupe and provocative plums.",
+        best_before : "31 January 2024" ,
+        skin_concern : "Gorgeous eyes",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Bold & Matte, Consistent Shade, Easy To Blend, Fadeproof, Highly Pigmented",
+        oneBenefit : "Sweat Proof",
+        type: "eyeshadow",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/182573/maybelline-new-york-the-blushed-nudes-palette-9-g-12_6_display_1614247901_8fa4f125.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/182573/maybelline-new-york-the-blushed-nudes-palette-9-g-12_5_display_1614247900_fd331185.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/182573/maybelline-new-york-the-blushed-nudes-palette-9-g-12_6_display_1614247901_8fa4f125.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/182573/maybelline-new-york-the-blushed-nudes-palette-9-g-12_7_display_1614247902_3f920764.jpg"]
+    },{
+        id : "AN",
+        title : "L'Oreal Paris Color Riche Le Stylo Smoky Eye Shadow - Glamor Khakhi 106 (1.5 g)",
+        rating : 2.4,
+        brand: "L'Oreal Paris",
+        price : 589,
+        discount: 0.25,
+        qty : 1,
+        description : "For smoky eyes made easy, L'Oreal Paris introduces the Le Stylo Smoky dual-ended eyeshadow sticks with 8 mistake-proof shades in two finishes (matte and metallic), and a designer built-in kabuki brush.",
+        best_before : "31 Jan 2023" ,
+        skin_concern : "Gorgeous eyes",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Highly Pigmented, Long Lasting, Smudgeproof, Waterproof",
+        oneBenefit : "Smudgeproof",
+        type: "eyeshadow",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/182670/l-oreal-paris-color-riche-le-stylo-smoky-eye-shadow-a6-glamor-khakhi-1-g-12_3_display_1580925082_94fbff5c.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/182670/l-oreal-paris-color-riche-le-stylo-smoky-eye-shadow-a6-glamor-khakhi-1-g_1_display_1509612069_e46a52ec.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/182670/l-oreal-paris-color-riche-le-stylo-smoky-eye-shadow-a6-glamor-khakhi-1-g_2_display_1509612077_1b30d254.jpg","https://media4.purplle.com/static/img/brand//__1619524156_755f3bc0.jpg"]
+    },{
+        id : "AH",
+        title : "Swiss Beauty Ultra Smooth Matte Lip Liquid Lipstick Color Stay - Deep-Maroon (6 ml)",
+        rating : 4.0,
+        brand: "Swiss Beauty",
+        price : 199,
+        discount: 0.10,
+        qty : 1,
+        description : "The iconic matte liquid lipstick with perfect pop of colour. Swiss Beauty Matte Lip Weightless liquid lipstick comes with a velvety matte finish that lasts all day long. Get you hands on the unquestionably smooth lip color that stays true for up to 8 hours, glides right on and gives that sophisticated silky matte finish that never feel dry and flaky",
+        best_before : "28 February 2025" ,
+        skin_concern : "Hydrated Lips",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "High Color Payoff, Hydrating, Long Lasting, Non-Flaky, Precise Application, Smudgeproof",
+        oneBenefit : "Smudgeproof",
+        type: "lipStick",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/200191/swiss-beauty-ultra-smooth-matte-lip-liquid-lipstick-color-stay-deep-maroon-6-ml_2_display_1632547325_46b6a8ef.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/200191/swiss-beauty-ultra-smooth-matte-lip-liquid-lipstick-color-stay-deep-maroon-6-ml_3_display_1632547325_ddca70e4.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/200191/swiss-beauty-ultra-smooth-matte-lip-liquid-lipstick-color-stay-deep-maroon-6-ml_4_display_1632547326_71b361ae.jpg","https://media4.purplle.com/static/img/brand//__1619086150_1647f507.jpg"]
+    },{
+        id : "AS",
+        title : "Lakme True Wear Nail Color - Classics Siren Red 404 (9 ml)",
+        rating : 4.1,
+        brand: "Lakme",
+        price : 108,
+        discount: 0.10,
+        qty : 1,
+        description : "Trendy shades on the go and for every mood, Lakme True Wear Color Crush nail enamel make the world a better place! Long-lasting by nature and chip-resistant, Lakme True Wear Color Crush coats your nails to perfection; giving them a vibrant and elegant look. It has color lock technology and is resin-based, making it a perfect choice! Add a stroke of classic color to your nails with Lakme True Wear Color Crush Nail Color.",
+        best_before : "30 June 2024" ,
+        skin_concern : "Happy and Colourful Nails",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Chip Resistant, Consistent Shade, High Color Payoff, Long Lasting, Strengthens The Nails",
+        oneBenefit : "Long Lasting",
+        type: "nailpolish",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/197387/lakme-true-wear-nail-enamel-404_1_display_1565334046_8a11c4dd.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/197387/lakme-true-wear-nail-enamel-404_3_display_1565334047_6bdbc95e.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/197387/lakme-true-wear-nail-enamel-404_4_display_1565334048_0d1d9a34.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/197387/lakme-true-wear-nail-enamel-404_5_display_1565334048_6a38e8d7.jpg"]
+    },{
+        id : "AO",
+        title : "Colorbar Moon Lava Eyeshadow Orion (3.5 g)",
+        rating : 4.2,
+        brand: "Colorbar",
+        price : 680,
+        discount: 0.20,
+        qty : 1,
+        description : "Make heads turn with this magical Colorbar Moon Lava Eyeshadow that bursts with glitter. A lightweight water infused formula, which sets smoothly and locks in sparkles. With minimal fallout, it’s sure to keep you shining bright all night long. So you get long-lasting lustre and 3D metallic shine with an effortless application of this smooth gel. Wear it alone or as a topper for eye shadow, to shine like the moon.",
+        best_before : "30 Feb 2024" ,
+        skin_concern : "Gorgeous eyes",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Creaseless, Easy To Blend, Fadeproof, Highly Pigmented, Intense Sparkle, Light Weight, Long Lasting, Shine, Smooth Application, Smooth Texture",
+        oneBenefit : "Light Weight",
+        type: "eyeshadow",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/184509/colorbar-moon-lava-eyeshadow-orion-3-5-g_9_display_1629271772_119497b0.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/184509/colorbar-moon-lava-eyeshadow-orion-3-5-g_11_display_1629271773_f15582f2.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/184509/colorbar-moon-lava-eyeshadow-orion-3-5-g_12_display_1629271773_051617c4.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/184509/colorbar-moon-lava-eyeshadow-orion-3-5-g_13_display_1629271774_38235316.jpg"]
+    },{
+        id : "AP",
+        title : "Swiss Beauty Ultimate Eyeshadow Palette Kit - Multi-02 (6 g)",
+        rating : 4.4,
+        brand: "Swiss Beauty",
+        price : 249,
+        discount: 0,
+        qty : 1,
+        description : "Swiss Beauty Ultimate Shadow Palette combinations for your eyes! The Ultimate Shadow Palettes featuring 9 expertly coordinated colour combination eyeshadows, from naturals to smokies to pop. Each set features a vivid mix of velvety-rich textures and mesmerising finishes that range from mattes and satins to shimmers and metallics. 9 professionally coordinated high-performance eye shadows - Velvety shades and highly pigmented - The range of finishes allows different looks from smokey to natural to pop",
+        best_before : "31 August 2025" ,
+        skin_concern : "Gorgeous eyes",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Bold & Matte, Consistent Shade, Easy To Blend, Highly Pigmented, Long Shelf Life, Smooth Texture",
+        oneBenefit : "Long Lasting",
+        type: "eyeshadow",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/267462/swiss-beauty-ultimate-eyeshadow-palette-kit-multi-02-9-g_2_display_1630141384_ae712a15.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/267462/swiss-beauty-ultimate-eyeshadow-palette-kit-multi-02-9-g_3_display_1630141384_3d998528.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/267462/swiss-beauty-ultimate-eyeshadow-palette-kit-multi-02-9-g_5_display_1630141386_d4fe4c3b.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/267462/swiss-beauty-ultimate-eyeshadow-palette-kit-multi-02-9-g_4_display_1630141385_8e7339d5.jpg"]
+    },{
+        id : "AQ",
+        title : "NY Bae Matte Chrome Nail Paint | Matte Finish | Chip Resistant | Cruelty Free | Travel Friendly | Mini Nail Paint - Maroon Twill 11 (3 ml) ",
+        rating : 3.0,
+        brand: "NY Bae",
+        price : 49,
+        discount: 0,
+        qty : 1,
+        description : "Uff darling all eyes are going to be on you with NY Bae Matte Chrome Nail Paint - Maroon Twill. Dip your tips to toes with nail paint that's all shiney, has a high colour pay off and long-lasting dazzle power with a beautiful finish. All your glam dreams are about to come true with one swipe of this tantalizing beauty. This marvellous trinket is going to have everyone swooning. So why wait, get it today!",
+        best_before : "31 October 2024" ,
+        skin_concern : "Happy and Colourful Nails",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Chip Resistant, Intense Pigmentation",
+        oneBenefit : "Light Weight",
+        type: "nailpolish",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/257418/ny-bae-matte-chrome-nail-paint-maroon-twill-11-3-ml_1_display_1638191607_1ee6e51c.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/257418/ny-bae-matte-chrome-nail-paint-maroon-twill-11-3-ml_2_display_1638191608_cab71ded.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/257418/ny-bae-matte-chrome-nail-paint-maroon-twill-11-3-ml_3_display_1638191609_1e69aac5.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/257418/ny-bae-matte-chrome-nail-paint-maroon-twill-11-3-ml_6_display_1639661755_80dd17b3.jpg"]
+    },{
+        id : "AR",
+        title : "NY Bae Pretty Pastels Nail Paint | Glossy Finish | Chip Resistant | Cruelty Free | Travel Friendly | Mini Nail Paint - Blue Hyacinth 03 (3 ml)",
+        rating : 4,
+        brand: "NY Bae",
+        price : 49,
+        discount: 0,
+        qty : 1,
+        description : "Dekha hai pehli baar, Purplle pe pretty pastels ki Bahaar! The NY Bae Pretty Pastels Nail Paint in ‘Blue Hyacinth’ will bloom on your fingertips like fresh, Spring flowers. This gorgeously smooth and attractive shade looks sooo damn fine on your fingertips! Wherever you go, whatever you do, these FAB nail paints will bring out the best in you. After all, no makeup is complete without nail makeup. What’s more to love about this behtareen shade!? It doesn’t chip and lets your nails drip sass. More pastel power to you, NY Bae girls!",
+        best_before : "31 October 2024" ,
+        skin_concern : "Happy and Colourful Nails",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Chip Resistant, Intense Pigmentation",
+        oneBenefit : "Long Lasting",
+        type: "nailpolish",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/257443/ny-bae-pretty-pastels-nail-paint-blue-hyacinth-03-3-ml_1_display_1638019215_a542cfd2.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/257443/ny-bae-pretty-pastels-nail-paint-blue-hyacinth-03-3-ml_2_display_1638019216_3957c533.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/257443/ny-bae-pretty-pastels-nail-paint-blue-hyacinth-03-3-ml_3_display_1638019217_3dfc47a2.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/257443/ny-bae-pretty-pastels-nail-paint-blue-hyacinth-03-3-ml_6_display_1639661396_76e59518.jpg"]
+    },{
+        id : "AU",
+        title : "Colorbar Nail Lacquer Carnation (12 ml)",
+        rating : 3.9,
+        brand: "Colorbar Nail",
+        price : 1065,
+        discount: 0.32,
+        qty : 1,
+        description : "1. A range of pink lacquers with varied light and dark shades and glitter and sheer textures  2. Chip-resistant and non-yellowing 3. Formulated with a 7-free formula: without formaldehydes, formaldehyde resin, DBP, toluene, camphor, paraben, and xylene.4. A special wide applicator for effortless end-to-end coverage.5. Dermatologically tested",
+        best_before : "30 August 2025", 
+        skin_concern : "Happy and Colourful Nails",
+        skin_type : "All Skin Types",
+        Speciality : "Camphor Free, DBP Free, Dermatologically Tested, Formaldehyde Free, Paraben Free, Toluene Free",
+        finish : "Glossy Finish",
+        Benefits : "Chip Resistant, High Color Payoff, Long Lasting, Non-Yellowing",
+        oneBenefit : "Long Lasting",
+        type: "nailpolish",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/176012/nail-lacquer-carnation-12-ml_1_display_1562750180_63035d1d.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/176012/nail-lacquer-carnation-12-ml_3_display_1562750185_79b0e79e.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/176012/nail-lacquer-carnation-12-ml_5_display_1562750186_da9ae047.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/176012/nail-lacquer-carnation-12-ml_2_display_1562750185_ff1a7b32.jpg"]
+    },{
+        id : "AV",
+        title : "Swiss Beauty Classic Nail Polish - 35 - 12 ml",
+        rating : 3.9,
+        brand: "Swiss Beauty",
+        price : 99,
+        discount: 0,
+        qty : 1,
+        description : "Perfect your nails in just one stroke with this Swiss Beauty Classic Nail Polish that provides a brilliant smooth, uniform finish, long lasting and chip-free coverage.Ideal for the girl-on-the-go, itd hassle - free and the most practical path to pretty.Cruelty Free Testedlong lasting, high shine, chip-free coverage, High color payoff, smooth, uniform finish All skin type",
+        best_before : "20 April 2024" ,
+        skin_concern : "Happy and Colourful Nails",
+        skin_type : "All Skin Types",
+        Speciality : "Cruelty Free",
+        finish : "Glossy Finish",
+        Benefits : "Dries quickly, Easy Application, Easy to Use, Glides easily, High Color Payoff, Long Lasting, Single Swipe Application, Smooth Application, Strengthens The Nails, Strong Packaging, Travel Friendly Packaging",
+        oneBenefit : "Long Lasting",
+        type: "nailpolish",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/225250/swiss-beauty-classic-nail-polish-35-12-ml_6_display_1617963124_d128d57b.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/225250/swiss-beauty-classic-nail-polish-35-12-ml_7_display_1617963125_e451087f.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/225250/swiss-beauty-classic-nail-polish-35-12-ml_9_display_1617963126_edd3fc2d.jpg","https://media4.purplle.com/static/img/brand//__1619086150_1647f507.jpg"]
+    },{
+        id : "AW",
+        title : "Swiss Beauty Makeup Brushes Set 5 Purple",
+        rating : 3.9,
+        brand: "Swiss Beauty",
+        price : 299,
+        discount: 0,
+        qty : 1,
+        description : "Made from imported high quality hair materials.With thick and elastic feeling, comfortable for the skin, can naturally handle the powder to its best effect.Make you beautiful.",
+        best_before : "31 January 2025" ,
+        skin_concern : "Soft on the skin",
+        skin_type : "Fibre brizzles,smooth sponge",
+        finish : "top nouch",
+        Benefits : "Durable, Flexible Brush, Long Lasting, Skin Friendly, Soft",
+        oneBenefit : " Long Lasting",
+        type: "makeup brush set",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/205764/swiss-beauty-makeup-brushes-set-3-100-g_2_display_1638789687_68fdea31.jpg","https://media4.purplle.com/static/img/brand//__1619086150_1647f507.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/205764/swiss-beauty-makeup-brushes-set-3-100-g_2_display_1638789687_68fdea31.jpg","https://media4.purplle.com/static/img/brand//__1619086150_1647f507.jpg"]
+    },{
+        id : "AX",
+        title : "Colorbar Blend-itude Makeup Sponge-Black Sponges",
+        rating : 4.5,
+        brand: "Colorbar",
+        price : 199,
+        discount: 0.20,
+        qty : 1,
+        description : "An egg shaped blending sponge that perfectly fits in the palm of your hand? Yes, please! Colorbar brings you the Blend-itude Makeup Sponge, a next-gen makeup tool that gives you an even blend without absorbing excess product.",
+        best_before : "29 February 2024" ,
+        skin_concern : "Soft on the skin",
+        skin_type : "Fibre brizzles,smooth sponge",
+        finish : "top nouch",
+        Benefits : "Durable, Easy Application, Easy to Use, Soft, Washable",
+        oneBenefit : "Easy to Use",
+        type: "makeup sponge",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/158897/colorbar-blend-itude-makeup-sponge-black-sponges_2_display_1586606462_887b32b5.jpg","https://media4.purplle.com/static/img/brand//__1619086186_4fc82136.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/172236/bronson-professional-beauty-blender-makeup-sponge-color-and-shape-may-vary_1_display_1555047210_fcb4706e.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/172236/bronson-professional-beauty-blender-makeup-sponge-color-and-shape-may-vary_3_display_1555047444_4cd42963.jpg"]
+    },{
+        id : "AY",
+        title : "NY Bae Pro Beauty Blender | Makeup Sponge | Flawless Finish | Maximum Coverage - Violet",
+        rating : 4.3,
+        brand: "NY Bae",
+        price : 199,
+        discount: 0,
+        qty : 1,
+        description : "Loads of hard work go to create that perfect, luminous base finish. Great foundation, the right primer, the on-point concealer. But dear girl, it all comes crashing down with the wrong blender. That’s why now is the time to friend the new blender - NYBae Pro Beauty Blender. Cute, curvy, pink and perfect. That’s how it looks. And it works like magic. It’s easy to use, flows like a dream to give you awesome coverage, is latex-free and expands in water. So simply soak it, watch it expand, put your foundation on the blender and go dab-dab on your face. That flawless, perfect base is set. All you need now is to put on a high-watt smile to match the luminous, glowing skin and you’re dressed to steal hearts with one look.",
+        best_before : "31 October 2024" ,
+        skin_concern : "Soft on the skin",
+        skin_type : "Fibre brizzles,smooth sponge",
+        finish : "top nouch",
+        Benefits : "Durable, Easy Application, Easy to Use, Soft, Washable",
+        oneBenefit : "Easy to Use",
+        type: "makeup sponge",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/266025/ny-bae-pro-beauty-blender-violet_1_display_1637670816_6ec25417.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/266025/ny-bae-pro-beauty-blender-violet_2_display_1637670817_1457f18e.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/266025/ny-bae-pro-beauty-blender-violet_3_display_1637670819_b539bac8.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/266025/ny-bae-pro-beauty-blender-violet_5_display_1637670822_effe2b47.jpg"]
+    },{
+        id : "AZ",
+        title : "Swiss Beauty Professional Face & Eye Brush Set - 7",
+        rating : 4.1,
+        brand: "Swiss Beauty",
+        price : 149,
+        discount: 0.05,
+        qty : 1,
+        description : "F07: Highlighting & Lash Brush: Spotlight your features! This precise highlighting brush has short and long bristles that work together to buff and blend highlighter, creating a lit-from-within glow",
+        best_before : "31 January 2025" ,
+        skin_concern : "Soft on the skin",
+        skin_type : "All Skin Types",
+        finish : "top nouch",
+        Benefits : "Easy Application, Glides easily, Precise Application, Smooth Texture, Soft Delicate Finish, Soft Synthetic Bristles, Washable",
+        oneBenefit : "Easy to Use",
+        type: "makeup sponge",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/239221/swiss-beauty-professional-face-and-eye-brush-set-7_1_display_1610522304_f54a7bc8.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/239221/swiss-beauty-professional-face-and-eye-brush-set-7_2_display_1610522305_788ae906.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/239221/swiss-beauty-professional-face-and-eye-brush-set-7_3_display_1610522305_ffcc5756.jpg","https://media4.purplle.com/static/img/brand//__1619086150_1647f507.jpg"]
+    }
+];
+
+let contain_Div = document.querySelector("#container_products");
+
+ShowProductsOnMain(products,contain_Div,cartArray);
+
+function priceRange1(){
+    let max = 100;
+    let newProd = products.filter(function(item){
+         if(item.price <= max) return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function priceRange2(){
+    let min = 100;
+    let max = 200;
+    let newProd = products.filter(function(item){
+         if(item.price > min && item.price <= max) return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function priceRange3(){
+    let min = 200;
+    let max = 400;
+    let newProd = products.filter(function(item){
+         if(item.price > min && item.price <= max) return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function priceRange4(){
+    let min = 400;
+    let max = 1000;
+    let newProd = products.filter(function(item){
+         if(item.price > min && item.price <= max) return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function priceRange5(){
+    let min = 1000;
+    let max = 3000;
+    let newProd = products.filter(function(item){
+         if(item.price > min && item.price <= max) return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function priceRange6(){
+    let min = 3000;
+    let newProd = products.filter(function(item){
+         if(item.price > min) return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+
+function brand1(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "Lakme") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand2(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "Bobbi Brown") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand3(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "Maybelline") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand4(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "MAC") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand5(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "Swiss Beauty") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand6(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "Maliao") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand7(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "Makeup Revolution") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand8(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "Colorbar") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand9(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "NY Bae") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand10(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "L'Oreal Paris") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function brand11(){
+    let newProd = products.filter(function(item){
+         if(item.brand === "Purplle") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+
+function discount1(){
+    let max = 0.1;
+    let newProd = products.filter(function(item){
+         if(item.discount <= max) return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function discount2(){
+    let min = 0.1
+    let max = 0.2;
+    let newProd = products.filter(function(item){
+         if(item.discount > min && item.discount <= max) return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function discount3(){
+    let min = 0.2
+    let max = 0.3;
+    let newProd = products.filter(function(item){
+         if(item.discount > min && item.discount <= max) return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function discount4(){
+    let min = 0.3
+    let max = 0.4;
+    let newProd = products.filter(function(item){
+         if(item.discount > min && item.discount <= max) return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function discount5(){
+    let min = 0.4
+    let newProd = products.filter(function(item){
+         if(item.discount > min) return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+
+function skin4(){
+    let newProd = products.filter(function(item){
+         if(item.skin_type === "Combination Skin") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function skin6(){
+    let newProd = products.filter(function(item){
+         if(item.skin_type === "All Skin Types") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function skin7(){
+    let newProd = products.filter(function(item){
+         if(item.skin_type === "Acne-Prone Skin") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+
+function discount_Desc(){
+     let newProd = products.sort(function(a,b){
+             return b.discount - a.discount ;
+         });
+    ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function  highTolow(){
+    let  newProd = products.sort(function(a,b){
+             return b.price - a.price ;
+         });
+    ShowProductsOnMain(newProd,contain_Div,cartArray)     
+}
+function lowTohigh(){
+    let  newProd = products.sort(function(a,b){
+             return a.price - b.price ;
+         });
+    ShowProductsOnMain(newProd,contain_Div,cartArray)     
+}
+function ratingDown(){
+    let  newProd = products.sort(function(a,b){
+             return b.rating - a.rating ;
+         });
+    ShowProductsOnMain(newProd,contain_Div,cartArray)     
+}
+
+function  hydrating(){
+    let newProd = products.filter(function(item){
+         if(item.oneBenefit === "Hydrating") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function longLasting(){
+    let newProd = products.filter(function(item){
+         if(item.oneBenefit === "Long Lasting") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function moisturizer(){
+    let newProd = products.filter(function(item){
+         if(item.oneBenefit === "Moisturizing") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function lightweight(){
+    let newProd = products.filter(function(item){
+         if(item.oneBenefit === "Light Weight") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function Smudgeproof(){
+    let newProd = products.filter(function(item){
+         if(item.oneBenefit === "Smudgeproof") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function Sweatproof(){
+    let newProd = products.filter(function(item){
+         if(item.oneBenefit === "Sweat Proof") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+function Easy_to_Use(){
+    let newProd = products.filter(function(item){
+         if(item.oneBenefit === "Easy to Use") return item;
+    })
+    if(newProd.length === 0) NotAvailable()
+    else ShowProductsOnMain(newProd,contain_Div,cartArray)
+}
+
+
+function NotAvailable(){
+    contain_Div.innerHTML = "";
+    document.querySelector("#ForNoShow").innerHTML = "";
+    let pNop = document.createElement("h1");
+    pNop.textContent = "No Products Available";
+    document.querySelector("#ForNoShow").append(pNop);  
+}
+
+</script>
