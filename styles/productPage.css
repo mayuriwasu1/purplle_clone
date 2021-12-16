@@ -17,9 +17,9 @@
         background-image: url();
     }
     #path{
-        margin-left: 40% ;
+        margin-left: 37% ;
         margin-top: 15px ; 
-        margin-bottom: 40px ;   
+        margin-bottom: 40px ;  
     }
 
     a{
@@ -217,4 +217,8 @@
         margin-top: 30px !important;
         margin-bottom: 30px !important;
         text-align: center;
+    }
+    #relevanceSort > p:hover{
+       color: rgb(236,89,169);
+       font-weight: bold;
     }
