@@ -46,7 +46,7 @@ function ShowProductsOnMain(products,location,cartArray){
         rating.setAttribute("id","ratingOf");
         rating.append(ratingtag);
         if(item.rating < 4.0 && item.rating >= 2) rating.style.backgroundColor = "#cdd614";
-        if(item.rating < 2.0) rating.style.backgroundColor = "#ff7800"
+        if(item.rating < 2.5) rating.style.backgroundColor = "#ff7800"
         rating.addEventListener("click", function(){
             redirectedProduct(item);
         });
