@@ -112,15 +112,15 @@
                 color: #2c414c !important;
                 font-family: 'Aqleema-Regular';
                 letter-spacing: 0.5px;
-                width: 70%; 
+                width: 60%; 
                 margin: auto;
                 /* text-align: left; */
             }
             #wish_MasterDiv{
                 display:grid;
                 height:120px;
-                grid-template-columns: 15% 66% 16%;
-                column-gap: 1%;
+                grid-template-columns: 15% 63% 17%;
+                column-gap: 2%;
                 margin-bottom: 2px; 
             }
 
@@ -130,7 +130,7 @@
                 gap: 0;
                 margin: 0;
                 height: 120px;
-                padding-left: 2%;
+                padding-left: 5%;
             }
            
             #ratingOf{
@@ -172,10 +172,32 @@
                 height: 50px;
                 color: white;
                 background-color: #673ab7;
+               
                 height: 45px;
                 line-height: 45px;
                 font-size: 14px;
                 cursor: pointer;
+            }
+
+            #beauty_wish{
+                margin:auto;
+                width: 200px;
+                height: 200px;
+                margin-left: 40%;
+            }
+
+            #to_beauty{
+                border: none;
+                width: 150px;
+                height: 40px;
+                color: white;
+                background-color: #673ab7;
+                height: 45px;
+                line-height: 45px;
+                font-size: 14px;
+                cursor: pointer;
+                font-weight: bold;
+                letter-spacing:0.8px;
             }
         </style>
     </head>
@@ -258,6 +280,7 @@
 <script>
      document.getElementById("my_wishlist").style.borderBottom = "6px solid #e40980"
     function ordersFromWish(){
+        document.getElementById("product_wishlist").innerHTML = "";
         document.getElementById("my_wishlist").style.borderBottom = "none";
         document.getElementById("my_pro").style.borderBottom = "none";
         document.getElementById("my_orders").style.borderBottom = "6px solid #e40980"
@@ -265,15 +288,19 @@
     }
 
     function proFromWish(){
+        document.getElementById("product_wishlist").innerHTML = "";
         document.getElementById("my_wishlist").style.borderBottom = "none";
         document.getElementById("my_orders").style.borderBottom = "none";
-        document.getElementById("my_pro").style.borderBottom = "6px solid #e40980"
+        document.getElementById("my_pro").style.borderBottom = "6px solid #e40980";
+        showBeautyProfile();
     }
 
     function wishFromWish(){
+        document.getElementById("product_wishlist").innerHTML = "";
         document.getElementById("my_pro").style.borderBottom = "none";
         document.getElementById("my_orders").style.borderBottom = "none";
-       document.getElementById("my_wishlist").style.borderBottom = "6px solid #e40980"
+       document.getElementById("my_wishlist").style.borderBottom = "6px solid #e40980";
+       ShowWishProduct(wish_Data);
     }
 
     let wishDiv = document.getElementById("product_wishlist");
@@ -360,7 +387,10 @@ function ShowWishProduct(wish_Data){
 
         let image = document.createElement("img");
         image.setAttribute("id","image_Wish");
-        image.src= wish.image_url[0]
+        image.src= wish.image_url[0];
+        image.onclick= () => {
+            showThatprodfromWish(wish);
+        }
 
         let divCenter = document.createElement("div");
         divCenter.setAttribute("id","div_Center");
@@ -451,6 +481,47 @@ function addingtoCartFromWish(wish,index,cartArray){
 
  }
 
+function showBeautyProfile(){
+    wishDiv.innerHTML = "";
+
+    let image = document.createElement("img");
+    image.setAttribute("id","beauty_wish")
+    image.src="https://cdn-icons-png.flaticon.com/512/3131/3131757.png";
+
+    let beautyBtn = document.createElement("button");
+    beautyBtn.setAttribute("id","to_beauty");
+
+    beautyBtn.innerHTML = "Click To Beautify";
+    beautyBtn.onclick = () =>{
+        makeBeauty();
+    }
+
+    // https://cdn-icons-png.flaticon.com/512/3131/3131808.png
+
+    wishDiv.append(image,beautyBtn);
+}
+
+function makeBeauty(){
+    wishDiv.innerHTML = "";
+    let image = document.createElement("img");
+    image.setAttribute("id","beauty_wish")
+    image.src="https://cdn-icons-png.flaticon.com/512/3131/3131808.png";
+
+    let beautyBtn = document.createElement("button");
+    beautyBtn.setAttribute("id","to_beauty");
+    beautyBtn.style.backgroundColor = "#ad1ee6";
+    beautyBtn.innerHTML = "Revert Changes";
+    beautyBtn.onclick = () =>{
+        showBeautyProfile()
+    }
+    wishDiv.append(image,beautyBtn);
+}
+
+function showThatprodfromWish(wish){
+    let data = wish;
+    localStorage.setItem("DataIndivi",JSON.stringify(data));
+    window.location.href = "productDetails.html";
+}
 
 </script>
 
