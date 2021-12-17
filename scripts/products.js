@@ -68,7 +68,8 @@ function addtoCart(item,index,cartArray){
     if(count == cartArray.length){
        document.querySelector("#toCartBtn1").innerHTML = "ADDED TO CART";
        cartArray.push(toCartItem);
-       localStorage.setItem("cartItems", JSON.stringify(cartArray));  
+       localStorage.setItem("cartItems", JSON.stringify(cartArray));
+       alert("Item added to cart! Successfully")  
     }   
  }
 
