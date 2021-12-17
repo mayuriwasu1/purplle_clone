@@ -66,12 +66,16 @@
         #rdPart
          {
               padding-left: 100px;
+              font-size: 35px;
+              margin-left: 80px;
+              font-weight: 100;
+             
          }
-        #rdPart>img
+        #rdPart>a>i
         {
-            margin-top: 10px;
-            padding-left: 10px;
-            margin-left: 15px;
+            margin-top: 25px;
+            color: #88898a;
+            margin-left: 20px;
             width: 50px;
             height: 50px;
         }
@@ -581,4 +585,4 @@
              position: sticky;
              top : 0;
          }
-        
+         
