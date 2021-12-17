@@ -109,6 +109,131 @@
   }
 
 
+
+  /* purpple slider css */
+
+  .brand_slider_div1 {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slider_div1 {
+    grid-gap: 1rem;
+    gap: 3rem;
+    padding: 0 0.8rem;
+    margin: 0 -0.8rem;
+    display: flex;
+    left: 0;
+    transition: left 0.3s ease-out;
+    position: relative;
+  }
+  
+  .slider_box_p {
+    border: 1 solid #fff;
+    box-sizing: content-box;
+    min-width: 15rem;
+    max-width: 15rem;
+  }
+  
+  .sliderBoxx {
+    flex-shrink: 0;
+    width: 100%;
+  }
+  
+  .link_sliderTopage1,
+  .link_sliderTopage1:active,
+  .link_sliderTopage1:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .link_sliderTopage1 img {
+    width: 100%;
+  }
+  
+  
+  .brand_slider_div1 .butonp {
+    position: absolute;
+    top: 40%;
+    text-decoration: none;
+    padding-left: 0.1rem;
+    padding-right: 0.2rem;
+    margin: -0.1rem;
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+  }
+  
+  #rightSwipep {
+    right: 0;
+  }
+
+
+  /* animated slider */
+
+
+  
+  .brand_slider_div2 {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slider_div2 {
+    grid-gap: 1rem;
+    gap: 3rem;
+    padding: 0 0.8rem;
+    margin: 0 -0.8rem;
+    display: flex;
+    left: 0;
+    transition: left 0.3s ease-out;
+    position: relative;
+  }
+  
+  .slider_box_a {
+    border: 1 solid #fff;
+    box-sizing: content-box;
+    min-width: 15rem;
+    max-width: 15rem;
+  }
+  
+  .sliderBoxxx {
+    flex-shrink: 0;
+    width: 100%;
+  }
+  
+  .link_sliderTopagea,
+  .link_sliderTopagea:active,
+  .link_sliderTopagea:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .link_sliderTopagea img {
+    width: 100%;
+  }
+  
+  
+  .brand_slider_div2 .butona {
+    position: absolute;
+    top: 40%;
+    text-decoration: none;
+    padding-left: 0.1rem;
+    padding-right: 0.2rem;
+    margin: -0.1rem;
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+  }
+  
+  #rightSwipea {
+    right: 0;
+  }
+  
+ 
   /* card vala slider */
 
   .brand_slider {
@@ -282,7 +407,7 @@
   .grid-item >img {
     width: 99%;
     height: 99%;
-    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+   
   }
 
   #heading_img >img{

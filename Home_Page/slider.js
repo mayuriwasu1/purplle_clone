@@ -67,6 +67,129 @@ let timer = setInterval(function() {
 
 // another  master slider
 
+// gif slider
+
+
+// animated slider
+
+
+function brandSlidera() {
+  var slideList = document.querySelector(".slider_div2");
+
+  var count = 1;
+  var click = 2;
+  var size = document.querySelector(".slider_div2").offsetWidth;
+  if (size < 900) {
+    click = 7;
+  }
+  if (count == 1) {
+    document.getElementById("leftSwipea").style.opacity = 0.5;
+    document.getElementById("leftSwipea").style.display = "hidden";
+  }
+  console.log(size);
+  function stepBacka() {
+    if (count == 2) {
+      document.getElementById("leftSwipea").style.opacity = 0.5;
+    }
+    if (count > 1) {
+      count = count - 2;
+      slideList.style.left = "-" + count * 31 + "rem";
+
+      document.getElementById("rightSwipea").style.opacity = 1;
+
+      count++;
+    } else {
+      document.getElementById("leftSwipea").style.opacity = 0.5;
+      document.getElementById("leftSwipea").style.display = "hidden";
+    }
+  }
+  function stepForwarda() {
+    if (count == click - 1) {
+      document.getElementById("rightSwipea").style.opacity = 0.5;
+      document.getElementById("rightSwipea").style.display = "hidden";
+    }
+    if (count < click) {
+      slideList.style.left = "-" + count * 31 + "rem";
+
+      document.getElementById("leftSwipea").style.opacity = 1;
+      count++;
+    } else {
+      document.getElementById("rightSwipea").style.opacity = 0.5;
+      document.getElementById("rightSwipea").style.display = "hidden";
+    }
+  }
+  document
+    .getElementById("leftSwipea")
+    .addEventListener("click", stepBacka);
+  document
+    .getElementById("rightSwipea")
+    .addEventListener("click", stepForwarda);
+}
+
+brandSlidera();
+
+
+
+//purple slider
+
+
+// purple slider
+
+
+function brandSliderp() {
+  var slideList = document.querySelector(".slider_div1");
+
+  var count = 1;
+  var click = 4;
+  var size = document.querySelector(".slider_div1").offsetWidth;
+  if (size < 900) {
+    click = 8;
+  }
+  if (count == 1) {
+    document.getElementById("leftSwipep").style.opacity = 0.5;
+    document.getElementById("leftSwipep").style.display = "hidden";
+  }
+  console.log(size);
+  function stepBackp() {
+    if (count == 2) {
+      document.getElementById("leftSwipep").style.opacity = 0.5;
+    }
+    if (count > 1) {
+      count = count - 2;
+      slideList.style.left = "-" + count * 31 + "rem";
+
+      document.getElementById("rightSwipep").style.opacity = 1;
+
+      count++;
+    } else {
+      document.getElementById("leftSwipep").style.opacity = 0.5;
+      document.getElementById("leftSwipep").style.display = "hidden";
+    }
+  }
+  function stepForwardp() {
+    if (count == click - 1) {
+      document.getElementById("rightSwipep").style.opacity = 0.5;
+      document.getElementById("rightSwipep").style.display = "hidden";
+    }
+    if (count < click) {
+      slideList.style.left = "-" + count * 31 + "rem";
+
+      document.getElementById("leftSwipep").style.opacity = 1;
+      count++;
+    } else {
+      document.getElementById("rightSwipep").style.opacity = 0.5;
+      document.getElementById("rightSwipep").style.display = "hidden";
+    }
+  }
+  document
+    .getElementById("leftSwipep")
+    .addEventListener("click", stepBackp);
+  document
+    .getElementById("rightSwipep")
+    .addEventListener("click", stepForwardp);
+}
+
+brandSliderp();
 
 
 // cards vala slider
@@ -124,77 +247,12 @@ function brandSlider() {
       .getElementById("rightSwipe")
       .addEventListener("click", stepForward);
   }
- 
-
-
-
-//   function brandSlider1() {
-//     var slideList = document.querySelector(".slider");
-  
-//     var count = 1;
-//     var click = 8;
-//     var size = document.querySelector(".slider").offsetWidth;
-//     if (size < 900) {
-//       click = 11;
-//     }
-//     if (count == 1) {
-//       document.getElementById("leftSwipe1").style.opacity = 0.5;
-//       document.getElementById("leftSwipe1").style.display = "hidden";
-//     }
-//     console.log(size);
-//     function stepBack1() {
-//       if (count == 2) {
-//         document.getElementById("leftSwipe1").style.opacity = 0.5;
-//       }
-//       if (count > 1) {
-//         count = count - 2;
-//         slideList.style.left = "-" + count * 31 + "rem";
-  
-//         document.getElementById("rightSwipe1").style.opacity = 1;
-  
-//         count++;
-//       } else {
-//         document.getElementById("leftSwipe1").style.opacity = 0.5;
-//         document.getElementById("leftSwipe1").style.display = "hidden";
-//       }
-//     }
-//     function stepForward1() {
-//       if (count == click - 1) {
-//         document.getElementById("rightSwipe1").style.opacity = 0.5;
-//         document.getElementById("rightSwipe1").style.display = "hidden";
-//       }
-//       if (count < click) {
-//         slideList.style.left = "-" + count * 31 + "rem";
-  
-//         document.getElementById("leftSwipe1").style.opacity = 1;
-//         count++;
-//       } else {
-//         document.getElementById("rightSwipe1").style.opacity = 0.5;
-//         document.getElementById("rightSwipe1").style.display = "hidden";
-//       }
-//     }
-//     document
-//       .getElementById("leftSwipe1")
-//       .addEventListener("click", stepBack1);
-//     document
-//       .getElementById("rightSwipe1")
-//       .addEventListener("click", stepForward1);
-//   }
-  
-   
- // brandSlider1();
   brandSlider();
-
-
-
-// window.onload = function(){
-
-// }
 
 
 //last slider
 
-
+//last brand slider
 function brandSlider10() {
     var slideList = document.querySelector(".slider_div");
   
