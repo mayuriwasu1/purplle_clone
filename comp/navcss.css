@@ -2,7 +2,8 @@
 .BorderLineSearch {
    
     width: 70%;
-    border-bottom: 3px solid purple;
+    border-bottom: 3px solid #e40980
+;
     display: flex;
     justify-content: space-between;
     margin: 0px 0px 25px 50px;
@@ -47,7 +48,7 @@
          }
          a:hover
          {
-             color: purple;
+             color: #e40980;
          }
  
         #logo
@@ -92,6 +93,10 @@
            
             
              
+        }
+        #cat>ul>li:hover
+        {
+            color:  #e40980;
         }
         #cat>ul
         {
@@ -140,7 +145,7 @@
          }
          #A>img, #C>img, #B>img
          {
-             border: 1px solid red ;
+             border: 1px solid gray ;
          }
          #maindiv
          {
