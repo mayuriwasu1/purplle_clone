@@ -120,12 +120,14 @@
          {
               display: flex;
               list-style: none;
-             
+             background-color: white;
               position: absolute;
-              margin-top: 0px;
+              margin-top: 4px;
               padding: 15px;
               
               transform: translate(-10%,-10%);
+
+               
               
          }
          
@@ -169,6 +171,7 @@
              position: absolute;
              height: 100%;
              width: 94%;
+             background-color: white;
              
              
              
@@ -586,7 +589,7 @@
              font-weight: bolder;
          }
   
-         #mainDiv{
+         #thatDiv{
              position: sticky;
              top : 0;
          }
