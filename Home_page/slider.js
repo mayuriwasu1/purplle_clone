@@ -510,7 +510,7 @@ let products = [
         let cartArray = JSON.parse(localStorage.getItem("cartItems")) || [];
   
   
-  let contain_Div = document.querySelector("#container_products");
+  let contain_Div = document.querySelector("#container_pro_home");
   
   ShowProductsOnMain(products,contain_Div,cartArray);
   
