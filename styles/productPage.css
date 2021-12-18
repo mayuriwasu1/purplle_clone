@@ -5,7 +5,7 @@
         font-size: 15px;
         text-align: left;
         margin: 0;
-        letter-spacing: 2px;
+        /* letter-spacing: 2px; */
     }
     #slideShow1{
         width: 90%;
@@ -154,7 +154,7 @@
     }
     #ratingOf{
         width: max-content;
-        height: 5%;
+        height: 6%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -168,6 +168,7 @@
         font-weight: bold;
         font-family: 'Aqleema-Medium';
     }
+
     #priceOf{
         font-size: 16px;
         color: #2c414c;
@@ -222,3 +223,216 @@
        color: rgb(236,89,169);
        font-weight: bold;
     }
+
+/* css of wishlist */
+/* css of wishlist */
+/* css of wishlist */
+
+    #pinkDiv_Options_Wish{
+        /* margin-top: 100px; */
+        background-color: #e40980;
+        height: 160px;
+        margin-bottom: 100px;
+    }
+    #options_Shadow_Wish{
+        margin: auto;
+        background-color: white;
+        width: 91%;
+        height: 69%;
+        /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
+        min-height: 115px;
+        background: #fff;
+        position: relative;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px #d4d4d4;
+        padding: 10px;
+        text-align: center;
+        padding-bottom: 0;
+        /* padding-top: 2%; */
+        display: grid;
+        grid-template-columns: repeat(8,10%);
+        /* padding: 1%; */
+        padding-left: 1%;
+        padding-right: 2%;
+        column-gap: 2.8%;
+        color: #2c414c !important;
+        font-size: 14px;
+    }
+    #checking{
+        height: 68%;
+    }
+    #t_Center{
+        width: 100px;
+        height: 100px;
+        border-radius:50%;
+        border: 2px solid black;
+        background: #fff;
+        margin-top: 30px;
+        position: relative;
+    }
+    #To_Be_hidden{
+       /* margin-top: 100px; */
+       height: 100px;
+       display: flex;
+       justify-content: space-around;
+       padding-left: 35%;
+       padding-right: 35%;
+    }
+    #To_give_Name{
+        width: 250px;
+        height: 30px;   
+        /* border: 1px solid black; */
+        background: #fff;
+        margin-top: 70px;
+        position: relative;
+        text-align: center;
+        font-family: 'Aqleema-Regular';
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        color: #2c414c !important;
+        font-size: 20px;
+        display: flex;
+        column-gap: 8%;
+    }
+    #t_Center > img{
+        width:100px ;
+        height: 100px ;
+    }
+    #options_Shadow_Wish > div{
+        width: 100%;
+        cursor: pointer;
+        padding-bottom: 10px;
+        /* border-bottom : 6px solid #e40980; */
+    }
+    #options_Shadow_Wish > div >div:first-child{
+        height: 40%; 
+        margin-top: 10px; 
+    }
+    #options_Shadow_Wish > div >div:last-child{
+        margin-top: 16px;   
+    }
+    #options_Shadow_Wish > div >div:last-child:hover{
+        margin-top: 20px;
+        font-weight: bold   
+    }
+    #edit_icon:hover{
+        color: #3aa328;
+    }
+    #dream_true{
+        margin-bottom: 40px;
+        text-align: center;
+        font-family: 'Aqleema-Regular';
+        letter-spacing: 0.7px;
+        color: #2c414c !important;
+    }
+
+    #product_wishlist{
+        color: #2c414c !important;
+        font-family: 'Aqleema-Regular';
+        letter-spacing: 0.5px;
+        width: 60%; 
+        margin: auto;
+        /* text-align: left; */
+    }
+    #wish_MasterDiv{
+        display:grid;
+        height:120px;
+        grid-template-columns: 15% 63% 17%;
+        column-gap: 2%;
+        margin-bottom: 2px; 
+    }
+
+    #div_Center{
+        line-height: 0;
+        vertical-align: top;
+        gap: 0;
+        margin: 0;
+        height: 120px;
+        padding-left: 5%;
+    }
+   
+    #price_wishDiv{
+        display: flex;
+        gap: 2%;
+        letter-spacing: 0.7px  
+    }
+    #image_Wish{
+        width: 140px;
+        height: 120px;
+    }
+    #title_Wish{
+        line-height: 18px;
+    }
+    #btnDiv_wish{
+        padding-top: 10px;
+        text-align: center;
+        cursor: pointer;
+    }
+    #btnDiv_wish > button{
+        border: none;
+        width: 100%;
+        height: 50px;
+        color: white;
+        background-color: #673ab7;
+       
+        height: 45px;
+        line-height: 45px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    #beauty_wish{
+        margin:auto;
+        width: 200px;
+        height: 200px;
+        margin-left: 40%;
+    }
+
+    #to_beauty{
+        border: none;
+        width: 150px;
+        height: 40px;
+        color: white;
+        background-color: #673ab7;
+        height: 45px;
+        line-height: 45px;
+        font-size: 14px;
+        cursor: pointer;
+        font-weight: bold;
+        letter-spacing:0.8px;
+    }
+    #tomake_beauty{
+        margin:auto;
+        width: 200px;
+        height: 200px;
+        margin-left: 40%;
+    }
+    #steps_to_Beauty{
+        /* margin-left: 40%; */
+        text-align: center;
+        color:#e40980 
+    }
+    #ordersFrom_wish_delivery{
+        margin:auto;
+        width: 400px;
+        height: 350px;
+        margin-left: 35%;
+        margin-top: 0px;
+    }
+    #ratingOf_Wish{
+        width: max-content;
+        height: 12%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: white;
+        background-color: #27aa0b;
+        border-radius: 3px;
+        color: #fff;
+        padding: 3px 5px 0px 5px;
+        font-size: 11px;
+        font-weight: bold;
+        font-family: 'Aqleema-Medium';
+    }
+
