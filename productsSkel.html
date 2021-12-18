@@ -7,9 +7,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
         <link rel="stylesheet" href="./styles/productPage.css">
-
+        <link rel="stylesheet" href="comp/navcss.css">
     </head>
     <body>
+        <div id="thatDiv">
+
+        </div>
         <div id="slideShow1">
             <span>  
                 <i  style="margin-left:3%;margin-top:190px; font-size: 30px;color:grey" id="left"; class="fas fa-chevron-left"></i>  
@@ -151,6 +154,12 @@
     let count = 0; 
 
     let cartArray = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    import nav from './comp/navjs.js';
+
+    var div = document.getElementById("thatDiv");
+
+    div.innerHTML = nav();
 
     import ShowProductsOnMain from "./scripts/products.js";
 
