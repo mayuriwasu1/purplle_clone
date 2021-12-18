@@ -2164,7 +2164,7 @@ if(cartClick>1){
 
 function addtoCart(item){
    console.log(item);
-  //  console.log(index);
+
    let toCartItem = item;
    let uniqueId = item.id;
    let count = 0;
@@ -2173,7 +2173,7 @@ function addtoCart(item){
        else count++;
    }
    if(count == cartArray.length){
-      // document.querySelector("#toCartBtn1").innerHTML = "ADDED TO CART";
+      
       cartArray.push(toCartItem);
       localStorage.setItem("CartItems", JSON.stringify(cartArray));  
    }
@@ -2187,22 +2187,11 @@ wishList.addEventListener("click",function(){
 
   if(wishListClick%2!=0){
     wishList.innerHTML="<span class=iconify data-icon=ant-design:heart-filled  data-width=20 data-height=30 id=red_heart ></span>SAVED"
-    // alert("even")
+  
   }else{
     wishList.innerHTML="<span class=iconify data-icon=el:heart-empty  data-width=20 data-height=20 ></span>SAVE"
-    // alert("odd")
+  
   }
-//   // alert(wishListClick)
-//   if(wishListClick>1){
-//   alert("2")
-//   // wishListClick=0;
-// }
-// if(wishListClick<=1){
-//   alert("1")
-// }
-// if(wishListClick>1){
-//   alert("2")
-//   // wishListClick=0;
-// }
+
 })
 </script>
