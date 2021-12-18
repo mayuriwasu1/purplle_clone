@@ -4,92 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Product Details</title>
+    <link rel="icon" href="https://media6.ppl-media.com/mediafiles/ecomm/misc/purplle-16x16.png">
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
 
     <style>
-      #secure_assist_help {
-        border-top: 1px solid rgb(134, 131, 131);
-        border-bottom: 1px solid rgb(134, 131, 131);
-        width: 100%;
-        height: 250px;
-        display: flex;
-        justify-content: center;
-        color: rgb(46, 45, 45);
-      }
-      #secure_assist_help > div {
-         border-right: 1px solid rgb(121, 124, 121);
-         width:28.3%;
-         height: 100%;
-         display: block;
-         text-align: center;
-      }
-      #secure_assist_help >div>img{
-        width: 40%;
-        height: 40%;
-       padding-top: 20px;
-        
-      }
-
-      #secure > p{
-        color: rgb(66, 66, 66);
-      }
-      #secure_assist_help > div > h2{
-        color: rgb(66, 66, 66);
-      }
-
-      #secure_assist_help >div:nth-last-child(1) {
-        border-right: none;
-       
-      }
-      .advertise {
-        display: flex;
-        width: 100%;
-        margin: auto;
-        background-color: #f5f6f7;
-        justify-content: space-evenly;
-        border: 1px solid rgb(211, 211, 216);
-        border-top: none;
-      }
-      .advertise > div {
-        margin-left: 90px;
-      }
-      .advertise > div > div {
-        background-color: palevioletred;
-        display: flex;
-        width: 50%;
-        justify-content: space-between;
-      }
-      hr {
-        height: 8px;
-        background-color: rgb(185, 177, 177);
-        border-radius: 100%;
-        width: 80%;
-        margin: auto;
-        margin-top: 10px;
-      }
-      #app_ads {
-        width: 400px;
-        display: flex;
-      }
-      #app_ads > div:nth-child(1) {
-        width: 50%;
-        margin-left: 20px;
-        text-align: left;
-      }
-      .google_apple{
-        height: 50px;
-      }
-      #app_ads > div:nth-child(1) > p {
-        color: white;
-        margin-bottom: 40px;
-      }
-
-/* till here css of footer */
-/* till here css of footer */
+    
 
       #product {
-        /* border: 1px solid red; */
+       
         margin: auto;
         width: 85%;
         height: 600px;
@@ -97,19 +20,19 @@
         gap: 10px;
       }
       #product_images {
-        /* border: 1px solid blue; */
+       
         flex: 5;
         display: flex;
         gap: 0px;
       }
       #product_description {
-        /* border: 1px solid green; */
+        
 
         flex: 2.2;
       }
       #small_images {
-        /* border: 1px solid red; */
-        flex: 2;
+      
+        flex: 1.2;
         display: grid;
       }
       #small_images > div {
@@ -124,18 +47,26 @@
         height: 120px;
       }
       #small_images > div > img {
-        /* width:100%; */
-        /* height:100%; */
+       
         max-width: 100%;
         max-height: 100%;
       }
       #large_image {
         border: 1px solid rgb(104, 104, 102);
         flex: 6;
+        overflow: hidden;
+        position: relative;
+       margin-right:50px ;
       }
       #large_image > img {
         cursor: zoom-in;
-        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      
         height: 100%;
       }
       img {
@@ -143,7 +74,7 @@
         height: 100%;
       }
       #description_rating {
-        /* border: 1px solid black; */
+       
         height: 30%;
       }
       #description{
@@ -299,6 +230,10 @@
         
         width:25px;
       }
+      #red_heart{
+  color: red;
+}
+
       #delivery_to{
         /* border: 1px solid black; */
         width:100%;
@@ -538,6 +473,8 @@
     letter-spacing: 1px;
     opacity: 0;
     cursor: pointer;
+    border: none;
+    border-radius: 3%;
   
 }
 #slider_img:hover #slider_btn{
@@ -583,14 +520,13 @@
   overflow-x: auto;
   overflow-y: hidden;
   justify-content: left;
-  /* padding-left: 20px;
-  padding-right: 20px; */
+ 
 }
 #featured_slider::-webkit-scrollbar{
   visibility: hidden;
 }
 #featured_slider>div{
-  /* border: 1px solid black; */
+ 
   min-width: 270px;
   height: 300px;
   position: relative;
@@ -636,6 +572,167 @@
 }
 
 
+/* Todays Deals Slider */
+
+#todays_deals{
+ 
+  width: 85%;
+  height:390px;
+  margin: auto;
+ 
+  text-align: center;
+  margin-top: 20px;
+}
+#todays_deals>div{
+ 
+  padding: 0px;
+  position: relative;
+  height: 80%;
+  width: 100%;
+}
+#todays_deals>div>span{
+  position: relative;
+  top: 40%;
+  left: -50%;
+  font-size: 60px;
+  cursor: pointer;
+  z-index: 1;
+}
+#todays_deals>div>span:nth-of-type(2){
+  left:50%;
+  text-align: right;
+}
+#todays_deals_slider{
+  display: flex;
+  gap: 10px;
+  margin-top: -50px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  justify-content: left;
+ 
+}
+#todays_deals_slider::-webkit-scrollbar{
+  visibility: hidden;
+}
+#todays_deals_slider>div{
+ 
+  min-width: 270px;
+  height: 300px;
+  position: relative;
+  text-align: center;
+  transition: 1.5s;
+  margin-left: 30px;
+  
+  
+}
+#todays_deals_slider>div>p{
+  height:40px;
+  position: relative;
+  top: -20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#todays_deals_slider>div:nth-last-child(1){
+  margin-right: 30px;
+}
+#todays_deals_slider>div>div{
+  display: flex;
+  margin-top: -30px;
+  position: relative;
+  top: -20px;
+  gap: 5px;
+  padding-left: 5px;
+}
+#todays_deals_slider>div>div>p:nth-child(2){
+  line-height:1.7;
+  text-decoration: line-through;
+  color: rgb(65, 65, 66);
+
+}
+#todays_deals_slider>div>div>p:nth-child(3){
+  line-height: 1.7;
+  color: rgb(207, 44, 44);
+}
+.todays_deals_div>img{
+  height:70%;
+
+}
+
+
+/* Footer Part */
+
+#secure_assist_help {
+        border-top: 1px solid rgb(134, 131, 131);
+        border-bottom: 1px solid rgb(134, 131, 131);
+        width: 100%;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+      }
+      #secure_assist_help > div {
+         border-right: 1px solid rgb(121, 124, 121);
+         width:28.3%;
+         height: 100%;
+         display: block;
+         text-align: center;
+      }
+      #secure_assist_help >div>img{
+        width: 40%;
+        height: 40%;
+      padding-top: 20px;
+        
+      }
+
+      #secure_assist_help >div:nth-last-child(1) {
+        border-right: none;
+      }
+      .advertise {
+        display: flex;
+        width: 100%;
+        margin: auto;
+        background-color: #f5f6f7;
+        justify-content: space-evenly;
+        border: 1px solid rgb(211, 211, 216);
+        border-top: none;
+      }
+      .advertise > div {
+        margin-left: 90px;
+      }
+      .advertise > div > div {
+        background-color: palevioletred;
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+      }
+      .advertise>div>hr {
+        height: 8px;
+        background-color: rgb(185, 177, 177);
+        border-radius: 100%;
+        width: 80%;
+        margin: auto;
+        margin-top: 10px;
+      }
+      #app_ads {
+        width: 400px;
+        display: flex;
+      }
+      #app_ads > div:nth-child(1) {
+        width: 50%;
+        margin-left: 20px;
+        text-align: left;
+      }
+      .google_apple{
+        height: 50px;
+      }
+      #app_ads > div:nth-child(1) > p {
+        color: white;
+        margin-bottom: 40px;
+      }
+
+
+
+
+
 
 
     </style>
@@ -644,13 +741,10 @@
     <div id="product">
       <div id="product_images">
         <div id="small_images">
-          <!-- <div id="image1"></div>
-              <div id="image2"></div>
-              <div id="image3"></div>
-              <div id="image4"></div> -->
+        
         </div>
 
-        <div id="large_image" onmousemove="zoomIn(event)">
+        <div id="large_image">
           <img id="large_image_src" src="" alt="" />
         </div>
       </div>
@@ -720,9 +814,7 @@
 
   <div id="details_reviews_cart">
     <div id="details_reviews">
-        <!-- <div id="highlights">
-          <p id="title">HIGHLIGHTS</p>
-        </div> -->
+      
         <div id="ideal_for">
           <p class="bold_text">IDEAL FOR</p>
           <div id="ideal_for_img">
@@ -783,11 +875,7 @@
                   <p>Speciality</p>
                   <p id="speciality"></p>
                 </div>
-                
-                <div>
-                  <p>Finish</p>
-                  <p id="finish"></p>
-                </div>
+              
                 <div>
                   <p>Benefits</p>
                   <p id="benefits_specs"></p>
@@ -811,7 +899,7 @@
     <div id="cart_delivery">
         <div id="addtocart_save">
              <button id="addtocart">ADD TO CART</button>
-             <button id="save" style="display: flex; justify-content: center;"><span class="iconify" data-icon="el:heart-empty"  data-width="20" data-height="20"></span>SAVE</button>
+             <button id="save" style="display: flex; justify-content: center; "><span class="iconify" data-icon="el:heart-empty"  data-width="20" data-height="20" ></span>SAVE</button>
         </div>
         <div id="delivery_to">
           <label for="">Delivery To:</label>
@@ -865,21 +953,19 @@
     </div>
     </div>
 
-    <div>
-      <h2>ALSO BOUGHT</h2>
-    </div>
-
-    <div>
+  
+    <div id="todays_deals">
       <h2>TODAY'S DEALS</h2>
+      <div >
+        <span class="todays_deals_span">&#139</span>
+        <span class="todays_deals_span">&#155</span>
+       <section id="todays_deals_slider">
+     
+       </section>
+    </div>
     </div>
 
-    <div>
-      <h2>RECENT HISTORY</h2>
-    </div>
-
-    <!-- Customer Queries -->
-    <div></div>
-
+   
     <div id="secure_assist_help">
       <div id="secure">
         <img
@@ -964,12 +1050,16 @@
 </html>
 <script>
   let data = JSON.parse(localStorage.getItem("DataIndivi"));
+  let cartArray = JSON.parse(localStorage.getItem("cartItems"))
   console.log(data);
-  let cartArray = JSON.parse(localStorage.getItem("cartItems")) || [];
   var small_images_Div = document.getElementById("small_images");
   var small_image_data = data.image_url;
+  var large_image = document.getElementById("large_image_src");
+  large_image.src=data.image_url[0];
+ 
   small_image_data.forEach(function (item) {
     var innerDiv = document.createElement("div");
+
 
     innerDiv.addEventListener("mouseover", function () {
       viewLargeImage(item);
@@ -981,20 +1071,34 @@
   });
   function viewLargeImage(item) {
     var large_image = document.getElementById("large_image_src");
-    //   large_image.addEventListener("mouseenter",function(){
-    //       zoom()
-    //   })
+  
     large_image.src = item;
   }
-  function zoomIn(event) {
-    console.log(event);
-    var large_image = document.getElementById("large_image");
-    large_image.style.visibility = "visible";
-    var posX = event.offsetX;
-    var posY = event.offsetY;
-    large_image.style.backgroundPosition =
-      -posX * 2.5 + "px " + -posY * 5.5 + "px";
-  }
+
+  // Magnifying Effect Portion
+
+  var magnify_area=document.getElementById("large_image")
+    var magnify_img=document.getElementById("large_image_src")
+    magnify_area.addEventListener("mousemove",function(event){
+        var clientx=event.clientX-magnify_area.offsetLeft
+         var clienty=event.clientY -magnify_area.offsetTop
+
+        var mwid=magnify_area.offsetWidth
+        var mht=magnify_area.offsetHeight;
+
+        clientx=clientx/ mwid*100
+        clienty=clienty/mht*100
+        
+        magnify_img.style.transform=`translate(-${clientx}%,-${clienty}%) scale(2)`
+      
+
+    })
+    magnify_area.addEventListener("mouseleave",function() {
+        magnify_img.style.transform="translate(-50%,-50%) scale(1)"
+      
+    })
+
+
 
   var description = document.getElementById("description");
   description.innerText = data.Benefits;
@@ -1040,8 +1144,7 @@ skinType.innerText=data.skin_type
 var speciality=document.getElementById("speciality")
 speciality.innerText=data.Speciality
 
-var finish=document.getElementById("finish")
-finish.innerText=data.finish
+
 
 var benefitsSpecs=document.getElementById("benefits_specs")
 benefitsSpecs.innerText=data.Benefits
@@ -1291,6 +1394,9 @@ alsoViewedProducts.forEach(function(item){
   var innerDiv=document.createElement("div")
   innerDiv.className="viewed_div";
   innerDiv.id="slider_img";
+  innerDiv.addEventListener("click",function(){
+    displayProduct(item);
+  })
   var image=document.createElement("img");
   image.src=item.image_url[0];
   var btn=document.createElement("button");
@@ -1612,6 +1718,9 @@ featuredProduct.forEach(function(item){
   var innerDiv=document.createElement("div")
   innerDiv.className="featured_div";
   innerDiv.id="slider_img";
+  innerDiv.addEventListener("click",function(){
+    displayProduct(item);
+  })
   var image=document.createElement("img");
   image.src=item.image_url[0];
   var btn=document.createElement("button");
@@ -1692,6 +1801,337 @@ featuredSpan[0].onclick=()=>{
 
 
 
+// Todays Deals Slider
+
+let todaysDealsProducts=[
+{
+        id : "AF",
+        title : "Lakme Aboslute Blur Perfect Makeup Primer,10g",
+        rating : 4.1,
+        price : 299,
+        discount: 0.12,
+        qty : 1,
+        description : "Makeup glides on effortlessly and blends seamlessly for a more vibrant, color true finish. The Lakme Absolute Blur Perfect Makeup Primer is the perfect canvas for makeup or wear-alone over your moisturiser for instant smoothness and radiance. Buy Now!The Lakme Absolute Make-Up Primer is a flawless make-up primer that preps your skin for professional make-up. • Creates the perfect base for make-up and helps it stay for longer.. Hides skin imperfections and gives you an even toned skin. It is lightweight, water-proof, and has a smooth matte texture.",
+        best_before : "31 Jan 2023" ,
+        skin_concern : "Skin Imperfection, Uneven Skin Texture, Visible Pores",
+        skin_type : "Acne-Prone Skin, Combination Skin, Dry Skin, Normal Skin, Oily Skin, Sensitive skin",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Blurs Fine Lines, Evens Skin Tone, Fadeproof, Hides Imperfections, Light Weight,Mattifying",
+        type: "primer",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_7_display_1631104552_882ba13c.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_10_display_1631104554_9e79acb9.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_8_display_1631104552_aa52c3b0.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_11_display_1631104554_ff8fe6bb.jpg"]
+    },
+    {
+        id : "AE",
+        title : " NY Bae Blurin' Primer|Face Primer|Blurs Out Pores & Fine Lines| Enriched With Vitamin E| Radiant Glow| All Skin Types| Matte products",
+        rating : 3.9,
+        price : 215,
+        discount: 0.12,
+        qty : 1,
+        description : "NY Bae's Blurin Primer is the hot goss of Bae town. It's every girl's must have. And for good reasons too. As you dab-dab across your face, the light-weight immediately makes you go' wooohoo! But did you know it has extra super-powers too? Of course, it does a fab job on hiding acne scars, blemishes, minimising pores and leaving behind a perfect, even-toned finish. But that apart, it even hydrates and nourishes the skin. Didn't we tell you it's an absolute wonder to have? So go prep up and hit the town with flawless skin.",
+        best_before : "31 Jan 2023" ,
+        skin_concern : "Fine lines and Pores",
+        skin_type : "All skin types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Blurs out Pores & Fine Lines  Enriched with Vitamin E, Even skin tone, Hydrating, Light Weight",
+        type: "primer",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_10_display_1631800058_e824cd72.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_6_display_1623941086_74d4845f.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_4_display_1623941083_ab8853d8.jpg","https://media6.ppl-media.com/mediafiles/ecomm/promo/1626774900_primer-a8_04.jpg"]
+    },
+    {
+        id : "AG",
+        title : "Swiss Beauty Real Makeup Base Highlighting Primer - Natural - Tint (32 ml) ",
+        rating : 4.3,
+        price : 349,
+        discount: null,
+        qty : 1,
+        description : "The Swiss Beauty brighten the skin, contains pearl powder. It brightens skin and make the base fit and natural shines and enchanting lustre as well. Let your skin soft and moisturizing with this highlighting primer. Use it alone and bright your skin. Mixed with highlighting primer with base products such as foundation or BB cream with a scale of 1:1. After press on palm apply them on the face to finish the base. After finishing the base apply the product on the area where need to be highlighted, make the skin more glossy",
+        best_before : "31 Jan 2023" ,
+        skin_concern : "Dry Skin, Dull Skin, Fine Lines",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Radiant Finish",
+        Benefits : "Evens Skin Tone, Light Weight, Minimizing Pores, Moisturizing, Skin Brightening",
+        type: "primer",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_1_display_1590792783_75d33aec.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_2_display_1590792784_5bb3dd61.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_3_display_1590792785_20ae436d.jpg","https://media4.purplle.com/static/img/brand//__1619086150_1647f507.jpg"]
+    },
+    {
+        id : "AH",
+        title : "Purplle True Jewel 24K Gold Primer Mattel Oil Control Shine Controll Long Lasting Lightweight| Dermatologically Tested - (20 ml)",
+        rating : 1.8,
+        price : 450,
+        discount: 0.12,
+        qty : 1,
+        description : "Hey one with a golden heart, let your face channel your inner radiance with Purplle's True Jewel 24K Gold Primer. Purplle's True Jewel 24K Gold Primer is a total must-have for those who believe and know the true beauty of a good primer. This amazing primer masks fine lines and uneven texture, making skin marvellously soft and smooth. It is a perfect base for makeup as it holds the foundation in place for long hours. It instantly melts into the skin and helps retain moisture. It helps smooth out fine lines, helps reduce pores and tightens facial features. It also helps imparts a sheer glow & leaves skin an even finish under makeup sinks into the skin to provide moisture. It also helps neutralise redness for you to build up your base on. It's innovative light reflective gold flakes give a wonderful glow. The formula holds on your makeup up for a long time for a flawless looking shine. Say hello to a BFF for your skin",
+        best_before : "31 Jan 2023" ,
+        skin_concern : "Blemishes, Enlarged Pores, Fine Lines And Pores, Rough Skin, Uneven Skin Texture",
+        skin_type : "All Skin Types",
+        Speciality : "Cruelty Free, Dermatologically Tested,Enriched with Vitamin E,oil Free",
+        finish : "Illuminating",
+        Benefits : "Blurs Fine Lines, Light Weight, Mattifying, Minimizes Pores, Oil Control",
+        type: "primer",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_10_display_1628078492_d1932184.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_15_display_1628077466_636ffaff.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_9_display_1596000695_5cecb9c8.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_11_display_1596000711_5a3df986.jpg"]
+    },
+
+
+
+    {
+        id : "AI",
+        title : " NY Bae Blurin' Primer|Face Primer|Blurs Out Pores & Fine Lines| Enriched With Vitamin E| Radiant Glow| All Skin Types| Matte products",
+        rating : 3.9,
+        price : 215,
+        discount: 0.12,
+        qty : 1,
+        description : "NY Bae's Blurin Primer is the hot goss of Bae town. It's every girl's must have. And for good reasons too. As you dab-dab across your face, the light-weight immediately makes you go' wooohoo! But did you know it has extra super-powers too? Of course, it does a fab job on hiding acne scars, blemishes, minimising pores and leaving behind a perfect, even-toned finish. But that apart, it even hydrates and nourishes the skin. Didn't we tell you it's an absolute wonder to have? So go prep up and hit the town with flawless skin.",
+        best_before : "31 Jan 2023" ,
+        skin_concern : "Fine lines and Pores",
+        skin_type : "All skin types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Blurs out Pores & Fine Lines  Enriched with Vitamin E, Even skin tone, Hydrating, Light Weight",
+        type: "primer",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_10_display_1631800058_e824cd72.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_6_display_1623941086_74d4845f.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_4_display_1623941083_ab8853d8.jpg","https://media6.ppl-media.com/mediafiles/ecomm/promo/1626774900_primer-a8_04.jpg"]
+    },
+    {
+        id : "AJ",
+        title : "Lakme Aboslute Blur Perfect Makeup Primer,10g",
+        rating : 4.1,
+        price : 299,
+        discount: 0.12,
+        qty : 1,
+        description : "Makeup glides on effortlessly and blends seamlessly for a more vibrant, color true finish. The Lakme Absolute Blur Perfect Makeup Primer is the perfect canvas for makeup or wear-alone over your moisturiser for instant smoothness and radiance. Buy Now!The Lakme Absolute Make-Up Primer is a flawless make-up primer that preps your skin for professional make-up. • Creates the perfect base for make-up and helps it stay for longer.. Hides skin imperfections and gives you an even toned skin. It is lightweight, water-proof, and has a smooth matte texture.",
+        best_before : "31 Jan 2023" ,
+        skin_concern : "Skin Imperfection, Uneven Skin Texture, Visible Pores",
+        skin_type : "Acne-Prone Skin, Combination Skin, Dry Skin, Normal Skin, Oily Skin, Sensitive skin",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Blurs Fine Lines, Evens Skin Tone, Fadeproof, Hides Imperfections, Light Weight,Mattifying",
+        type: "primer",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_7_display_1631104552_882ba13c.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_10_display_1631104554_9e79acb9.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_8_display_1631104552_aa52c3b0.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_11_display_1631104554_ff8fe6bb.jpg"]
+    },
+    {
+        id : "AK",
+        title : "Swiss Beauty Real Makeup Base Highlighting Primer - Natural - Tint (32 ml) ",
+        rating : 4.3,
+        price : 349,
+        discount: null,
+        qty : 1,
+        description : "The Swiss Beauty brighten the skin, contains pearl powder. It brightens skin and make the base fit and natural shines and enchanting lustre as well. Let your skin soft and moisturizing with this highlighting primer. Use it alone and bright your skin. Mixed with highlighting primer with base products such as foundation or BB cream with a scale of 1:1. After press on palm apply them on the face to finish the base. After finishing the base apply the product on the area where need to be highlighted, make the skin more glossy",
+        best_before : "31 Jan 2023" ,
+        skin_concern : "Dry Skin, Dull Skin, Fine Lines",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Radiant Finish",
+        Benefits : "Evens Skin Tone, Light Weight, Minimizing Pores, Moisturizing, Skin Brightening",
+        type: "primer",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_1_display_1590792783_75d33aec.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_2_display_1590792784_5bb3dd61.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_3_display_1590792785_20ae436d.jpg","https://media4.purplle.com/static/img/brand//__1619086150_1647f507.jpg"]
+    },
+    {
+        id : "AL",
+        title : "Purplle True Jewel 24K Gold Primer Mattel Oil Control Shine Controll Long Lasting Lightweight| Dermatologically Tested - (20 ml)",
+        rating : 4.3,
+        price : 450,
+        discount: 0.12,
+        qty : 1,
+        description : "Hey one with a golden heart, let your face channel your inner radiance with Purplle's True Jewel 24K Gold Primer. Purplle's True Jewel 24K Gold Primer is a total must-have for those who believe and know the true beauty of a good primer. This amazing primer masks fine lines and uneven texture, making skin marvellously soft and smooth. It is a perfect base for makeup as it holds the foundation in place for long hours. It instantly melts into the skin and helps retain moisture. It helps smooth out fine lines, helps reduce pores and tightens facial features. It also helps imparts a sheer glow & leaves skin an even finish under makeup sinks into the skin to provide moisture. It also helps neutralise redness for you to build up your base on. It's innovative light reflective gold flakes give a wonderful glow. The formula holds on your makeup up for a long time for a flawless looking shine. Say hello to a BFF for your skin",
+        best_before : "31 Jan 2023" ,
+        skin_concern : "Blemishes, Enlarged Pores, Fine Lines And Pores, Rough Skin, Uneven Skin Texture",
+        skin_type : "All Skin Types",
+        Speciality : "Cruelty Free, Dermatologically Tested,Enriched with Vitamin E,oil Free",
+        finish : "Illuminating",
+        Benefits : "Blurs Fine Lines, Light Weight, Mattifying, Minimizes Pores, Oil Control",
+        type: "primer",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_10_display_1628078492_d1932184.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_15_display_1628077466_636ffaff.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_9_display_1596000695_5cecb9c8.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_11_display_1596000711_5a3df986.jpg"]
+    },{
+        id : "AR",
+        title : "NY Bae Pretty Pastels Nail Paint | Glossy Finish | Chip Resistant | Cruelty Free | Travel Friendly | Mini Nail Paint - Blue Hyacinth 03 (3 ml)",
+        rating : 4,
+        brand: "NY Bae",
+        price : 49,
+        discount: 0,
+        qty : 1,
+        description : "Dekha hai pehli baar, Purplle pe pretty pastels ki Bahaar! The NY Bae Pretty Pastels Nail Paint in ‘Blue Hyacinth’ will bloom on your fingertips like fresh, Spring flowers. This gorgeously smooth and attractive shade looks sooo damn fine on your fingertips! Wherever you go, whatever you do, these FAB nail paints will bring out the best in you. After all, no makeup is complete without nail makeup. What’s more to love about this behtareen shade!? It doesn’t chip and lets your nails drip sass. More pastel power to you, NY Bae girls!",
+        best_before : "31 October 2024" ,
+        skin_concern : "Happy and Colourful Nails",
+        skin_type : "All Skin Types",
+        Speciality : "Enriched with Vitamin E,oil Free",
+        finish : "Matte",
+        Benefits : "Chip Resistant, Intense Pigmentation",
+        oneBenefit : "Long Lasting",
+        type: "nailpolish",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/257443/ny-bae-pretty-pastels-nail-paint-blue-hyacinth-03-3-ml_1_display_1638019215_a542cfd2.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/257443/ny-bae-pretty-pastels-nail-paint-blue-hyacinth-03-3-ml_2_display_1638019216_3957c533.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/257443/ny-bae-pretty-pastels-nail-paint-blue-hyacinth-03-3-ml_3_display_1638019217_3dfc47a2.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/257443/ny-bae-pretty-pastels-nail-paint-blue-hyacinth-03-3-ml_6_display_1639661396_76e59518.jpg"]
+    },{
+        id : "AU",
+        title : "Colorbar Nail Lacquer Carnation (12 ml)",
+        rating : 3.9,
+        brand: "Colorbar Nail",
+        price : 1065,
+        discount: 0.32,
+        qty : 1,
+        description : "1. A range of pink lacquers with varied light and dark shades and glitter and sheer textures  2. Chip-resistant and non-yellowing 3. Formulated with a 7-free formula: without formaldehydes, formaldehyde resin, DBP, toluene, camphor, paraben, and xylene.4. A special wide applicator for effortless end-to-end coverage.5. Dermatologically tested",
+        best_before : "30 August 2025", 
+        skin_concern : "Happy and Colourful Nails",
+        skin_type : "All Skin Types",
+        Speciality : "Camphor Free, DBP Free, Dermatologically Tested, Formaldehyde Free, Paraben Free, Toluene Free",
+        finish : "Glossy Finish",
+        Benefits : "Chip Resistant, High Color Payoff, Long Lasting, Non-Yellowing",
+        oneBenefit : "Long Lasting",
+        type: "nailpolish",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/176012/nail-lacquer-carnation-12-ml_1_display_1562750180_63035d1d.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/176012/nail-lacquer-carnation-12-ml_3_display_1562750185_79b0e79e.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/176012/nail-lacquer-carnation-12-ml_5_display_1562750186_da9ae047.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/176012/nail-lacquer-carnation-12-ml_2_display_1562750185_ff1a7b32.jpg"]
+    },{
+        id : "AV",
+        title : "Swiss Beauty Classic Nail Polish - 35 - 12 ml",
+        rating : 3.9,
+        brand: "Swiss Beauty",
+        price : 99,
+        discount: 0,
+        qty : 1,
+        description : "Perfect your nails in just one stroke with this Swiss Beauty Classic Nail Polish that provides a brilliant smooth, uniform finish, long lasting and chip-free coverage.Ideal for the girl-on-the-go, itd hassle - free and the most practical path to pretty.Cruelty Free Testedlong lasting, high shine, chip-free coverage, High color payoff, smooth, uniform finish All skin type",
+        best_before : "20 April 2024" ,
+        skin_concern : "Happy and Colourful Nails",
+        skin_type : "All Skin Types",
+        Speciality : "Cruelty Free",
+        finish : "Glossy Finish",
+        Benefits : "Dries quickly, Easy Application, Easy to Use, Glides easily, High Color Payoff, Long Lasting, Single Swipe Application, Smooth Application, Strengthens The Nails, Strong Packaging, Travel Friendly Packaging",
+        oneBenefit : "Long Lasting",
+        type: "nailpolish",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/225250/swiss-beauty-classic-nail-polish-35-12-ml_6_display_1617963124_d128d57b.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/225250/swiss-beauty-classic-nail-polish-35-12-ml_7_display_1617963125_e451087f.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/225250/swiss-beauty-classic-nail-polish-35-12-ml_9_display_1617963126_edd3fc2d.jpg","https://media4.purplle.com/static/img/brand//__1619086150_1647f507.jpg"]
+    },{
+        id : "AW",
+        title : "Swiss Beauty Makeup Brushes Set 5 Purple",
+        rating : 3.9,
+        brand: "Swiss Beauty",
+        price : 299,
+        discount: 0,
+        qty : 1,
+        description : "Made from imported high quality hair materials.With thick and elastic feeling, comfortable for the skin, can naturally handle the powder to its best effect.Make you beautiful.",
+        best_before : "31 January 2025" ,
+        skin_concern : "Soft on the skin",
+        skin_type : "Fibre brizzles,smooth sponge",
+        finish : "top nouch",
+        Benefits : "Durable, Flexible Brush, Long Lasting, Skin Friendly, Soft",
+        oneBenefit : " Long Lasting",
+        type: "makeup brush set",
+        origin : "India",
+        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/205764/swiss-beauty-makeup-brushes-set-3-100-g_2_display_1638789687_68fdea31.jpg","https://media4.purplle.com/static/img/brand//__1619086150_1647f507.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/205764/swiss-beauty-makeup-brushes-set-3-100-g_2_display_1638789687_68fdea31.jpg","https://media4.purplle.com/static/img/brand//__1619086150_1647f507.jpg"]
+    }
+]
+
+var todaysDealsSlider=document.getElementById("todays_deals_slider");
+
+todaysDealsProducts.forEach(function(item){
+  // console.log(item);
+  var innerDiv=document.createElement("div")
+  innerDiv.className="todays_deals_div";
+  innerDiv.id="slider_img";
+  innerDiv.addEventListener("click",function(){
+    displayProduct(item);
+  })
+  var image=document.createElement("img");
+  image.src=item.image_url[0];
+  var btn=document.createElement("button");
+  btn.id="slider_btn"
+  btn.innerText="ADD TO CART"
+  btn.addEventListener("click",function(){
+            addtoCart(item)
+        });
+  var title=document.createElement("p");
+  title.innerText=item.title
+   var contentDiv=document.createElement("div");
+  
+   var vActualPrice=item.price;
+   var vDiscount=item.discount;
+   var vprofit= Math.round(vActualPrice*vDiscount)
+   var vSellingPrice=vActualPrice-vprofit
+  
+
+   var displayPrice=document.createElement("h3")
+   displayPrice.innerText=`₹${vSellingPrice}`;
+
+   var displayActualPrice=document.createElement("p")
+   displayActualPrice.innerText=vActualPrice;
+
+   var vdisplayProfit=document.createElement("p");
+   vdisplayProfit.innerText=`${vDiscount*100}% off`
+   
+contentDiv.append(displayPrice,displayActualPrice,vdisplayProfit)
+innerDiv.append(image,btn,title,contentDiv)
+todaysDealsSlider.append(innerDiv)
+
+   
+})
+
+
+var todaysDealsSpan=document.getElementsByClassName("todays_deals_span");
+var todaysDealsDiv=document.getElementsByClassName("todays_deals_div");
+
+var tdl=0;
+
+todaysDealsSpan[1].onclick=()=>{
+ tdl++;
+ for(var i of todaysDealsDiv){
+   if(tdl==2){
+     todaysDealsSpan[1].style.visibility="hidden"
+   }else{
+     todaysDealsSpan[1].style.visibility="visible";
+   }
+   if(tdl==0){
+     todaysDealsSpan[0].style.visibility="hidden"
+   }else{
+     todaysDealsSpan[0].style.visibility="visible";
+   }
+   if(tdl==0){i.style.left="0px";}
+   if(tdl==1){i.style.left="-1230px";}
+   if(tdl==2){i.style.left="-2460px";}
+   if(tdl>2){tdl=2}
+ }
+}
+todaysDealsSpan[0].onclick=()=>{
+  
+ tdl--;
+ for(var i of todaysDealsDiv){
+  if(tdl==0){
+     todaysDealsSpan[0].style.visibility="hidden"
+   }else{
+     todaysDealsSpan[0].style.visibility="visible";
+   }
+   if(tdl==2){
+     todaysDealsSpan[1].style.visibility="hidden"
+   }else{
+     todaysDealsSpan[1].style.visibility="visible";
+   }
+   if(tdl==0){i.style.left="0px";}
+   if(tdl==1){i.style.left="-1230px";}
+   if(tdl==2){i.style.left="-2460px";}
+   if(tdl<0){tdl=0}
+ }
+}
+
+
+
+
+
+
+
+
+
+
+function displayProduct(item){
+  let data = item;
+    localStorage.setItem("DataIndivi",JSON.stringify(data));
+    window.location.href = "productDetails.html";
+}
 
 
 
@@ -1705,16 +2145,21 @@ featuredSpan[0].onclick=()=>{
 
 
 
+var addingToCart=document.getElementById("addtocart")
+var cartClick=0;
+addingToCart.addEventListener("click",function(){
+  cartClick++;
+addingToCart.innerText="IN YOUR CART"
+if(cartClick<=1){
+  addtoCart(data);
+}
 
-
-
-
-
-
-
-
-
-
+if(cartClick>1){
+ window.location.href="cart.html"
+}
+  console.log(cartArray)
+  addtoCart(data);
+})
 
 
 function addtoCart(item){
@@ -1731,8 +2176,33 @@ function addtoCart(item){
       // document.querySelector("#toCartBtn1").innerHTML = "ADDED TO CART";
       cartArray.push(toCartItem);
       localStorage.setItem("CartItems", JSON.stringify(cartArray));  
-      alert("Item Added to Cart ! Successfully")
    }
    
 }
+
+var wishList=document.getElementById("save")
+var wishListClick=0;
+wishList.addEventListener("click",function(){
+  wishListClick++
+
+  if(wishListClick%2!=0){
+    wishList.innerHTML="<span class=iconify data-icon=ant-design:heart-filled  data-width=20 data-height=30 id=red_heart ></span>SAVED"
+    // alert("even")
+  }else{
+    wishList.innerHTML="<span class=iconify data-icon=el:heart-empty  data-width=20 data-height=20 ></span>SAVE"
+    // alert("odd")
+  }
+//   // alert(wishListClick)
+//   if(wishListClick>1){
+//   alert("2")
+//   // wishListClick=0;
+// }
+// if(wishListClick<=1){
+//   alert("1")
+// }
+// if(wishListClick>1){
+//   alert("2")
+//   // wishListClick=0;
+// }
+})
 </script>
