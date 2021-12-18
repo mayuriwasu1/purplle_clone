@@ -10,9 +10,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
         <link rel="icon" href="https://media6.ppl-media.com/mediafiles/ecomm/misc/purplle-16x16.png">
         <link rel="stylesheet" href="./styles/productPage.css">
+        <link rel="stylesheet" href="comp/navcss.css">
 
     </head>
     <body>
+
+        <div id="thatDiv">
+
+        </div>
 
 
         <div id="To_Be_hidden">
@@ -444,7 +449,7 @@ function showBeautyProfile(){
 
         if(i == wishStepstoBeauty.length) stopSS() ;
 
-    },1800);
+    },1200);
 
     }
 
@@ -474,4 +479,12 @@ function ShowWishOrders(){
 }
 </script>
 
+<script type="module">
+    import nav from './comp/navjs.js';
 
+    console.log(nav)
+    var div = document.getElementById("thatDiv");
+
+    div.innerHTML = nav();
+
+</script>
