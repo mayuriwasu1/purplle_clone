@@ -85,7 +85,7 @@ First you have to have to go to the signup page and create a new account. Then y
 
 
 
-## Team mates
+## Creators
 
 ### Mayuri
 #### [GitHub](https://www.google.com)
