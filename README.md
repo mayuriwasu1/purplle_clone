@@ -24,7 +24,7 @@
 ---
 - **Reponsive Home Page**
 
-![Responsive](https://github.com/mayuriwasu1/purplle_clone/Home_page/image/responsive.png)
+![Responsive](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/responsive.png)
 
 ---
 - **Navbar UI**
@@ -96,14 +96,13 @@ according to their choice, after choosing product they can add it to cart or the
 
 ## Creators
 
-### Mayuri
-#### [GitHub](https://github.com/mayuriwasu1)
-### Kavya
-#### [GitHub](https://github.com/kavya-2021)
-### Reetesh
-#### [GitHub](https://github.com/Reeteshin)
-### Aswin
-#### [GitHub](https://github.com/AswinAnand66)
+#### Mayuri  [GitHub](https://github.com/mayuriwasu1)
+
+#### Kavya [GitHub](https://github.com/kavya-2021)
+
+#### Reetesh  [GitHub](https://github.com/Reeteshin)
+
+#### Aswin [GitHub](https://github.com/AswinAnand66)
 
 
 
