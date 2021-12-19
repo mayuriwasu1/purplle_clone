@@ -1,22 +1,22 @@
 
 # Purplle-Website-Clone
-
+---
 ##### This is clone website of purplle.com Purplle is an ecommerse website where user can buy all kinds of bueaty products.
-
+---
 ## [Video Presentation ](https://www.google.com)
-
+---
 ## Tech Stack
 - `HTML5`
 - `CSS3`
 - `Advanced JavaScript`
-
+---
 ## Features
-
+---
 #### User ca buy any type of beauty product
 #### They can use this website from any device 
-
+---
 ## Page and Responsibilities 
-
+---
 
 - **Home Page**
 
