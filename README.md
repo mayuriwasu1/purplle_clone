@@ -36,21 +36,17 @@ Purplle clone is adaptive to different screen sizes
 
 ![Landing Page Brands Category](https://github.com/)
 
----
-- **Sign-Up Page**
-
-![Sign Up Page](https://github.com/)
 
 ---
-- **Sign-In Page**
+- **login-In Page**
 
-![Sign In Page](https://github.com/)
+![Sign In Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/login.png)
 
 
 ---
 - **Product Category Page**
 
-![Product Category Page](https://github.com/)
+![Product Category Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/product.png)
 
 ---
 
