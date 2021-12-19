@@ -1051,6 +1051,7 @@
 <script>
   let data = JSON.parse(localStorage.getItem("DataIndivi"));
   let cartArray = JSON.parse(localStorage.getItem("cartItems"))
+  let wishListArray=JSON.parse(localStorage.getItem("product_wishlist")) || [];
   console.log(data);
   var small_images_Div = document.getElementById("small_images");
   var small_image_data = data.image_url;
@@ -2164,7 +2165,7 @@ if(cartClick>1){
 
 function addtoCart(item){
    console.log(item);
-
+  //  console.log(index);
    let toCartItem = item;
    let uniqueId = item.id;
    let count = 0;
@@ -2173,7 +2174,7 @@ function addtoCart(item){
        else count++;
    }
    if(count == cartArray.length){
-      
+      // document.querySelector("#toCartBtn1").innerHTML = "ADDED TO CART";
       cartArray.push(toCartItem);
       localStorage.setItem("CartItems", JSON.stringify(cartArray));  
    }
@@ -2187,11 +2188,40 @@ wishList.addEventListener("click",function(){
 
   if(wishListClick%2!=0){
     wishList.innerHTML="<span class=iconify data-icon=ant-design:heart-filled  data-width=20 data-height=30 id=red_heart ></span>SAVED"
-  
+   addtoWishList(data)
   }else{
     wishList.innerHTML="<span class=iconify data-icon=el:heart-empty  data-width=20 data-height=20 ></span>SAVE"
   
+    removeFromWishList()
+   
   }
 
 })
+
+function addtoWishList(item) {
+  
+  let uniqueID=item.id;
+  let count=0;
+  for(let i=0;i<wishListArray.length;i++){
+    if(uniqueID!=wishListArray[i].id){
+      count++
+    }
+  }
+ 
+  if(count==wishListArray.length){
+ 
+    wishListArray.push(item)
+    localStorage.setItem("product_wishlist",JSON.stringify(wishListArray));
+    console.log("add",wishListArray)
+    
+  }
+}
+
+function removeFromWishList() {
+
+ var removeItem=wishListArray.length-1
+ wishListArray.splice(removeItem,1)
+ console.log("remove",wishListArray)
+
+}
 </script>
