@@ -21,14 +21,14 @@
   }
 
   function closebtn(){
-    window.location.href="Home_page/home.html"
+    window.location.href="home.html"
     // document.getElementById("login-box").style.display="none";
     // document.getElementById("signin_box").style.display="none"
   }
 
   function submitbtn(){
      
-      window.location.href="Home_Page/home.html"
+      window.location.href="home.html"
   }
   var backbtn=document.getElementById("back").addEventListener("click",function(){
         document.getElementById("login-box").style.display="block";

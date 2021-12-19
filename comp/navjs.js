@@ -9,7 +9,7 @@ function nav()
             <button id="Sbutton"><img src="https://cdn2.iconfinder.com/data/icons/social-messaging-productivity-black-2/1/16-512.png" alt=""></i></button>
           </div>
     
-        <a href="Home_Page/home.html"><img id="logoin" src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg" alt=""></a>
+        <a href="home.html"><img id="logoin" src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg" alt=""></a>
        
         <div id="rdPart">
             <!-- <img id="details-enlarged-image" class="js-search-result-thumbnail custom-height container--focus" src="https://as2.ftcdn.net/v2/jpg/01/25/83/03/1000_F_125830316_m9Grtzjlt2I5Gp4qpDQq5G5BSXR5d9ZF.jpg" alt="Heart outline icon vector isolated" itemprop="thumbnail" data-content-id="125830316"> -->
