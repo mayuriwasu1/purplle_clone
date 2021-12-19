@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN</title>
+    <link rel="icon" href="https://media6.ppl-media.com/mediafiles/ecomm/misc/purplle-16x16.png">
+    <link rel="stylesheet" href="comp/navcss.css">
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/1914a1aa0a.js"
+      crossorigin="anonymous"
+    ></script>
+
+  <link rel="stylesheet" href="login.css">
+  </head>
+  <body>
+    <div id="thatDiv">
+
+    </div>
+    <!-- login box -->
+    <div id="login-box">
+      <button class="close-btn" onclick="closebtn()" for="">&times;</button>
+      <div>
+        <h1>Login/Create Account</h1>
+      </div>
+      <div class="floating_flex">
+        <div id="floating_content">
+          <span>
+            <input oninput="check()" type="text" id="mobile_number" class="inputText" required />
+            <span class="floating-label"
+              >Enter Your Mobile No. <span style="color: red">*</span></span
+            >
+          </span>
+        </div>
+      
+        <button id="login-btn" onclick="login()">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+      <div id="logo_content">
+        <p>or connect with</p>
+        <div class="flex">
+          <div>
+            <div class="logo_div">
+              <img
+                alt="Facebook"
+                src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1542974744_fb-logo.png"
+                class="logo"
+              /><span>FACEBOOK</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="logo_div">
+              <img
+                alt="Google"
+                src="https://media6.ppl-media.com/mediafiles/ecomm/misc/1542974745_google-logo.png"
+                class="logo"
+              /><span>GOOGLE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- signup box -->
+
+    <div id="signin_box">
+        <button class="close-btn" onclick="closebtn()" for="">&times;</button>
+      <div>
+        <h2>Welcome Aboard</h2>
+        <p>
+          Let's know you the better and make sure that you never lose access to
+          your account.
+        </p>
+      </div>
+
+      <div id="signin_details">
+
+        <div id="floating_content">
+            <span>
+              <input type="text" class="inputText" required />
+              <span class="floating-label"
+                >Enter Your Mobile No. <span style="color: red">*</span></span
+              >
+            </span>
+          </div>
+     
+        <div id="floating_content">
+            <span>
+              <input type="text" class="inputText" required />
+              <span class="floating-label"
+                >Enter Email <span style="color: red">*</span></span
+              >
+            </span>
+          </div>
+
+    
+        <div id="floating_content">
+            <span>
+              <input type="text" id="logged_number"class="inputText" required />
+              <span class="floating-label"
+                >Mobile No.<span style="color: red">*</span></span
+              >
+            </span>
+          </div>
+         
+
+        <p id="verification">Please Verify Phone Number</p>
+        
+
+        <div id="floating_content">
+            <span>
+              <input type="text" class="inputText" required />
+              <span class="floating-label"
+                >Enter OTP<span style="color: red">*</span></span
+              >
+            </span>
+          </div>
+
+
+        <div id="floating_content">
+            <span>
+              <input type="text" class="inputText" required />
+              <span class="floating-label"
+                >Create Password <span style="color: red">*</span></span
+              >
+            </span>
+          </div>
+      
+      </div>
+
+      <div class="radio_btn">
+        <form>
+            <label >
+              <input type="radio" name="optradio">Male
+            </label>
+            <label >
+              <input type="radio" name="optradio">Female
+            </label>
+           
+          </form>
+      </div>
+
+      <div class="submit_div">
+        <button id="submit_btn" onclick="submitbtn()">SUBMIT</button>
+        <p id="back">
+          <i class="fas fa-arrow-left"></i
+          ><a> back to login</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="login.js"></script>
+</script>
+<script type="module">
+  import nav from './comp/navjs.js';
+
+  console.log(nav)
+  var div = document.getElementById("thatDiv");
+
+  div.innerHTML = nav();
+
+</script>
