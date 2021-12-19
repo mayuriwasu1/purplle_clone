@@ -19,19 +19,23 @@
         #leftDiv
         { 
              
-            border: 1px solid rgb(252, 255, 71);
+            
         }
         #rightDiv
         {
              
-            border: 1px solid rgb(255, 71, 224);
         }
         #secureBox
         {
             display: grid;
             grid-template-columns: 30% 70%;
             margin: 0px 40px 0px 40px;
-            border: 1px solid gray;
+           
+
+        }
+        #thatDiv
+        {
+            z-index: 99;
         }
         #secureBox >div >img
         {
@@ -108,7 +112,7 @@
             display: grid;
             grid-template-columns: 12% 67% 20%;
              margin-top: 20px;
-            border: 1px solid red;
+            
         }
         #products >div >img
         {
@@ -162,7 +166,7 @@
             <div id="MyCart">
                 <h4>My Cart <span>(Number)</span></h3>
                 
-                <a href=""><p class="shopmore">Shop More <i class="fas fa-angle-right"></i></p></a> 
+                <a href="Home_page/home.html"><p class="shopmore">Shop More <i class="fas fa-angle-right"></i></p></a> 
             </div>
 
             <div id="cartItem">
@@ -192,7 +196,7 @@
                 <p>Saving MRP: <span id="savingmrp">RS Null</span></p>
                 <p>Subtotal: <span id="subtotal">RS Null</span></p>
                 <p>Shipping charges: <span id="shipping">RS Null</span></p>
-                <p>Coupon Discount: <span id="coupon">RS Null</span></p>
+                <p>Coupon Discount: <span id="coupon">Applied</span></p>
                 <hr>
                 <h3>Order total: <span id="ordertotal">Rs Null</span></h3>
                 <p>You Save: <span id="yousave">RS Null</span></p>
@@ -208,7 +212,7 @@
     // Importing the nav
     import nav from './comp/navjs.js';
     var div = document.getElementById("thatDiv");
-    //div.innerHTML = nav();
+    div.innerHTML = nav();
 
     // getting data from local
 
@@ -336,6 +340,7 @@
                         subtotal.innerHTML = total+v-(Math.round(total+v-distotal));
                         ordertotal.innerHTML =total+v-(Math.round(total+v-distotal))+50;
                         yousave.innerHTML = Math.round(total+v-distotal);
+                        coupon.innerHTML = "Applied"
                         console.log(total,distotal)
                         let x = total+v;
                         let y = Math.round(total+v-distotal);
