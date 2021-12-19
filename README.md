@@ -12,8 +12,8 @@
 
 ## Features
 
-### User ca buy any type of beauty product
-### They can use this website from any device 
+#### User ca buy any type of beauty product
+#### They can use this website from any device 
 
 ## Page and Responsibilities 
 
