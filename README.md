@@ -18,12 +18,13 @@
 ---
 
 - **Home Page**
-here is the landing page of purplle clone
+##### here is the landing page of purplle clone
 ![Landing Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/home_pic.png)
 
 ---
 - **Reponsive Home Page**
-Purplle clone is adaptive to different screen sizes
+##### User Can use this website irrespective of screen sizes
+
 ![Responsive](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/responsive.png)
 
 ---
@@ -33,35 +34,32 @@ Purplle clone is adaptive to different screen sizes
 
 
 ---
-- **Product Category Page**
 
-![Product Category Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/product.png)
-
----
-- **Filter/Sort**
-
+- **Product Page Filter/Sort**
+##### Here user can filter the product according to choice
 ![Product Category Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/cat_p.png)
 
 ---
 
 - **Product Details Page**
+##### Here User can get more information about product
 ![Product Details Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/prod_desc.png)
 
 ---
 - **Cart Page**
-
+##### From here user can add and remove from cart
 ![Cart Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/cart_page.png)
 
 ---
 
 
 - **Checkout Page**
-
+##### Here user can insert address 
 ![Checkout Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/adress.png)
 
 ---
 - **Payment Page**
-
+##### here user will have to fill their payment details then they will be notified that their order has been placed.
 ![Payment Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/pay.png)
 
 ---
