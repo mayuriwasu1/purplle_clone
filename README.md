@@ -11,21 +11,20 @@
 - `Advanced JavaScript`
 ---
 ## Features
----
-##### User can buy any type of beauty product
-##### They can use this website from any device 
+##### - User can buy any type of beauty product
+##### - They can use this website from any device 
 ---
 ## Page and Responsibilities 
 ---
 
 - **Home Page**
 
-![Landing Page](https://github.com/)
+![Landing Page](https://github.com/mayuriwasu1/purplle_clone/Home_page/image/homepage.png)
 
 ---
 - **Reponsive Home Page**
 
-![Responsive](https://github.com/)
+![Responsive](https://github.com/mayuriwasu1/purplle_clone/Home_page/image/responsive.png)
 
 ---
 - **Navbar UI**
