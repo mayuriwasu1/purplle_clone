@@ -56,14 +56,14 @@ Purplle clone is adaptive to different screen sizes
 ---
 - **Cart Page**
 
-![Cart Page](https://github.com/)
+![Cart Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/cart_page.png)
 
 ---
 
 
 - **Checkout Page**
 
-![Checkout Page](https://github.com/)
+![Checkout Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/adress.png)
 
 ---
 - **Payment Page**
