@@ -31,7 +31,7 @@
       }
       #product_description {
         
-
+      
         flex: 2.2;
       }
       #small_images {
@@ -113,6 +113,7 @@
       }
       #price_primer {
         /* border: 1px solid blue; */
+        margin-top: -30px;
         height: 15%;
         display: grid;
       }
@@ -205,6 +206,7 @@
       #cart_delivery{
         /* border: 1px solid green; */
         flex:2.2;
+        margin-top: 30px;
       }
       #addtocart_save{
         /* border: 1px solid yellow; */
@@ -413,7 +415,7 @@
   overflow-x: auto;
   overflow-y: hidden;
   justify-content: left;
-  z-index: -44445;
+  /* z-index: -44445; */
  
 }
 #also_viewed_slider::-webkit-scrollbar{
@@ -427,7 +429,7 @@
   text-align: center;
   transition: 1.5s;
   margin-left: 30px;
-  z-index: -4848;
+  /* z-index: -4848; */
   
 }
 #also_viewed_slider>div>p{
@@ -481,10 +483,11 @@
     cursor: pointer;
     border: none;
     border-radius: 3%;
-  
+    
 }
 #slider_img:hover #slider_btn{
   opacity: 1;
+  
 }
 
 
@@ -526,7 +529,7 @@
   overflow-x: auto;
   overflow-y: hidden;
   justify-content: left;
-  z-index: -4848;
+  /* z-index: -4848; */
  
 }
 #featured_slider::-webkit-scrollbar{
@@ -540,7 +543,7 @@
   text-align: center;
   transition: 1.5s;
   margin-left: 30px;
-  z-index: -4848;
+  /* z-index: -4848; */
   
   
 }
@@ -617,7 +620,7 @@
   overflow-x: auto;
   overflow-y: hidden;
   justify-content: left;
-  z-index: -4848;
+  /* z-index: -4848; */
  
 }
 #todays_deals_slider::-webkit-scrollbar{
@@ -631,7 +634,7 @@
   text-align: center;
   transition: 1.5s;
   margin-left: 30px;
-  z-index: -4848;
+  /* z-index: -4848; */
   
   
 }
@@ -740,7 +743,9 @@
         margin-bottom: 40px;
       }
 
-
+   #thatDiv{
+     z-index: 9999999999999;
+   }
 
     </style>
   </head>
@@ -1173,224 +1178,234 @@ origin.innerText=data.origin
 let alsoViewedProducts=[
   
 {
-        id : "AI",
-        title : " NY Bae Blurin' Primer|Face Primer|Blurs Out Pores & Fine Lines| Enriched With Vitamin E| Radiant Glow| All Skin Types| Matte products",
-        rating : 3.9,
-        price : 215,
-        discount: 0.12,
-        qty : 1,
-        description : "NY Bae's Blurin Primer is the hot goss of Bae town. It's every girl's must have. And for good reasons too. As you dab-dab across your face, the light-weight immediately makes you go' wooohoo! But did you know it has extra super-powers too? Of course, it does a fab job on hiding acne scars, blemishes, minimising pores and leaving behind a perfect, even-toned finish. But that apart, it even hydrates and nourishes the skin. Didn't we tell you it's an absolute wonder to have? So go prep up and hit the town with flawless skin.",
-        best_before : "31 Jan 2023" ,
-        skin_concern : "Fine lines and Pores",
-        skin_type : "All skin types",
-        Speciality : "Enriched with Vitamin E,oil Free",
-        finish : "Matte",
-        Benefits : "Blurs out Pores & Fine Lines  Enriched with Vitamin E, Even skin tone, Hydrating, Light Weight",
-        type: "primer",
-        origin : "India",
-        image_url : ["https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_10_display_1631800058_e824cd72.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_6_display_1623941086_74d4845f.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_4_display_1623941083_ab8853d8.jpg","https://media6.ppl-media.com/mediafiles/ecomm/promo/1626774900_primer-a8_04.jpg"]
-    },
-    {
-        id : "AJ",
-        title : "Lakme Aboslute Blur Perfect Makeup Primer,10g",
-        rating : 4.1,
-        price : 299,
-        discount: 0.12,
-        qty : 1,
-        description : "Makeup glides on effortlessly and blends seamlessly for a more vibrant, color true finish. The Lakme Absolute Blur Perfect Makeup Primer is the perfect canvas for makeup or wear-alone over your moisturiser for instant smoothness and radiance. Buy Now!The Lakme Absolute Make-Up Primer is a flawless make-up primer that preps your skin for professional make-up. • Creates the perfect base for make-up and helps it stay for longer.. Hides skin imperfections and gives you an even toned skin. It is lightweight, water-proof, and has a smooth matte texture.",
-        best_before : "31 Jan 2023" ,
-        skin_concern : "Skin Imperfection, Uneven Skin Texture, Visible Pores",
-        skin_type : "Acne-Prone Skin, Combination Skin, Dry Skin, Normal Skin, Oily Skin, Sensitive skin",
-        Speciality : "Enriched with Vitamin E,oil Free",
-        finish : "Matte",
-        Benefits : "Blurs Fine Lines, Evens Skin Tone, Fadeproof, Hides Imperfections, Light Weight,Mattifying",
-        type: "primer",
-        origin : "India",
-        image_url : ["https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_7_display_1631104552_882ba13c.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_10_display_1631104554_9e79acb9.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_8_display_1631104552_aa52c3b0.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_11_display_1631104554_ff8fe6bb.jpg"]
-    },
-    {
-        id : "AK",
-        title : "Swiss Beauty Real Makeup Base Highlighting Primer - Natural - Tint (32 ml) ",
-        rating : 4.3,
-        price : 349,
-        discount: null,
-        qty : 1,
-        description : "The Swiss Beauty brighten the skin, contains pearl powder. It brightens skin and make the base fit and natural shines and enchanting lustre as well. Let your skin soft and moisturizing with this highlighting primer. Use it alone and bright your skin. Mixed with highlighting primer with base products such as foundation or BB cream with a scale of 1:1. After press on palm apply them on the face to finish the base. After finishing the base apply the product on the area where need to be highlighted, make the skin more glossy",
-        best_before : "31 Jan 2023" ,
-        skin_concern : "Dry Skin, Dull Skin, Fine Lines",
-        skin_type : "All Skin Types",
-        Speciality : "Enriched with Vitamin E,oil Free",
-        finish : "Radiant Finish",
-        Benefits : "Evens Skin Tone, Light Weight, Minimizing Pores, Moisturizing, Skin Brightening",
-        type: "primer",
-        origin : "India",
-        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_1_display_1590792783_75d33aec.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_2_display_1590792784_5bb3dd61.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_3_display_1590792785_20ae436d.jpg","https://media4.purplle.com/static/img/brand//__1619086150_1647f507.jpg"]
-    },
-    {
-        id : "AL",
-        title : "Purplle True Jewel 24K Gold Primer Mattel Oil Control Shine Controll Long Lasting Lightweight| Dermatologically Tested - (20 ml)",
-        rating : 4.3,
-        price : 450,
-        discount: 0.12,
-        qty : 1,
-        description : "Hey one with a golden heart, let your face channel your inner radiance with Purplle's True Jewel 24K Gold Primer. Purplle's True Jewel 24K Gold Primer is a total must-have for those who believe and know the true beauty of a good primer. This amazing primer masks fine lines and uneven texture, making skin marvellously soft and smooth. It is a perfect base for makeup as it holds the foundation in place for long hours. It instantly melts into the skin and helps retain moisture. It helps smooth out fine lines, helps reduce pores and tightens facial features. It also helps imparts a sheer glow & leaves skin an even finish under makeup sinks into the skin to provide moisture. It also helps neutralise redness for you to build up your base on. It's innovative light reflective gold flakes give a wonderful glow. The formula holds on your makeup up for a long time for a flawless looking shine. Say hello to a BFF for your skin",
-        best_before : "31 Jan 2023" ,
-        skin_concern : "Blemishes, Enlarged Pores, Fine Lines And Pores, Rough Skin, Uneven Skin Texture",
-        skin_type : "All Skin Types",
-        Speciality : "Cruelty Free, Dermatologically Tested,Enriched with Vitamin E,oil Free",
-        finish : "Illuminating",
-        Benefits : "Blurs Fine Lines, Light Weight, Mattifying, Minimizes Pores, Oil Control",
-        type: "primer",
-        origin : "India",
-        image_url : ["https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_10_display_1628078492_d1932184.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_15_display_1628077466_636ffaff.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_9_display_1596000695_5cecb9c8.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_11_display_1596000711_5a3df986.jpg"]
-    },
-{
-        id : "AA",
-        title : " NY Bae Blurin' Primer|Face Primer|Blurs Out Pores & Fine Lines| Enriched With Vitamin E| Radiant Glow| All Skin Types| Matte products",
-        rating : 3.9,
-        price : 215,
-        discount: 0.12,
-        qty : 1,
-        description : "NY Bae's Blurin Primer is the hot goss of Bae town. It's every girl's must have. And for good reasons too. As you dab-dab across your face, the light-weight immediately makes you go' wooohoo! But did you know it has extra super-powers too? Of course, it does a fab job on hiding acne scars, blemishes, minimising pores and leaving behind a perfect, even-toned finish. But that apart, it even hydrates and nourishes the skin. Didn't we tell you it's an absolute wonder to have? So go prep up and hit the town with flawless skin.",
-        best_before : "31 Jan 2023" ,
-        skin_concern : "Fine lines and Pores",
-        skin_type : "All skin types",
-        Speciality : "Enriched with Vitamin E,oil Free",
-        finish : "Matte",
-        Benefits : "Blurs out Pores & Fine Lines  Enriched with Vitamin E, Even skin tone, Hydrating, Light Weight",
-        type: "primer",
-        origin : "India",
-        image_url : ["https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_10_display_1631800058_e824cd72.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_6_display_1623941086_74d4845f.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_4_display_1623941083_ab8853d8.jpg","https://media6.ppl-media.com/mediafiles/ecomm/promo/1626774900_primer-a8_04.jpg"]
-    },
-    {
-        id : "AB",
-        title : "Lakme Aboslute Blur Perfect Makeup Primer,10g",
-        rating : 4.1,
-        price : 299,
-        discount: 0.12,
-        qty : 1,
-        description : "Makeup glides on effortlessly and blends seamlessly for a more vibrant, color true finish. The Lakme Absolute Blur Perfect Makeup Primer is the perfect canvas for makeup or wear-alone over your moisturiser for instant smoothness and radiance. Buy Now!The Lakme Absolute Make-Up Primer is a flawless make-up primer that preps your skin for professional make-up. • Creates the perfect base for make-up and helps it stay for longer.. Hides skin imperfections and gives you an even toned skin. It is lightweight, water-proof, and has a smooth matte texture.",
-        best_before : "31 Jan 2023" ,
-        skin_concern : "Skin Imperfection, Uneven Skin Texture, Visible Pores",
-        skin_type : "Acne-Prone Skin, Combination Skin, Dry Skin, Normal Skin, Oily Skin, Sensitive skin",
-        Speciality : "Enriched with Vitamin E,oil Free",
-        finish : "Matte",
-        Benefits : "Blurs Fine Lines, Evens Skin Tone, Fadeproof, Hides Imperfections, Light Weight,Mattifying",
-        type: "primer",
-        origin : "India",
-        image_url : ["https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_7_display_1631104552_882ba13c.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_10_display_1631104554_9e79acb9.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_8_display_1631104552_aa52c3b0.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_11_display_1631104554_ff8fe6bb.jpg"]
-    },
-    {
-        id : "AC",
-        title : "Swiss Beauty Real Makeup Base Highlighting Primer - Natural - Tint (32 ml) ",
-        rating : 4.3,
-        price : 349,
-        discount: null,
-        qty : 1,
-        description : "The Swiss Beauty brighten the skin, contains pearl powder. It brightens skin and make the base fit and natural shines and enchanting lustre as well. Let your skin soft and moisturizing with this highlighting primer. Use it alone and bright your skin. Mixed with highlighting primer with base products such as foundation or BB cream with a scale of 1:1. After press on palm apply them on the face to finish the base. After finishing the base apply the product on the area where need to be highlighted, make the skin more glossy",
-        best_before : "31 Jan 2023" ,
-        skin_concern : "Dry Skin, Dull Skin, Fine Lines",
-        skin_type : "All Skin Types",
-        Speciality : "Enriched with Vitamin E,oil Free",
-        finish : "Radiant Finish",
-        Benefits : "Evens Skin Tone, Light Weight, Minimizing Pores, Moisturizing, Skin Brightening",
-        type: "primer",
-        origin : "India",
-        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_1_display_1590792783_75d33aec.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_2_display_1590792784_5bb3dd61.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_3_display_1590792785_20ae436d.jpg","https://media4.purplle.com/static/img/brand//__1619086150_1647f507.jpg"]
-    },
-    {
-        id : "AD",
-        title : "Purplle True Jewel 24K Gold Primer Mattel Oil Control Shine Controll Long Lasting Lightweight| Dermatologically Tested - (20 ml)",
-        rating : 4.3,
-        price : 450,
-        discount: 0.12,
-        qty : 1,
-        description : "Hey one with a golden heart, let your face channel your inner radiance with Purplle's True Jewel 24K Gold Primer. Purplle's True Jewel 24K Gold Primer is a total must-have for those who believe and know the true beauty of a good primer. This amazing primer masks fine lines and uneven texture, making skin marvellously soft and smooth. It is a perfect base for makeup as it holds the foundation in place for long hours. It instantly melts into the skin and helps retain moisture. It helps smooth out fine lines, helps reduce pores and tightens facial features. It also helps imparts a sheer glow & leaves skin an even finish under makeup sinks into the skin to provide moisture. It also helps neutralise redness for you to build up your base on. It's innovative light reflective gold flakes give a wonderful glow. The formula holds on your makeup up for a long time for a flawless looking shine. Say hello to a BFF for your skin",
-        best_before : "31 Jan 2023" ,
-        skin_concern : "Blemishes, Enlarged Pores, Fine Lines And Pores, Rough Skin, Uneven Skin Texture",
-        skin_type : "All Skin Types",
-        Speciality : "Cruelty Free, Dermatologically Tested,Enriched with Vitamin E,oil Free",
-        finish : "Illuminating",
-        Benefits : "Blurs Fine Lines, Light Weight, Mattifying, Minimizes Pores, Oil Control",
-        type: "primer",
-        origin : "India",
-        image_url : ["https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_10_display_1628078492_d1932184.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_15_display_1628077466_636ffaff.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_9_display_1596000695_5cecb9c8.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_11_display_1596000711_5a3df986.jpg"]
-    },
-
-
-
-    {
-        id : "AF",
-        title : "Lakme Aboslute Blur Perfect Makeup Primer,10g",
-        rating : 4.1,
-        price : 299,
-        discount: 0.12,
-        qty : 1,
-        description : "Makeup glides on effortlessly and blends seamlessly for a more vibrant, color true finish. The Lakme Absolute Blur Perfect Makeup Primer is the perfect canvas for makeup or wear-alone over your moisturiser for instant smoothness and radiance. Buy Now!The Lakme Absolute Make-Up Primer is a flawless make-up primer that preps your skin for professional make-up. • Creates the perfect base for make-up and helps it stay for longer.. Hides skin imperfections and gives you an even toned skin. It is lightweight, water-proof, and has a smooth matte texture.",
-        best_before : "31 Jan 2023" ,
-        skin_concern : "Skin Imperfection, Uneven Skin Texture, Visible Pores",
-        skin_type : "Acne-Prone Skin, Combination Skin, Dry Skin, Normal Skin, Oily Skin, Sensitive skin",
-        Speciality : "Enriched with Vitamin E,oil Free",
-        finish : "Matte",
-        Benefits : "Blurs Fine Lines, Evens Skin Tone, Fadeproof, Hides Imperfections, Light Weight,Mattifying",
-        type: "primer",
-        origin : "India",
-        image_url : ["https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_7_display_1631104552_882ba13c.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_10_display_1631104554_9e79acb9.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_8_display_1631104552_aa52c3b0.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/214310/lakme-absolute-blur-perfect-makeup-primer-10-g-18_11_display_1631104554_ff8fe6bb.jpg"]
-    },
-    {
-        id : "AE",
-        title : " NY Bae Blurin' Primer|Face Primer|Blurs Out Pores & Fine Lines| Enriched With Vitamin E| Radiant Glow| All Skin Types| Matte products",
-        rating : 3.9,
-        price : 215,
-        discount: 0.12,
-        qty : 1,
-        description : "NY Bae's Blurin Primer is the hot goss of Bae town. It's every girl's must have. And for good reasons too. As you dab-dab across your face, the light-weight immediately makes you go' wooohoo! But did you know it has extra super-powers too? Of course, it does a fab job on hiding acne scars, blemishes, minimising pores and leaving behind a perfect, even-toned finish. But that apart, it even hydrates and nourishes the skin. Didn't we tell you it's an absolute wonder to have? So go prep up and hit the town with flawless skin.",
-        best_before : "31 Jan 2023" ,
-        skin_concern : "Fine lines and Pores",
-        skin_type : "All skin types",
-        Speciality : "Enriched with Vitamin E,oil Free",
-        finish : "Matte",
-        Benefits : "Blurs out Pores & Fine Lines  Enriched with Vitamin E, Even skin tone, Hydrating, Light Weight",
-        type: "primer",
-        origin : "India",
-        image_url : ["https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_10_display_1631800058_e824cd72.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_6_display_1623941086_74d4845f.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/240161/ny-bae-primer-white-15g-15_4_display_1623941083_ab8853d8.jpg","https://media6.ppl-media.com/mediafiles/ecomm/promo/1626774900_primer-a8_04.jpg"]
-    },
-    {
-        id : "AG",
-        title : "Swiss Beauty Real Makeup Base Highlighting Primer - Natural - Tint (32 ml) ",
-        rating : 4.3,
-        price : 349,
-        discount: null,
-        qty : 1,
-        description : "The Swiss Beauty brighten the skin, contains pearl powder. It brightens skin and make the base fit and natural shines and enchanting lustre as well. Let your skin soft and moisturizing with this highlighting primer. Use it alone and bright your skin. Mixed with highlighting primer with base products such as foundation or BB cream with a scale of 1:1. After press on palm apply them on the face to finish the base. After finishing the base apply the product on the area where need to be highlighted, make the skin more glossy",
-        best_before : "31 Jan 2023" ,
-        skin_concern : "Dry Skin, Dull Skin, Fine Lines",
-        skin_type : "All Skin Types",
-        Speciality : "Enriched with Vitamin E,oil Free",
-        finish : "Radiant Finish",
-        Benefits : "Evens Skin Tone, Light Weight, Minimizing Pores, Moisturizing, Skin Brightening",
-        type: "primer",
-        origin : "India",
-        image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_1_display_1590792783_75d33aec.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_2_display_1590792784_5bb3dd61.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/267458/swiss-beauty-real-makeup-base-highlighting-primer-natural-tint-30-ml_3_display_1590792785_20ae436d.jpg","https://media4.purplle.com/static/img/brand//__1619086150_1647f507.jpg"]
-    },
-    {
-        id : "AH",
-        title : "Purplle True Jewel 24K Gold Primer Mattel Oil Control Shine Controll Long Lasting Lightweight| Dermatologically Tested - (20 ml)",
-        rating : 1.8,
-        price : 450,
-        discount: 0.12,
-        qty : 1,
-        description : "Hey one with a golden heart, let your face channel your inner radiance with Purplle's True Jewel 24K Gold Primer. Purplle's True Jewel 24K Gold Primer is a total must-have for those who believe and know the true beauty of a good primer. This amazing primer masks fine lines and uneven texture, making skin marvellously soft and smooth. It is a perfect base for makeup as it holds the foundation in place for long hours. It instantly melts into the skin and helps retain moisture. It helps smooth out fine lines, helps reduce pores and tightens facial features. It also helps imparts a sheer glow & leaves skin an even finish under makeup sinks into the skin to provide moisture. It also helps neutralise redness for you to build up your base on. It's innovative light reflective gold flakes give a wonderful glow. The formula holds on your makeup up for a long time for a flawless looking shine. Say hello to a BFF for your skin",
-        best_before : "31 Jan 2023" ,
-        skin_concern : "Blemishes, Enlarged Pores, Fine Lines And Pores, Rough Skin, Uneven Skin Texture",
-        skin_type : "All Skin Types",
-        Speciality : "Cruelty Free, Dermatologically Tested,Enriched with Vitamin E,oil Free",
-        finish : "Illuminating",
-        Benefits : "Blurs Fine Lines, Light Weight, Mattifying, Minimizes Pores, Oil Control",
-        type: "primer",
-        origin : "India",
-        image_url : ["https://media6.ppl-media.com/tr:h-235,w-235,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_10_display_1628078492_d1932184.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_15_display_1628077466_636ffaff.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_9_display_1596000695_5cecb9c8.jpg","https://media6.ppl-media.com/tr:h-75,w-75,c-at_max/static/img/product/170676/purplle-true-jewel-24k-gold-primer-20-ml_11_display_1596000711_5a3df986.jpg"]
-    },
+    id : "BA",
+    title : "L'Oreal Paris Total Repair 5 Shampoo (396 ml)",
+    rating : 4.2,
+    brand: "L'Oreal Paris",
+    price : 265,
+    discount: 0.10,
+    qty : 1,
+    description : " Loreal Total Repair 5 Shampoo uses a technology that replicates the hair's natural cement. It helps repair and strengthen the hair's fibre and smoothen its surface. Damaged hair loses its cement that keeps it strong and healthy. It penetrates into hair and fills in the cracks or strengthened, more resilient hair.",
+    best_before : "31 August 2024" ,
+    skin_concern : "Damaged Hair, Dull Hair, Hair Breakage, Split Ends",
+    skin_type : "All Hair Types, Dry Hair",
+    Speciality : "Dermatologically Tested, Mineral Oil Free, Onion, Paraben Free, Peta-certified, Silicone Free, Sulfate Free, Toxicity Free",
+    finish : "",
+    Benefits : "Anti-Breakage, Hair Repair, Nourishing, Repairs Split Ends , Shine, Smoothening",
+    oneBenefit : "Smoothening",
+    type: "hair",
+    origin : "India",
+    image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/203387/loreal-paris-total-repair-5-repairing-shampoo-400-ml-10_3_display_1627294601_a816e0e1.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/203387/loreal-paris-total-repair-5-repairing-shampoo-400-ml-10_5_display_1627294607_cdc29efb.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/203387/loreal-paris-total-repair-5-repairing-shampoo-400-ml-10_6_display_1627294612_d38c200c.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/203387/loreal-paris-total-repair-5-repairing-shampoo-400-ml-10_7_display_1627294614_b80de4d8.jpg"]
+  },{
+    id : "BB",
+    title : "Mamaearth Onion Hair Fall Shampoo For Hair Growth & Hair Fall Control, With Onion Oil & Plant Keratin (250 ml)",
+    rating : 4.0,
+    brand: "Mamaearth",
+    price : 349,
+    discount: 0,
+    qty : 1,
+    description : "Stress, pollution & unhealthy lifestyle choices can lead to many hair troubles, hair fall being the most common one. Mamaearth's Onion Hair Shampoo helps you combat that. Onion Oil, rich in Sulphur, Potassium & antioxidants, reduces hair fall & accelerates hair regrowth.",
+    best_before : "30 April 2023" ,
+    skin_concern : "Damaged Hair, Frizzy Hair, Hair Breakage",
+    skin_type : "All Hair Types",
+    Speciality : "Dermatologically Tested, Mineral Oil Free, Onion, Paraben Free, Peta-certified, Silicone Free, Sulfate Free, Toxicity Free",
+    finish : "",
+    Benefits : "Anti-Pollution, Antioxidants, Frizz Control, Hair Growth, Hair Repair",
+    oneBenefit : "Dandruff Free",
+    type: "hair",
+    origin : "India",
+    image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/181887/mamaearth-onion-hair-fall-shampoo-for-hair-growth-and-hair-fall-control-with-onion-oil-and-plant-keratin-250-ml_8_display_1619425462_cafdd4a1.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/181887/mamaearth-onion-hair-fall-shampoo-for-hair-growth-and-hair-fall-control-with-onion-oil-and-plant-keratin-250-ml_10_display_1619425466_148c7422.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/181887/mamaearth-onion-hair-fall-shampoo-for-hair-growth-and-hair-fall-control-with-onion-oil-and-plant-keratin-250-ml_11_display_1619425468_7c9b4365.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/181887/mamaearth-onion-hair-fall-shampoo-for-hair-growth-and-hair-fall-control-with-onion-oil-and-plant-keratin-250-ml_12_display_1619425469_84d0637d.jpg"]
+  },{
+    id : "BC",
+    title : "Good Vibes Banana Shine Shampoo | Nourishing, Moisturizing |No Parabens, No Animal Testing (300 ml)",
+    rating : 4.0,
+    brand: "Good Vibes",
+    price : 320,
+    discount: 0.10,
+    qty : 1,
+    description : "Give your hair the utmost care with Good Vibes Shine Shampoo. Infused with the goodness of Banana, this shampoo adds shine and lustre to your tresses. It makes hair manageable and healthy while effectively eliminating dirt, excess oil and other impurities from the scalp.",
+    best_before : "30 April 2023" ,
+    skin_concern : "Dull Hair, Split Ends, Unmanageable Hair",
+    skin_type : "All Hair Types",
+    Speciality : "Cruelty Free",
+    finish : "",
+    Benefits : "Adds Shine, Nourishing, Shine, Silky Hair, Tames Unmanageable Hair",
+    oneBenefit : "Nourishing",
+    type: "hair",
+    origin : "India",
+    image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/218488/good-vibes-shine-shampoo-banana-300-ml-1_5_display_1602829461_6f452b16.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/218488/good-vibes-shine-shampoo-banana-300-ml-1_4_display_1602829460_40bdc1ee.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/218488/good-vibes-shine-shampoo-banana-300-ml-1_3_display_1602829458_04d43098.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/218488/good-vibes-shine-shampoo-banana-300-ml-1_2_display_1602829457_4aeeb325.jpg"]
+  },{
+    id : "BD",
+    title : "WOW Skin Science Himalayan Rose Shampoo (300 ml)",
+    rating : 4.3,
+    brand: "WOW Skin Science",
+    price : 449,
+    discount: 0.42,
+    qty : 1,
+    description : "Help calm your irritated scalp and revive weak, damaged strands with the nourishing goodness of WOW Skin Science Himalayan Rose Shampoo.It is infused with Rose Hydrosol that is rich in flavonoids and vitamins A, B, C & E; and Pro-Vitamin B5 that helps to improve hair elasticity.This shampoo helps to improve scalp health, prevent buildups, protect hair and restores its natural moisture barrier giving it a smooth, soft texture and healthy, lustrous appearance.",
+    best_before : "28 February 2023" ,
+    skin_concern : "Damaged Hair",
+    skin_type : "All Hair Types",
+    Speciality : "Dermatologically Tested, Paraben Free, Silicone Free, Sulfate Free",
+    finish : "",
+    Benefits : "Hair Cleansing, Nourishing, Shine, Strengthening, Volumizing",
+    oneBenefit : "Nourishing",
+    type: "hair",
+    origin : "India",
+    image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/204237/wow-skin-science-himalayan-rose-shampoo-300-ml_1_display_1597218947_499a81ef.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/204237/wow-skin-science-himalayan-rose-shampoo-300-ml_2_display_1597218947_f9533f45.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/204237/wow-skin-science-himalayan-rose-shampoo-300-ml_3_display_1597218948_e6e311d9.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/204237/wow-skin-science-himalayan-rose-shampoo-300-ml_1_display_1597218947_499a81ef.jpg"]
+  },{
+    id : "BE",
+    title : "Streax Professional Vitariche Gloss Hair Serum (45 ml)",
+    rating : 4.4,
+    brand: "Streax",
+    price : 130,
+    discount: 0.15,
+    qty : 1,
+    description : "Streax Professional Vitariche Gloss serum with macademia oil & Vitamin E, helps to nourish hair & tame frizz, while its unique shine enhancers help to give hair a shiny & Glossy finish.",
+    best_before : "30 September 2024" ,
+    skin_concern : "Dull Hair, Frizzy Hair, Untamed Hair",
+    skin_type : "All Hair Types",
+    Speciality : "Dermatologically Tested, Paraben Free, Silicone Free, Sulfate Free",
+    finish : "",
+    Benefits : "Easy to Use, Frizz Free, Nourishing, Shine",
+    oneBenefit : "Nourishing",
+    type: "hair",
+    origin : "India",
+    image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/264004/streax-professional-vitariche-gloss-hair-serum-45-ml_1_display_1620297298_21f1a76f.jpg","https://media4.purplle.com/static/img/brand//__1621745679_a443461d.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/264004/streax-professional-vitariche-gloss-hair-serum-45-ml_1_display_1620297298_21f1a76f.jpg","https://media4.purplle.com/static/img/brand//__1621745679_a443461d.jpg"]
+  },{
+    id : "BF",
+    title : "Alps Goodness Tea Tree Oil, Lemon & Climbazole Anti-Dandruff Shampoo for Oily Scalp (290ml) | Sulphate Free, Silicone Free, Paraben Free | Gentle & Mild Cleansing Shampoo| Vegan",
+    rating : 3.8,
+    brand: "Alps Goodness",
+    price : 249,
+    discount: 0.05,
+    qty : 1,
+    description : "A real amalgamation of nature and science to bring forth a formulation that helps you get healthy, shiny and silky hair. That's the range of Alps Goodness Shampoos. Combining the essence of mother nature with the contemporary skincare formulations by science we present to you a variety of Shampoos with outstanding ingredients that are here to take the best care of your scalp and hair follicles. Get ready to make all your days good hair days with Alps Goodness Shampoos&nbsp;",
+    best_before : "31 May 2023" ,
+    skin_concern : "Dandruff, Hair Follicles",
+    skin_type : "All Hair Types",
+    Speciality : "Cruelty Free, Paraben Free, Silicone Free, Sulfate Free, Vegan",
+    finish : "",
+    Benefits : "Dandruff Treatment, Hair Shine, Silky Hair, Soothing, Soothing ",
+    oneBenefit : "Dandruff Free",
+    type: "hair",
+    origin : "India",
+    image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/213122/alps-goodness-anti-dandruff-shampoo-for-oily-scalp_11_display_1637750036_33f18085.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/213122/alps-goodness-anti-dandruff-shampoo-for-oily-scalp_3_display_1617273334_2d2b6748.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/213122/alps-goodness-anti-dandruff-shampoo-for-oily-scalp_5_display_1617273336_0158d466.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/213122/alps-goodness-anti-dandruff-shampoo-for-oily-scalp_11_display_1622552234_a4878225.jpg"]
+  },{
+    id : "BG",
+    title : "Alps Goodness Powder - Sandalwood (50 g) | 100% Natural Powder | No Chemicals, No Preservatives, No Pesticides | Face Mask for Even Toned Skin | Face Mask for Glow",
+    rating : 4.1,
+    brand: "Alps Goodness",
+    price : 90,
+    discount: 0.12,
+    qty : 1,
+    description : "Give your skin and hair a powdery twist with Alps Goodness Powder. Sourced from natural ingredients, it makes sure to benefit your skin & hair in the most beautiful way possible. A therapeutic formulation made to make your skin & hair feel a lot better. Powder stains, protect clothes and other surfaces. Scent so alluring, you'll want to reapply it with every chance you get. Moisturise and rejuvenate yourself with every use. The powder formulation makes it easy to apply and benefit the skin directly without damaging the protective barrier of your skin and hair. Your every skin & hair concerned answered with Alps Goodness range of Powders",
+    best_before : "31 January 2023" ,
+    skin_concern : "Damaged Hair, Dull Hair, Hair Loss, Premature Greying",
+    skin_type : "All Hair Types",
+    Speciality : "Cruelty Free",
+    finish : "",
+    Benefits : "Anti-Acne, Hair Growth, Moisturizing, Rejuvenating, Skin Brightening",
+    oneBenefit : "Moisturizing",
+    type: "hair",
+    origin : "India",
+    image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/219115/alps-goodness-sandalwood-powder-59_10_display_1634629069_d0fd61cb.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/219115/alps-goodness-sandalwood-powder_12_display_1604319952_355d0fc7.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/219115/alps-goodness-sandalwood-powder_2_display_1590048738_8d6a5560.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/219115/alps-goodness-sandalwood-powder_10_display_1602560920_84dda295.jpg"]
+  },{
+    id : "BH",
+    title : "L'Oreal Paris Total Repair 5 Masque (200 ml)",
+    rating : 4.2,
+    brand: "L'Oreal Paris",
+    price : 365,
+    discount: 0.35,
+    qty : 1,
+    description : "Softens the hair, without weighing hair down. Heals daily wear and tear. Suitable for limp and lifeless hair",
+    best_before : "31 August 2024" ,
+    skin_concern : "Damaged Hair, Dry Hair, Frizzy Hair, Hairfall",
+    skin_type : "Dry Scalp",
+    Speciality : "Cruelty Free",
+    finish : "",
+    Benefits : "Hair Protection, Hair Repair, Nourishing, Smooth Texture, Volumizing",
+    oneBenefit : "Nourishing",
+    type: "hair",
+    origin : "India",
+    image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/182740/loreal-paris-total-repair-5-repairing-mask-200-ml-27_3_display_1632833252_5fd24717.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/182740/loreal-paris-total-repair-5-repairing-mask-200-ml-27_2_display_1580812013_f4a0facd.jpg","https://media4.purplle.com/static/img/brand//__1619524156_755f3bc0.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/182740/loreal-paris-total-repair-5-repairing-mask-200-ml-27_2_display_1580812013_f4a0facd.jpg"]
+  },{
+    id : "BI",
+    title : "L'Oreal Paris Casting Creme Gloss Small Pack, 400 Dark Brown (45 g)",
+    rating : 4.2,
+    brand: "L'Oreal Paris",
+    price : 199,
+    discount: 0.05,
+    qty : 1,
+    description : "The delicate fragrance makes colouring a luxurious treat.Highlights: 1) Enriched with natural ingredients2) Lasts up to 28 washes3) It is a no ammonia hair colour and leaves your hair smelling great4) Gives a natural looking colour with visible shimmering tones and glossy shine!",
+    best_before : "31 March 2023" ,
+    skin_concern : "All Hair Types colouring",
+    skin_type : "All Hair Types",
+    Speciality : "Ammonia Free",
+    finish : "",
+    Benefits : "Grey Coverage, Hair Colour, Hair Shine, Prevents Hair Damage, Silky Hair",
+    oneBenefit : "Moisturizing",
+    type: "hair",
+    origin : "India",
+    image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/238696/l-oreal-paris-casting-creme-gloss-small-pack-400-dark-brown-45-g_1_display_1620370404_bba296d8.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/238696/l-oreal-paris-casting-creme-gloss-small-pack-400-dark-brown-45-g_2_display_1620370405_422d3b2c.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/238696/l-oreal-paris-casting-creme-gloss-small-pack-400-dark-brown-45-g_3_display_1620370406_a7472b4d.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/238696/l-oreal-paris-casting-creme-gloss-small-pack-400-dark-brown-45-g_5_display_1620370407_1de4956d.jpg"]
+  },{
+    id : "BJ",
+    title : "TRESemme Keratin Smooth Conditioner (190 ml)",
+    rating : 4.2,
+    brand: "Tresemme",
+    price : 220,
+    discount: 0.25,
+    qty : 1,
+    description : "TRESemme Keratin Smooth Conditioner helps restore keratin and nourishes each strand to leave hair gorgeously straighter, shinier and more manageable.When used together with Keratin Smooth Shampoo, it controls frizz for up to 48 hours and transforms your hair to be gorgeously straighter, more manageable and easy to style.",
+    best_before : "31 August 2023" ,
+    skin_concern : "Frizzy Hair, Hair Loss, Weak Hair",
+    skin_type : "All Skin Types",
+    Speciality : "Paraben Free",
+    finish : "",
+    Benefits : "Frizz Control, Hair Shine, Smoothening, Softening, Stopping Hairfall",
+    oneBenefit : "Smoothening",
+    type: "hair",
+    origin : "India",
+    image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/175638/tresemme-keratin-smooth-conditioner-200-ml-18_3_display_1609828520_0f26dace.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/175638/tresemme-keratin-smooth-conditioner-200-ml-18_2_display_1609828519_e210e96c.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/175638/tresemme-keratin-smooth-conditioner-200-ml-18_6_display_1609828521_de9b9b68.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/175638/tresemme-keratin-smooth-conditioner-200-ml-18_6_display_1609828521_de9b9b68.jpg"]
+  },{
+    id : "BK",
+    title : "Alps Goodness Powder - Liquorice (50 g) | 100% Natural Powder | No Chemicals, No Preservatives, No Pesticides | Can be used for Hair Mask and Face Mask | De tan Face Mask | Tan removal Face Mask | Hair Mask for hydrating and soothing scalp",
+    rating : 4.3,
+    brand: "Alps Goodness",
+    price : 110,
+    discount: 0.12,
+    qty : 1,
+    description : "Give your hair a powdery twist with Alps Goodness Powder. Sourced from natural ingredients, it makes sure to benefit your hair in the most beautiful way possible. A therapeutic formulation made to make your hair feel a lot better. Liquorice is rich in antioxidants and purifying properties. It helps revitalize and strenghthen the hair while also smoothening out the tresses, leaving it looking healthy and nourished and shiny Your every hair concerned answered with Alps Goodness range of Powders",
+    best_before : "31 March 2023" ,
+    skin_concern : "Dryness, Dull Hair, Hair Loss",
+    skin_type : "All Hair Types, Dry Hair",
+    Speciality : "Cruelty Free",
+    finish : "",
+    Benefits : "Hair Growth, Nourishing, Scalp Cleansing, Stopping Hairfall",
+    oneBenefit : "Non Greezy",
+    type: "hair",
+    origin : "India",
+    image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/219119/alps-goodness-liquorice-powder-68_10_display_1628141437_1cd1307c.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/219119/alps-goodness-liquorice-powder_2_display_1581588944_36c2ebbc.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/219119/alps-goodness-liquorice-powder_4_display_1581588945_039c0910.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/219119/alps-goodness-liquorice-powder_3_display_1581588945_737cc0b1.jpg"]
+  },{
+    id : "BB",
+    title : "Mamaearth Onion Hair Fall Shampoo For Hair Growth & Hair Fall Control, With Onion Oil & Plant Keratin (250 ml)",
+    rating : 4.0,
+    brand: "Mamaearth",
+    price : 349,
+    discount: 0,
+    qty : 1,
+    description : "Stress, pollution & unhealthy lifestyle choices can lead to many hair troubles, hair fall being the most common one. Mamaearth's Onion Hair Shampoo helps you combat that. Onion Oil, rich in Sulphur, Potassium & antioxidants, reduces hair fall & accelerates hair regrowth.",
+    best_before : "30 April 2023" ,
+    skin_concern : "Damaged Hair, Frizzy Hair, Hair Breakage",
+    skin_type : "All Hair Types",
+    Speciality : "Dermatologically Tested, Mineral Oil Free, Onion, Paraben Free, Peta-certified, Silicone Free, Sulfate Free, Toxicity Free",
+    finish : "",
+    Benefits : "Anti-Pollution, Antioxidants, Frizz Control, Hair Growth, Hair Repair",
+    oneBenefit : "Dandruff Free",
+    type: "hair",
+    origin : "India",
+    image_url : ["https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/181887/mamaearth-onion-hair-fall-shampoo-for-hair-growth-and-hair-fall-control-with-onion-oil-and-plant-keratin-250-ml_8_display_1619425462_cafdd4a1.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/181887/mamaearth-onion-hair-fall-shampoo-for-hair-growth-and-hair-fall-control-with-onion-oil-and-plant-keratin-250-ml_10_display_1619425466_148c7422.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/181887/mamaearth-onion-hair-fall-shampoo-for-hair-growth-and-hair-fall-control-with-onion-oil-and-plant-keratin-250-ml_11_display_1619425468_7c9b4365.jpg","https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/181887/mamaearth-onion-hair-fall-shampoo-for-hair-growth-and-hair-fall-control-with-onion-oil-and-plant-keratin-250-ml_12_display_1619425469_84d0637d.jpg"]
+  }
 ]
 
 
