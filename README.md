@@ -12,8 +12,8 @@
 ---
 ## Features
 ---
-#### User ca buy any type of beauty product
-#### They can use this website from any device 
+##### User can buy any type of beauty product
+##### They can use this website from any device 
 ---
 ## Page and Responsibilities 
 ---
@@ -21,6 +21,11 @@
 - **Home Page**
 
 ![Landing Page](https://github.com/)
+
+---
+- **Reponsive Home Page**
+
+![Responsive](https://github.com/)
 
 ---
 - **Navbar UI**
@@ -74,12 +79,16 @@
 
 - **Footer Section**
 
-![Order Successful Page](https://github.com/)
+![Footer](https://github.com/)
 
 
 
 
 ### How To Use 
+User can login into purplle by clicking the login button and inserting the right credentials, 
+new user can register themself by clicking on register button and filling a simple form, after sucessful 
+login user can stat shopping, they can choose category that they like also they can sort the product 
+according to their choice, after choosing product they can add it to cart or they 
 
 
 
