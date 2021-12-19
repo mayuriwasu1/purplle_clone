@@ -21,7 +21,7 @@
   }
 
   function closebtn(){
-    window.location.href="Home_Page/home.html"
+    window.location.href="Home_page/home.html"
     // document.getElementById("login-box").style.display="none";
     // document.getElementById("signin_box").style.display="none"
   }
