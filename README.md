@@ -1,7 +1,7 @@
 
 # Purplle-Website-Clone
 ---
-##### This is clone website of purplle.com Purplle is an ecommerse website where user can buy all kinds of bueaty products.
+##### This is clone website of purplle.com Purplle is an ecommerse website where user can buy all kinds of beauty products.
 ---
 ## [Video Presentation ](https://www.google.com)
 ---
@@ -18,8 +18,8 @@
 ---
 
 - **Home Page**
-
-![Landing Page](https://github.com/mayuriwasu1/purplle_clone/Home_page/image/homepage.png)
+here is the landing page of purplle clone
+![Landing Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/home_pic.png)
 
 ---
 - **Reponsive Home Page**
@@ -64,10 +64,12 @@ Purplle clone is adaptive to different screen sizes
 
 
 ### How To Use 
-User can login into purplle by clicking the login button and inserting the right credentials, 
-new user can register themself by clicking on register button and filling a simple form, after sucessful 
-login user can stat shopping, they can choose category that they like also they can sort the product 
-according to their choice, after choosing product they can add it to cart or they 
+Users can log in into purplle by clicking the login button and inserting the right credentials, 
+new users can register themself by clicking on the register button and filling a simple form, after successful 
+login user can stat shopping, they can choose the category that they like also they can sort the product 
+according to their choice, after choosing a product they can add it to the cart or they keep it on the wishlist 
+they can place an order by simply clicking on the place order button after that they will get notified that their 
+the order has been successfully placed.
 
 
 
