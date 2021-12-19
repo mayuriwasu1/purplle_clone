@@ -16,7 +16,7 @@ function nav()
 
             <a href="WishList.html"><i class="far fa-heart"></i></a>
 
-            <a href=""><i class="far fa-smile"></i></a>
+            <a href="login.html"><i class="far fa-smile"></i></a>
 
             <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
 
