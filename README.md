@@ -38,6 +38,11 @@ Purplle clone is adaptive to different screen sizes
 ![Product Category Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/product.png)
 
 ---
+- **Filter/Sort**
+
+![Product Category Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/cat_p.png)
+
+---
 
 - **Product Details Page**
 ![Product Details Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/prod_desc.png)
