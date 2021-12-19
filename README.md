@@ -27,17 +27,6 @@ Purplle clone is adaptive to different screen sizes
 ![Responsive](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/responsive.png)
 
 ---
-- **Navbar UI**
-
-![Landing Page Subcategory](https://github.com/)
-
----
-- **Navbar UI 2**
-
-![Landing Page Brands Category](https://github.com/)
-
-
----
 - **login-In Page**
 
 ![Sign In Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/login.png)
@@ -68,14 +57,9 @@ Purplle clone is adaptive to different screen sizes
 ---
 - **Payment Page**
 
-![Payment Page](https://github.com/)
+![Payment Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/pay.png)
 
 ---
-
-- **Footer Section**
-
-![Footer](https://github.com/)
-
 
 
 
