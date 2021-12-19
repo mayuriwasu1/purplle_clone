@@ -32,11 +32,30 @@ function ShowProductsOnMain(products,location,cartArray){
             redirectedProduct(item);
         });
 
+        let prices = document.createElement("div");
+        prices.setAttribute("id","price_item0nDiv");
+        prices.style.marginTop = "-18px"
+            
         let price = document.createElement("p");
-        price.setAttribute("id","priceOf");
-        // let disc = 100 * item.discount
-        price.textContent = `₹ ${item.price}` ;
-        price.addEventListener("click", function(){
+        price.style.fontSize = "17px";
+        let finalprice = Math.round((item.price * (1-item.discount))) 
+        price.innerHTML = `₹${finalprice}`;
+
+
+        let mrp = document.createElement("p");
+        mrp.style.fontSize = "14px";
+        mrp.innerHTML = item.price;
+        mrp.style.color = "grey"
+        mrp.style.textDecoration = "line-through";
+
+        let discount = document.createElement("p");
+        discount.style.fontSize = "15px";
+        discount.style.color = "#ec008c";
+        let newPer = item.discount*100
+        discount.innerHTML = `${newPer}% off`
+
+        prices.append(price,mrp,discount);
+        prices.addEventListener("click", function(){
             redirectedProduct(item);
         });
 
@@ -51,7 +70,7 @@ function ShowProductsOnMain(products,location,cartArray){
             redirectedProduct(item);
         });
 
-        Mdiv.append(image, title, price,rating);
+        Mdiv.append(image, title, prices,rating);
         location.append(Mdiv);
 
     })

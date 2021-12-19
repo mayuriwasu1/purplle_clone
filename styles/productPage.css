@@ -224,6 +224,13 @@
        font-weight: bold;
     }
 
+    #price_item0nDiv{
+        display: flex;
+        gap: 2%;
+        letter-spacing: 0.7px  ;
+        align-items: center;
+    }
+
 /* css of wishlist */
 /* css of wishlist */
 /* css of wishlist */
@@ -354,7 +361,8 @@
     #price_wishDiv{
         display: flex;
         gap: 2%;
-        letter-spacing: 0.7px  
+        letter-spacing: 0.7px ;
+        align-items: center; 
     }
     #image_Wish{
         width: 140px;
