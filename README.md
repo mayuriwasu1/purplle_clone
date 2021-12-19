@@ -51,7 +51,7 @@ Purplle clone is adaptive to different screen sizes
 ---
 
 - **Product Details Page**
-![Product Details Page](https://github.com/)
+![Product Details Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/prod_desc.png)
 
 ---
 - **Cart Page**
