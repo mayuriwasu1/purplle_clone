@@ -98,12 +98,15 @@ according to their choice, after choosing product they can add it to cart or the
 ## Creators
 
 ### Mayuri
-#### [GitHub](https://www.google.com)
+#### [GitHub](https://github.com/mayuriwasu1)
 ### Kavya
-#### [GitHub](https://www.google.com)
+#### [GitHub](https://github.com/kavya-2021)
 ### Reetesh
-#### [GitHub](https://www.google.com)
+#### [GitHub](https://github.com/Reeteshin)
 ### Aswin
-#### [GitHub](https://www.google.com)
+#### [GitHub](https://github.com/AswinAnand66)
 
 
+
+
+ 
