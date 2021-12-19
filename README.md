@@ -5,6 +5,8 @@
 ---
 ## [Video Presentation ](https://www.google.com)
 ---
+## [Blog Link](https://purpllecloneteam.blogspot.com/2021/12/purplle-website-clone.html)
+---
 ## Tech Stack
 - `HTML5`
 - `CSS3`
