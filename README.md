@@ -23,7 +23,7 @@
 
 ---
 - **Reponsive Home Page**
-
+Purplle clone is adaptive to different screen sizes
 ![Responsive](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/responsive.png)
 
 ---
