@@ -55,7 +55,7 @@
 ---
 - **Wish List**
 ##### here users can save their favorite products.
-![Cart Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/cart_page.png)
+![Wish List](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/wishlist.png)
 
 ---
 
