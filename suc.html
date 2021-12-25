@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./comp/navcss.css">
+    <style>
+           
+            #o{
+                display: flex;
+                justify-content: center;
+                margin-top: 100px;
+            }
+    </style>
+</head>
+<body>
+    <div id="thatDiv"></div>
+    <div id="o">
+        <img src="https://cdn-icons.flaticon.com/png/512/3855/premium/3855480.png?token=exp=1639911491~hmac=c4447e784d6ac5232722916225b27e83" width="256" height="256" alt="Delivery van  premium icon" title="Delivery van premium icon">
+
+    </div>
+  
+</body>
+</html>
+<script type="module">
+     import nav from './comp/navjs.js';
+
+console.log(nav)
+var div = document.getElementById("thatDiv");
+
+div.innerHTML = nav();
+</script>
