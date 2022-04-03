@@ -9,8 +9,8 @@
 - `HTML5`, `CSS3`, `Advanced JavaScript`
 ---
 ## Features
-##### - User can buy any type of beauty product
-##### - They can use this website from any device 
+- User can buy any type of beauty product
+- They can use this website from any device 
 ---
 ## Page and Responsibilities 
 ---
